@@ -1,12 +1,7 @@
 body {
   margin: 0;
   padding: 0 1.618rem 1.618rem;
-  font-family: Tahoma, SimHei, sans-serif;
-}
-@media (max-resolution: 126dpi) {
-  body {
-    font-family: Tahoma, sans-serif;
-  }
+  font-family: sans-serif;
 }
 header, main {
   width: 40rem;
@@ -36,13 +31,25 @@ article a {
 h1, h2 {
   text-align: left;
 }
+hr {
+  border: none;
+  border-bottom: 1px solid #e2e2e2;
+  margin: 1.618rem 0;
+}
 h1 {
   font-size: 1.618rem;
-  margin: 1rem 0 1.618rem 0;
+  margin: .618em 0 1em 0;
 }
 h2 {
   font-size: 1.272rem;
-  margin: 1.618rem 0 1rem;
+  margin: 1em 0 .618em;
+}
+h3 {
+  font-size: 1rem;
+  margin: 1em 0 .618em;
+}
+h2, h3 {
+  font-weight: bold;
 }
 p {
   margin: 1rem 0;
@@ -72,4 +79,7 @@ p {
 .posts {
   list-style: none;
   padding: 0;
+}
+.posts li {
+  margin: 0.382em 0;
 }

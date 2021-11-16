@@ -9,7 +9,7 @@ const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
 ;(async () => {
-  const posts = await Promise.all((await readdir(path.normalize(postsDir))).map(async postFilename => {
+  const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const content = await readFile(path.normalize(`${postsDir}/${postFilename}`))
     return { filename: postFilename, title: content.match(/#\s(.+)/)[1] }
   }))
