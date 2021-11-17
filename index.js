@@ -34,7 +34,7 @@ const _siteDir = `${__dirname}/_site`
     render(
       path.normalize(`${__dirname}/post.ejs`),
       { article: marked(rapMarkdown.toString()) },
-      path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}.html`)
+      path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
   })
 
