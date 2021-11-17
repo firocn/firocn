@@ -28,6 +28,13 @@ article a {
   color: #9b1c2e;
   text-decoration: none;
 }
+article a:hover {
+  color: #ba2a45;
+}
+article a:active {
+  color: white;
+  background-color: #7c1624;
+}
 h1, h2 {
   text-align: left;
 }
@@ -37,22 +44,22 @@ hr {
   margin: 1.618rem 0;
 }
 h1 {
-  font-size: 1.618rem;
-  margin: .618em 0 1em 0;
+  font-size: 2.618rem;
+  margin: 1em 0 0;
 }
 h2 {
-  font-size: 1.272rem;
-  margin: 1em 0 .618em;
+  font-size: 1.618rem;
+  margin: 1.618em 0 1em;
 }
 h3 {
   font-size: 1rem;
-  margin: 1em 0 .618em;
+  margin: 1.618em 0 1em;
 }
 h2, h3 {
   font-weight: bold;
 }
 p {
-  margin: 1rem 0;
+  margin: 1em 0;
   /* text-indent: 2em; */
 }
 @media screen and (max-width: 40rem) {
@@ -71,10 +78,19 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
+  font-weight: bold;
+  color: #9b1c2e;
 }
 .menu a {
   text-decoration: none;
   color: inherit;
+}
+.menu a:hover {
+  color: #ba2a45;
+}
+.menu a:active {
+  color: white;
+  background-color: #7c1624;
 }
 .posts {
   list-style: none;
@@ -82,4 +98,11 @@ p {
 }
 .posts li {
   margin: 0.382em 0;
+  margin: 1.618em 0;
+}
+.posts li a {
+  font-weight: bold;
+}
+.post-date {
+  font-size: .618em;
 }

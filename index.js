@@ -11,7 +11,11 @@ const _siteDir = `${__dirname}/_site`
 ;(async () => {
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const content = await readFile(path.normalize(`${postsDir}/${postFilename}`))
-    return { filename: postFilename, title: content.match(/#\s(.+)/)[1] }
+    return {
+      filename: postFilename,
+      date: postFilename.match(/\d{4}-\d{2}-\d{2}/)[0],
+      title: content.match(/#\s(.+)/)[1]
+    }
   }))
 
   await checkCreateDir(_siteDir)
