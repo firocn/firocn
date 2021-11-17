@@ -98,10 +98,11 @@ p {
 }
 .posts li {
   margin: 0.382em 0;
+  margin: 1.618em 0;
 }
 .posts li a {
   font-weight: bold;
 }
 .post-date {
-  float: right;
+  font-size: .618em;
 }
