@@ -3,6 +3,10 @@ body {
   padding: 0 1.618rem 1.618rem;
   font-family: sans-serif;
 }
+::selection {
+  background-color: #9b1c2e;
+  color: white;
+}
 header, main {
   width: 40rem;
   margin: 0 auto;
