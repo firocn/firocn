@@ -14,7 +14,7 @@ _展望 2022 年_
 
 我们还对 [Lelantus Spark](https://firo.org/2021/08/24/presenting-lelantus-spark.html) 进行了开创性的研究，在不牺牲无需信任的前提下，大大提高了隐私性和灵活性，还有我们即将推出的隐私主节点质押机制 —— Helsing。
 
-我们通过[与 Binance 挂钩的 BEP20 FIRO 代币](https://www.coingecko.com/en/coins/binance-peg-firo)与 Binance 智能链整合，扩大了我们的效用，并且在 [Pancakeswap DEX](https://pancakeswap.finance/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0xd5d0322b6bab6a762c79f8c81a0b674778e13aed) 上也有一个资金充足的配对。与 [FiroDEX](https://github.com/firoorg/FiroDEX-Desktop) 的更加去中心化的选择，将允许跨多个链的原子交换，也将在 2021 年 12 月到来。
+我们通过[与 Binance 挂钩的 BEP20 FIRO 代币](https://www.coingecko.com/en/coins/binance-peg-firo)与 Binance 智能链整合，扩大了我们的效用，并且在 [Pancakeswap DEX](https://pancakeswap.finance/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0xd5d0322b6bab6a762c79f8c81a0b674778e13aed) 上也有一个资金充足的交易对。与 [FiroDEX](https://github.com/firoorg/FiroDEX-Desktop) 的更加去中心化的选择，将允许跨多个链的原子交换，也将在 2021 年 12 月到来。
 
 ## 变化中的加密货币格局
 
@@ -48,7 +48,7 @@ Firo 一直致力于成为一种具有隐私保障的数字形式的现金。实
 
 ## 资金
 
-2022 年 9 月底将标志着创始人奖励停止后的第二年，我们承诺将与社区进行检查，以从区块奖励中评估开发基金的状态。这其中的一个关键部分是明确核心团队的角色，同时探索其他筹资机制，无论是通过 [Firo 众筹系统](https://fcs.firo.org/)还是潜在的 [Firo MAGIC 基金](https://forum.firo.org/t/seeking-feedback-on-a-magic-firo-fund/1929)。我们期待着与社区就前进的最佳道路进行富有成效的讨论。
+2022 年 9 月底将标志着创始人奖励停止后的第二年，我们承诺将与社区进行检查，以评估来自区块奖励的开发基金的状况。这其中的一个关键部分是明确核心团队的角色，同时探索其他筹资机制，无论是通过 [Firo 众筹系统](https://fcs.firo.org/)还是潜在的 [Firo MAGIC 基金](https://forum.firo.org/t/seeking-feedback-on-a-magic-firo-fund)。我们期待着与社区就前进的最佳道路进行富有成效的讨论！
 
 ## 与监控作斗争
 
