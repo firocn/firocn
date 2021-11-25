@@ -5,6 +5,8 @@ const marked = require("marked")
 
 marked.setOptions({ breaks: true })
 
+const siteData = { imgsURL: 'imgs' }
+
 const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
@@ -33,30 +35,21 @@ const _siteDir = `${__dirname}/_site`
 
     render(
       path.normalize(`${__dirname}/post.ejs`),
-      { article: marked(rapMarkdown.toString()), post },
+      {
+        article: marked(ejs.render(rapMarkdown.toString(), siteData)),
+        post
+      },
       path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
   })
 
-  await checkCreateDir(path.normalize(`${_siteDir}/css`))
-  const filenames = await readdir(path.normalize(`${__dirname}/css`))
-  filenames.forEach(filename => {
-    fs.copyFile(
-      path.normalize(`${__dirname}/css/${filename}`),
-      path.normalize(`${_siteDir}/css/${filename}`),
-      err => { if (err) throw err }
-    )
-  })
-  fs.copyFile(
-    path.normalize(`${__dirname}/Firo logo dark.svg`),
-    path.normalize(`${_siteDir}/Firo logo dark.svg`),
-    err => { if (err) throw err }
-  )
+  copyDir('css')
+  copyDir('imgs')
 })()
 
 async function render(templateFile, data, destFile) {
   return new Promise((resolve, reject) => {
-    ejs.renderFile(templateFile, data, (err, str) => {
+    ejs.renderFile(templateFile, { ...data, ...siteData }, (err, str) => {
       if (err) return reject(err)
       fs.writeFile(destFile, str, err => {
         if (err) return reject(err)
@@ -94,5 +87,17 @@ async function checkCreateDir(dirname) {
         resolve()
       })
     })
+  })
+}
+
+async function copyDir(dirname) {
+  await checkCreateDir(path.normalize(`${_siteDir}/${dirname}`))
+  const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`))
+  filenames.forEach(filename => {
+    fs.copyFile(
+      path.normalize(`${__dirname}/${dirname}/${filename}`),
+      path.normalize(`${_siteDir}/${dirname}/${filename}`),
+      err => { if (err) throw err }
+    )
   })
 }
