@@ -25,6 +25,9 @@ article {
 article > header {
   margin-bottom: 2.618rem;
 }
+.article-date {
+  font-size: .618em;
+}
 article img {
   max-width: 100%;
   margin: 0 auto;
