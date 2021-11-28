@@ -1,0 +1,9 @@
+# Firo 中文社区
+
+## 电报群
+
+[t.me/firo_zh](https://t.me/firo_zh)
+
+## 微信
+
+![微信公众号](<%= imgsURL %>/wechat.webp)

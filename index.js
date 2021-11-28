@@ -11,11 +11,14 @@ const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
 ;(async () => {
+  const dateRegexp = /\d{4}-\d{2}-\d{2}/
+
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const content = await readFile(path.normalize(`${postsDir}/${postFilename}`))
+    const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]
     return {
       filename: postFilename,
-      date: postFilename.match(/\d{4}-\d{2}-\d{2}/)[0],
+      date,
       title: content.match(/^#\s(.+)/m)[1]
     }
   }))
@@ -24,7 +27,7 @@ const _siteDir = `${__dirname}/_site`
 
   render(
     path.normalize(`${__dirname}/index.ejs`),
-    { posts },
+    { posts: posts.filter(p => p.date) },
     path.normalize(`${__dirname}/_site/index.html`)
   )
 
