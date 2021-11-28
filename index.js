@@ -16,7 +16,7 @@ const _siteDir = `${__dirname}/_site`
     return {
       filename: postFilename,
       date: postFilename.match(/\d{4}-\d{2}-\d{2}/)[0],
-      title: content.match(/#\s(.+)/)[1]
+      title: content.match(/^#\s(.+)/m)[1]
     }
   }))
 
@@ -29,11 +29,12 @@ const _siteDir = `${__dirname}/_site`
   )
 
   posts.forEach(async post => {
-    const rapMarkdown = ejs.render((await readFile(path.normalize(
+    const markdownRaw = (await readFile(path.normalize(
       `${postsDir}/${post.filename}`
-    ))).toString(), siteData)
+    ))).toString()
+    const markdown = ejs.render(markdownRaw, siteData)
 
-    const propertiesMatchResult = rapMarkdown.match(/^<!--(.+?)-->/s)
+    const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
 
     const properties = propertiesMatchResult && propertiesMatchResult[1] ?
       JSON.parse(propertiesMatchResult[1]) : {}
@@ -41,7 +42,7 @@ const _siteDir = `${__dirname}/_site`
     render(
       path.normalize(`${__dirname}/post.ejs`),
       {
-        content: marked(rapMarkdown),
+        content: marked(markdown),
         post,
         properties
       },
