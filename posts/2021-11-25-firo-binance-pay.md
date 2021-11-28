@@ -4,7 +4,7 @@ _2021 年 11 月 25 日_
 
 _用 Firo 购物或将 Firo 发送给世界各地的朋友和家人_
 
-![FIRO 和 BINANCE PAY 集成](<%= imgsURL %>/firo_binance_pay_integration.png)
+![FIRO 和 BINANCE PAY 集成](<%= imgsURL %>/firo_binance_pay_integration.webp)
 
 Firo 已集成到[币安支付](https://pay.binance.com/)中，币安支付是一种无接触、无界限、安全的加密货币支付技术。
 
