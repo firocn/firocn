@@ -29,15 +29,21 @@ const _siteDir = `${__dirname}/_site`
   )
 
   posts.forEach(async post => {
-    const rapMarkdown = await readFile(path.normalize(
+    const rapMarkdown = ejs.render((await readFile(path.normalize(
       `${postsDir}/${post.filename}`
-    ))
+    ))).toString(), siteData)
+
+    const propertiesMatchResult = rapMarkdown.match(/^<!--(.+?)-->/s)
+
+    const properties = propertiesMatchResult && propertiesMatchResult[1] ?
+      JSON.parse(propertiesMatchResult[1]) : {}
 
     render(
       path.normalize(`${__dirname}/post.ejs`),
       {
-        article: marked(ejs.render(rapMarkdown.toString(), siteData)),
-        post
+        content: marked(rapMarkdown),
+        post,
+        properties
       },
       path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
