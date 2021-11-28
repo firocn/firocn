@@ -1,13 +1,13 @@
-# Firo 中文社区
-
 <style>
-article * {
-  text-align: center;
-}
-article img {
-  width: 25em;
-}
+  article * {
+    text-align: center;
+  }
+  article img {
+    width: 25em;
+  }
 </style>
+
+# Firo 中文社区
 
 ## 电报群
 

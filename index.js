@@ -11,15 +11,23 @@ const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
 ;(async () => {
-  const dateRegexp = /\d{4}-\d{2}-\d{2}/
+  const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
 
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
-    const content = await readFile(path.normalize(`${postsDir}/${postFilename}`))
+    const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
     const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]
+    const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
+    const properties = propertiesMatchResult && propertiesMatchResult[1] ?
+      JSON.parse(propertiesMatchResult[1]) : {}
+    const markdown = ejs.render(markdownRaw, siteData)
+    const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
     return {
       filename: postFilename,
       date,
-      title: content.match(/^#\s(.+)/m)[1]
+      dateLocale: date && date.replace(dateRegexp, '$1 年 $2 月 $3 日'),
+      title,
+      properties,
+      html: marked(markdown)
     }
   }))
 
@@ -32,23 +40,9 @@ const _siteDir = `${__dirname}/_site`
   )
 
   posts.forEach(async post => {
-    const markdownRaw = (await readFile(path.normalize(
-      `${postsDir}/${post.filename}`
-    ))).toString()
-    const markdown = ejs.render(markdownRaw, siteData)
-
-    const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
-
-    const properties = propertiesMatchResult && propertiesMatchResult[1] ?
-      JSON.parse(propertiesMatchResult[1]) : {}
-
     render(
       path.normalize(`${__dirname}/post.ejs`),
-      {
-        content: marked(markdown),
-        post,
-        properties
-      },
+      { post },
       path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
   })

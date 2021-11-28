@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= post.title %>｜Firo 中文社区</title>
-    <meta name="description" content="<%= properties.description %>">
-    <meta property="og:image" content="<%= properties.img || 'https://firo.org/img/meta/apple-touch-icon.png' %>">
+    <meta name="description" content="<%= post.properties.description %>">
+    <meta property="og:image" content="<%= post.properties.img || 'https://firo.org/img/meta/apple-touch-icon.png' %>">
     <meta property="og:title" content="<%= post.title %>">
-    <meta property="og:description" content="<%= properties.description %>">
+    <meta property="og:description" content="<%= post.properties.description %>">
     <meta name="twitter:title" content="<%= post.title %>">
     <link rel="stylesheet" href="css/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
@@ -25,7 +25,16 @@
     </header>
     <main>
       <article>
-        <%- content %>
+        <% if (post.properties.title) { %>
+          <header>
+            <h1><%= post.properties.title %></h1>
+            <% if (post.properties.subtitle) { %>
+              <p><em><%= post.properties.subtitle %></em></p>
+            <% } %>
+            <p><em><%= post.dateLocale %></em></p>
+          </header>
+        <% } %>
+        <%- post.html %>
       </article>
     </main>
   </body>

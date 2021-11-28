@@ -7,11 +7,11 @@ body {
   background-color: #9b1c2e;
   color: white;
 }
-header, main {
+body > header, body > main {
   max-width: 40rem;
   margin: 0 auto;
 }
-header {
+body > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,6 +21,9 @@ article {
   line-height: 1.618;
   text-align: justify;
   overflow-wrap: break-word;
+}
+article > header {
+  margin-bottom: 2.618rem;
 }
 article img {
   max-width: 100%;
