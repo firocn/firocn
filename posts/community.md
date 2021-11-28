@@ -11,3 +11,7 @@
 ## 微博
 
 [![微博](<%= imgsURL %>/weibo.webp)](https://weibo.com/u/6140252510)
+
+## QQ
+
+![QQ](<%= imgsURL %>/qq.jpg)
