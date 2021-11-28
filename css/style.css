@@ -31,12 +31,6 @@ article img {
   padding: 0.309rem 0;
   display: block;
 }
-@media (max-width: 40rem) {
-  article img {
-    max-width: calc(100% + 3.236rem);
-    margin-left: -1.618rem;
-  }
-}
 article a {
   color: #9b1c2e;
   text-decoration: none;
