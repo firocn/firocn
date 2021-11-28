@@ -14,4 +14,4 @@
 
 ## QQ
 
-![QQ](<%= imgsURL %>/qq.jpg)
+![QQ](<%= imgsURL %>/qq.png)
