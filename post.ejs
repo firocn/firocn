@@ -28,8 +28,8 @@
         <% if (post.properties.title) { %>
           <header>
             <h1><%= post.properties.title %></h1>
-            <% if (post.properties.subtitle) { %>
-              <p><em><%= post.properties.subtitle %></em></p>
+            <% if (post.properties.summary) { %>
+              <p><em><%= post.properties.summary %></em></p>
             <% } %>
             <p><em><%= post.dateLocale %></em></p>
           </header>
