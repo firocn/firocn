@@ -2,7 +2,7 @@
 
 2021 年 6 月 9 日
 
-![Firo 在主网上推出 RAP 地址以保护链上接收方隐私](https://img.chainnews.com/material/images/e63cfa988ccb51629bb95ac765c3546b_3rbNFl3.png)
+![推出 RAP 地址](https://firo.org/blog/assets/rap-launch/rap-launch.png)
 
 我们很自豪地宣布在 Firo 的主网上推出接收方地址隐私（RAP）！RAP 允许用户公开发布他们的 RAP 地址而不影响隐私。你可以像分享电子邮件地址一样分享你的 RAP 地址。即使他们有你的 RAP 地址，也没有人可以知道你收到了多少付款或哪些交易是你的。
 
@@ -22,9 +22,9 @@ Firo 的实现也是 BIP47 在 C++ 和桌面钱包上的第一个完整实现。
 
 RAP 地址目前可以通过 Firo 最新的官方 [QT 钱包 v14.7.0](https://github.com/firoorg/firo/releases/tag/v0.14.7.0) 访问，并且正在努力将其整合到我们的桌面 Electron 钱包。RAP 地址是一个软分叉，所以升级和采用这些地址是可选的。
 
-![钱包 RAP 功能截图](https://img.chainnews.com/material/images/e63cfa988ccb51629bb95ac765c3546b_gz1CAhY.png)
+![钱包 RAP 功能截图](https://firo.org/blog/assets/rap-launch/rap1.png)
 
-![钱包 RAP 功能截图](https://img.chainnews.com/material/images/e63cfa988ccb51629bb95ac765c3546b_q7xALUH.png)
+![钱包 RAP 功能截图](https://firo.org/blog/assets/rap-launch/rap2.png)
 
 所有存放在 RAP 地址中的资金都可以使用备份的钱包助记词进行恢复。
 
