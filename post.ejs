@@ -20,7 +20,9 @@
     <header>
       <a href="index.html" class="logo" target="_self"><img src="<%= imgsURL %>/Firo logo dark.svg" alt="Firo" height="84"></a>
       <ul class="menu">
-        <li><a href="community.html" target="_self">社区</a></li>
+        <% if (!post.filename.startsWith('community.')) { %>
+          <li><a href="community.html" target="_self">社区</a></li>
+        <% } %>
         <li><a href="index.html" target="_self">动态</a></li>
       </ul>
     </header>
