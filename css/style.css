@@ -87,7 +87,7 @@ p {
   color: #9b1c2e;
   display: flex;
 }
-.menu li {
+.menu li:not(:first-child) {
   margin-left: 1.618em;
 }
 .menu a {
