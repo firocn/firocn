@@ -17,8 +17,7 @@ const _siteDir = `${__dirname}/_site`
     const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
     const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]
     const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
-    const properties = propertiesMatchResult && propertiesMatchResult[1] ?
-      JSON.parse(propertiesMatchResult[1]) : {}
+    const properties = propertiesMatchResult && propertiesMatchResult[1] ? JSON.parse(propertiesMatchResult[1]) : {}
     const markdown = ejs.render(markdownRaw, siteData)
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
     return {
@@ -98,9 +97,7 @@ async function checkCreateDir(dirname) {
 async function copyDir(dirname) {
   await checkCreateDir(path.normalize(`${_siteDir}/${dirname}`))
   const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`))
-  filenames.forEach(filename => {
-    copyFile(`${dirname}/${filename}`)
-  })
+  filenames.forEach(filename => copyFile(`${dirname}/${filename}`))
 }
 
 function copyFile(fullFilename) {
