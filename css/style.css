@@ -37,18 +37,22 @@ article img {
 }
 iframe {
   width: 100%;
-  height: 700px;
+  height: 40em;
+}
+.iframe-wrapper {
+  height: 22.5em;
+  overflow: hidden;
 }
 @media (max-width: 40rem) {
-  article img, iframe {
+  article img, .iframe-wrapper {
     margin-left: -1.618rem;
   }
   article img {
     max-width: calc(100% + 3.236rem);
   }
-  iframe {
+  .iframe-wrapper {
     width: calc(100% + 3.236rem);
-    height: 100vh;
+    height: 56.25vw;
   }
 }
 article a {
