@@ -39,6 +39,7 @@ const _siteDir = `${__dirname}/_site`
   )
 
   posts.forEach(async post => {
+    if (post.properties.url) return
     render(
       path.normalize(`${__dirname}/post.ejs`),
       { post },
