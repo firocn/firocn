@@ -49,6 +49,7 @@ const _siteDir = `${__dirname}/_site`
 
   copyDir('css')
   copyDir('imgs')
+  copyFile('googleced77188be24025c.html')
 })()
 
 async function render(templateFile, data, destFile) {
@@ -98,10 +99,14 @@ async function copyDir(dirname) {
   await checkCreateDir(path.normalize(`${_siteDir}/${dirname}`))
   const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`))
   filenames.forEach(filename => {
-    fs.copyFile(
-      path.normalize(`${__dirname}/${dirname}/${filename}`),
-      path.normalize(`${_siteDir}/${dirname}/${filename}`),
-      err => { if (err) throw err }
-    )
+    copyFile(`${dirname}/${filename}`)
   })
+}
+
+function copyFile(fullFilename) {
+  fs.copyFile(
+    path.normalize(`${__dirname}/${fullFilename}`),
+    path.normalize(`${_siteDir}/${fullFilename}`),
+    err => { if (err) throw err }
+  )
 }
