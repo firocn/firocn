@@ -1,7 +1,8 @@
 <%# {
   "title": "Firo 工作动态更新 2021 年 11 月",
   "summary": "手机钱包、Elysium、Lelantus Spark、QT 钱包界面重塑、Helsing",
-  "description": "手机钱包、Elysium、Lelantus Spark、QT 钱包界面重塑、Helsing"
+  "description": "手机钱包、Elysium、Lelantus Spark、QT 钱包界面重塑、Helsing",
+  "source": "https://forum.firo.org/t/what-firo-core-team-has-been-working-on"
 } %>
 
 ## 开发
@@ -95,7 +96,3 @@ NFT 是一个热门领域，虽然我们不希望建立一个 NFT 生态系统�
 ### Firo 奔跑者
 
 游戏的基本版本现在可以在[这里](https://firorunner.com/)玩。在公布之前，我们正在为锦标赛模式引入反作弊机制。我们认为这是一个有趣的方式来赚取一些 Firo，并让人们谈论我们。
-
----
-
-[原文](https://forum.firo.org/t/what-firo-core-team-has-been-working-on)

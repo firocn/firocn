@@ -1,7 +1,8 @@
 <%# {
   "title": "Firo 在主网上推出 RAP 地址以保护链上接收方隐私",
   "summary": "为经常性 Firo 付款引入接收方地址隐私",
-  "description": "为经常性 Firo 付款引入接收方地址隐私"
+  "description": "为经常性 Firo 付款引入接收方地址隐私",
+  "source": "https://firo.org/2021/06/09/introducing-receiver-address-privacy-for-firo.html"
 } %>
 
 ![推出 RAP 地址](https://firo.org/blog/assets/rap-launch/rap-launch.png)
@@ -40,7 +41,3 @@ RAP 地址具有与隐形地址类似的效用。隐形地址的不同实现方�
 [https://mp.weixin.qq.com/s/U6XDUQqNa3XoeYlUcDKNfw](https://mp.weixin.qq.com/s/U6XDUQqNa3XoeYlUcDKNfw)
 
 我们很高兴在 Firo 中成功实现了 RAP 地址；解决了链上隐私的一个重要部分，即接收方隐私。我们还要特别感谢我们的核心开发人员 Andrey Bezrukov，他在实现 RAP 地址方面做了大部分繁重的工作，以及 [Arcadia 集团](https://arcadiamgroup.com/)，他们提供了一个早期的工作实现，这是由我们的[社区众筹系统](https://ccs.firo.org/)提供部分资金。
-
----
-
-[原文](https://firo.org/2021/06/09/introducing-receiver-address-privacy-for-firo.html)

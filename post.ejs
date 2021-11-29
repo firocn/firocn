@@ -34,10 +34,22 @@
             <% if (post.properties.summary) { %>
               <p><em><%= post.properties.summary %></em></p>
             <% } %>
-            <p class="article-date"><%= post.dateLocale %></p>
+            <p class="article-date">
+              <%= post.dateLocale %>
+              <% if (post.properties.source) { %>
+                ｜
+                <a href="<%= post.properties.source %>">
+                  <%= post.properties.type === 'video' ? '原视频' : '原文' %>
+                </a>
+              <% } %>
+            </p>
           </header>
         <% } %>
         <%- post.html %>
+        <% if (post.properties.source && (!post.properties.type || post.properties.type === 'article')) { %>
+          <hr>
+          <p><a href="<%= post.properties.source %>">原文</a></p>
+        <% } %>
       </article>
     </main>
   </body>

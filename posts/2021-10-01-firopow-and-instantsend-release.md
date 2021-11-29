@@ -1,7 +1,8 @@
 <%# {
   "title": "FiroPoW 和即时发送随 Firo v0.14.9.0 发布",
   "summary": "硬分叉定于 10 月 26 日",
-  "description": "硬分叉定于 10 月 26 日"
+  "description": "硬分叉定于 10 月 26 日",
+  "source": "https://firo.org/2021/10/01/firopow-and-instantsend-release.html"
 } %>
 
 ![FiroPoW 和即时发送随 Firo v0.14.9.0 发布](https://firo.org/blog/assets/firopow-instantsend-release.png)
@@ -31,7 +32,3 @@ FiroPoW 是一项重大改进，加强了我们的承诺，使 Firo 可通过消
 即时发送极大地改善了作为货币的功能和 Firo 的用户体验，将交易最终确定所需的等待时间减少到几秒钟。
 
 我们相信隐私技术与良好的用户体验是相辅相成的，我们将在这方面努力工作，原生手机钱包和快速同步钱包即将到来。
-
----
-
-[原文](https://firo.org/2021/10/01/firopow-and-instantsend-release.html)
