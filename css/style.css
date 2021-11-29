@@ -113,6 +113,6 @@ p {
 .posts li a {
   font-weight: bold;
 }
-.post-date {
+.posts-date, .posts-description {
   font-size: .618em;
 }
