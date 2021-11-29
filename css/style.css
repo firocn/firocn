@@ -24,6 +24,7 @@ article {
 }
 article > header {
   margin-bottom: 2.618rem;
+  text-align: initial;
 }
 .article-date {
   font-size: .618em;
@@ -87,7 +88,7 @@ p {
   color: #9b1c2e;
   display: flex;
 }
-.menu li {
+.menu li:not(:first-child) {
   margin-left: 1.618em;
 }
 .menu a {
