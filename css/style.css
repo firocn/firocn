@@ -35,10 +35,21 @@ article img {
   padding: 0.309rem 0;
   display: block;
 }
+iframe {
+  border: none;
+  width: 100%;
+  height: 700px;
+}
 @media (max-width: 40rem) {
+  article img, iframe {
+    margin-left: -1.618rem;
+  }
   article img {
     max-width: calc(100% + 3.236rem);
-    margin-left: -1.618rem;
+  }
+  iframe {
+    width: calc(100% + 3.236rem);
+    height: 100vh;
   }
 }
 article a {
