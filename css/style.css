@@ -76,6 +76,9 @@ h3 {
 p {
   margin: 1em 0;
 }
+iframe {
+  border: none;
+}
 .logo img {
   display: block;
   margin-left: -21px;
