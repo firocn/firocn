@@ -1,7 +1,7 @@
 <%# {
   "title": "Firo 在主网上推出 RAP 地址以保护链上接收方隐私",
-  "summary": "为经常性 Firo 付款引入接收者地址隐私",
-  "description": "为经常性 Firo 付款引入接收者地址隐私"
+  "summary": "为经常性 Firo 付款引入接收方地址隐私",
+  "description": "为经常性 Firo 付款引入接收方地址隐私"
 } %>
 
 ![推出 RAP 地址](https://firo.org/blog/assets/rap-launch/rap-launch.png)
