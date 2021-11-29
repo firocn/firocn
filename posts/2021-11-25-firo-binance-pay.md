@@ -1,7 +1,7 @@
 <%# {
   "title": "Firo 集成到币安支付",
   "summary": "用 Firo 购物或将 Firo 发送给世界各地的朋友和家人",
-  "description": "Firo 已集成到 Binance Pay 中，允许现有的 Binance 用户直接从他们的 App 中使用 Firo 相互发送、接收和付款。使用 Binance Pay 的现有商户现在也可以轻松添加 Firo 作为付款选项。"
+  "description": "Firo 已集成到币安支付中，允许现有的币安用户直接从他们的 App 中使用 Firo 相互发送、接收和付款。使用币安支付的现有商户现在也可以轻松添加 Firo 作为付款选项。"
 } %>
 
 ![FIRO 和 BINANCE PAY 集成](<%= imgsURL %>/firo_binance_pay_integration.webp)
