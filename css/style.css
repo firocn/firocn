@@ -28,7 +28,6 @@ article > header {
 }
 .article-header-bar {
   font-size: .618em;
-  font-size: max(.618em, 12px);
 }
 article img {
   max-width: 100%;
@@ -130,5 +129,4 @@ p {
 }
 .posts-date, .posts-description {
   font-size: .618em;
-  font-size: max(.618em, 12px);
 }
