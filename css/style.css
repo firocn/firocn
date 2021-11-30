@@ -26,7 +26,7 @@ article > header {
   margin-bottom: 2.618rem;
   text-align: initial;
 }
-.article-date {
+.article-header-bar {
   font-size: .618em;
 }
 article img {
@@ -43,7 +43,7 @@ iframe {
   height: 22.5em;
   overflow: hidden;
 }
-@media (max-width: 40rem) {
+@media (max-width: 43.236rem) {
   article img, .iframe-wrapper {
     margin-left: -1.618rem;
   }
@@ -129,4 +129,11 @@ p {
 }
 .posts-date, .posts-description {
   font-size: .618em;
+}
+@media (-moz-max-device-pixel-ratio: 1),
+       (-webkit-max-device-pixel-ratio: 1),
+       (max-device-pixel-ratio: 1) {
+  .article-header-bar, .posts-date, .posts-description {
+    font-size: 12px;
+  }
 }
