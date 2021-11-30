@@ -34,7 +34,7 @@
             <% if (post.properties.summary) { %>
               <p><em><%= post.properties.summary %></em></p>
             <% } %>
-            <p class="article-date">
+            <p class="article-header-bar">
               <%= post.dateLocale %>
               <% if (post.properties.source) { %>
                 ｜
@@ -46,6 +46,11 @@
           </header>
         <% } %>
         <%- post.html %>
+        <% if (post.properties.iframe) { %>
+          <div class="iframe-wrapper">
+            <iframe src="<%= post.properties.iframe %>" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no"></iframe>
+          </div>
+        <% } %>
         <% if (post.properties.source && (!post.properties.type || post.properties.type === 'article')) { %>
           <hr>
           <p><a href="<%= post.properties.source %>">原文</a></p>
