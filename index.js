@@ -28,7 +28,7 @@ const _siteDir = `${__dirname}/_site`
       dateLocale,
       title,
       properties,
-      html: marked(markdown)
+      html: marked.parse(markdown)
     }
   }))
 
