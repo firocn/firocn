@@ -15,7 +15,8 @@ body > header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: .309rem;
+  padding-top: calc(1.618rem - 21px);
+  margin-bottom: calc(2.618rem - 21px);
 }
 article {
   line-height: 1.618;
@@ -77,7 +78,7 @@ hr {
 }
 h1 {
   font-size: 2.618rem;
-  margin: .618em 0 0;
+  margin: 0;
 }
 h2 {
   font-size: 1.618rem;
@@ -121,8 +122,10 @@ p {
   padding: 0;
 }
 .posts li {
-  margin: 0.382em 0;
   margin: 1.618em 0;
+}
+.posts li:first-child {
+  margin-top: 0;
 }
 .posts li a {
   font-weight: bold;
