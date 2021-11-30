@@ -28,6 +28,7 @@ article > header {
 }
 .article-header-bar {
   font-size: .618em;
+  font-size: max(.618em, 12px);
 }
 article img {
   max-width: 100%;
@@ -129,11 +130,5 @@ p {
 }
 .posts-date, .posts-description {
   font-size: .618em;
-}
-@media (-moz-max-device-pixel-ratio: 1),
-       (-webkit-max-device-pixel-ratio: 1),
-       (max-device-pixel-ratio: 1) {
-  .article-header-bar, .posts-date, .posts-description {
-    font-size: 12px;
-  }
+  font-size: max(.618em, 12px);
 }
