@@ -60,12 +60,14 @@ article a {
   color: #9b1c2e;
   text-decoration: none;
 }
-article a:hover {
-  color: #ba2a45;
-}
-article a:active {
-  color: white;
-  background-color: #7c1624;
+@media (hover: hover) {
+  article a:hover {
+    color: #ba2a45;
+  }
+  article a:active {
+    color: white;
+    background-color: #7c1624;
+  }
 }
 h1, h2 {
   text-align: left;
@@ -110,12 +112,14 @@ p {
   text-decoration: none;
   color: inherit;
 }
-.menu a:hover {
-  color: #ba2a45;
-}
-.menu a:active {
-  color: white;
-  background-color: #7c1624;
+@media (hover: hover) {
+  .menu a:hover {
+    color: #ba2a45;
+  }
+  .menu a:active {
+    color: white;
+    background-color: #7c1624;
+  }
 }
 .posts {
   list-style: none;
