@@ -17,12 +17,12 @@
 
 ## 微信
 
-<img src="<%= imgsURL %>/wechat.webp" alt="微信公众号">
+![微信公众号](<%= imgsURL %>/wechat.webp)
 
 ## 微博
 
-<a href="https://weibo.com/u/6140252510"><img src="<%= imgsURL %>/weibo.webp" alt="微博" style="display: initial; vertical-align: middle;"></a>
+[![微博](<%= imgsURL %>/weibo.webp)](https://weibo.com/u/6140252510)
 
 ## QQ
 
-<img src="<%= imgsURL %>/qq.webp" alt="QQ">
+[![QQ](<%= imgsURL %>/qq.webp)](https://jq.qq.com/?_wv=1027&k=JzGzHApT)

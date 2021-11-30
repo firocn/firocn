@@ -16,14 +16,16 @@ const _siteDir = `${__dirname}/_site`
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
     const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]
+    const dateMatchResult = date && date.match(dateRegexp)
     const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
+    const dateLocale = dateMatchResult && `${dateMatchResult[1]} 年 ${+dateMatchResult[2]} 月 ${+dateMatchResult[3]} 日`
     const properties = propertiesMatchResult && propertiesMatchResult[1] ? JSON.parse(propertiesMatchResult[1]) : {}
     const markdown = ejs.render(markdownRaw, siteData)
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
     return {
       filename: postFilename,
       date,
-      dateLocale: date && date.replace(dateRegexp, '$1 年 $2 月 $3 日'),
+      dateLocale,
       title,
       properties,
       html: marked(markdown)
