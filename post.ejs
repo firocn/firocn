@@ -47,9 +47,9 @@
         <% } %>
         <%- post.html %>
         <% if (post.properties.iframe) { %>
-          <div class="iframe-wrapper">
+          <p class="iframe-wrapper">
             <iframe src="<%= post.properties.iframe %>" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no"></iframe>
-          </div>
+          </p>
         <% } %>
         <% if (post.properties.source && (!post.properties.type || post.properties.type === 'article')) { %>
           <hr>
