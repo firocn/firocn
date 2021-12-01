@@ -20,7 +20,6 @@ body > header {
 }
 article {
   line-height: 1.618;
-  text-align: justify;
   overflow-wrap: break-word;
 }
 article > header {
@@ -96,6 +95,7 @@ h3 {
 }
 p {
   margin: 1em 0;
+  text-align: justify;
 }
 .logo img {
   display: block;
@@ -140,4 +140,7 @@ p {
 }
 .posts-date, .posts-description {
   font-size: .618em;
+}
+.posts-description {
+  text-align: justify;
 }
