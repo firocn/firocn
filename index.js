@@ -2,6 +2,7 @@ const ejs = require('ejs')
 const path = require('path')
 const fs = require('fs')
 const marked = require("marked")
+const sizeOf = require('image-size')
 
 marked.setOptions({ breaks: true })
 
@@ -21,6 +22,17 @@ const _siteDir = `${__dirname}/_site`
     const dateLocale = dateMatchResult && `${dateMatchResult[1]} 年 ${+dateMatchResult[2]} 月 ${+dateMatchResult[3]} 日`
     const properties = propertiesMatchResult && propertiesMatchResult[1] ? JSON.parse(propertiesMatchResult[1]) : {}
     const markdown = ejs.render(markdownRaw, siteData)
+    let html = marked.parse(markdown)
+    const imgRegexp = /<img(.+?)src="(.+?)"(.+?)>/g
+    const imgMatchResults = html.matchAll(imgRegexp)
+    for (result of imgMatchResults) {
+      const originalImgTag = result[0]
+      const url = result[2]
+      if (url.startsWith('http')) continue
+      const { width, height } = await sizeOf(url)
+      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="$2" width="${width}" height="${height}" $3>`)
+      html = html.replaceAll(originalImgTag, newImgTag)
+    }
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
     return {
       filename: postFilename,
@@ -28,7 +40,7 @@ const _siteDir = `${__dirname}/_site`
       dateLocale,
       title,
       properties,
-      html: marked.parse(markdown)
+      html
     }
   }))
 
