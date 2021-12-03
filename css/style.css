@@ -7,11 +7,11 @@ body {
   background-color: #9b1c2e;
   color: white;
 }
-body > header, body > main {
+nav, body > main {
   max-width: 40rem;
   margin: 0 auto;
 }
-body > header {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -129,9 +129,21 @@ p {
 .posts {
   list-style: none;
   padding: 0;
+  font-size: 1.214em;
+  position: relative;
+}
+.posts:before {
+  content: '';
+  border-left: 1px dotted #cfcccc;
+  position: absolute;
+  left: calc(1.309rem - .5px);
+  top: -2rem;
+  bottom: 0;
+  margin: auto;
 }
 .posts li {
   margin: 1.618em 0;
+  display: flex;
 }
 .posts li:first-child {
   margin-top: 0;
@@ -142,6 +154,21 @@ p {
 .posts-date, .posts-description {
   font-size: .618em;
 }
+.posts-date {
+  margin-right: 1em;
+  color: #3d3939;
+  line-height: 2.618;
+}
+.posts-date-text {
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+.posts-body {
+  flex: 1
+}
 .posts-description {
   text-align: justify;
+  font-style: italic;
+  color: #3d3939;
 }
