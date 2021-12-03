@@ -73,6 +73,9 @@ article a {
     background-color: #7c1624;
   }
 }
+article > footer {
+  margin: 2.618em 0 1em;
+}
 h1, h2 {
   text-align: left;
 }
@@ -134,7 +137,7 @@ p {
 }
 .posts:before {
   content: '';
-  border-left: 1px dotted #cfcccc;
+  border-left: 1px solid #f4f4f4;
   position: absolute;
   left: calc(1.309rem - .5px);
   top: -2.1545rem;
@@ -142,7 +145,7 @@ p {
   margin: auto;
 }
 .posts li {
-  margin: 1.618em 0;
+  margin: 2.0112785rem 0;
   display: flex;
 }
 .posts li:first-child {
@@ -156,7 +159,6 @@ p {
 }
 .posts-date {
   margin-right: 1rem;
-  color: #3d3939;
   line-height: 2.236;
   margin-top: 0.191em;
 }
@@ -176,6 +178,5 @@ p {
 .posts-description {
   text-align: justify;
   font-style: italic;
-  color: #3d3939;
   margin-top: 0.0113rem;
 }
