@@ -7,11 +7,11 @@ body {
   background-color: #9b1c2e;
   color: white;
 }
-body > header, body > main {
+nav, body > main {
   max-width: 40rem;
   margin: 0 auto;
 }
-body > header {
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
