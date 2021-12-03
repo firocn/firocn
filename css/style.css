@@ -137,7 +137,7 @@ p {
 }
 .posts:before {
   content: '';
-  border-left: 1px solid #f4f4f4;
+  border-left: 1px dashed;
   position: absolute;
   left: calc(1.309rem - .5px);
   top: -2.1545rem;
