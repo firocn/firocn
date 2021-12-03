@@ -137,7 +137,7 @@ p {
   border-left: 1px dotted #cfcccc;
   position: absolute;
   left: calc(1.309rem - .5px);
-  top: -2rem;
+  top: -2.1545rem;
   bottom: 0;
   margin: auto;
 }
@@ -157,7 +157,13 @@ p {
 .posts-date {
   margin-right: 1rem;
   color: #3d3939;
-  line-height: 2.618;
+  line-height: 2.236;
+  margin-top: 0.191em;
+}
+.posts li:last-child .posts-date {
+  background-color: white;
+  z-index: 1;
+  position: relative;
 }
 .posts-date-text {
   background-color: white;
