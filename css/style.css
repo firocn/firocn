@@ -73,6 +73,9 @@ article a {
     background-color: #7c1624;
   }
 }
+article > footer {
+  margin: 2.618em 0 1em;
+}
 h1, h2 {
   text-align: left;
 }
@@ -129,9 +132,21 @@ p {
 .posts {
   list-style: none;
   padding: 0;
+  font-size: 1.214em;
+  position: relative;
+}
+.posts:before {
+  content: '';
+  border-left: 1px dashed;
+  position: absolute;
+  left: calc(1.309rem - .5px);
+  top: -2.1545rem;
+  bottom: 0;
+  margin: auto;
 }
 .posts li {
-  margin: 1.618em 0;
+  margin: 2.0112785rem 0;
+  display: flex;
 }
 .posts li:first-child {
   margin-top: 0;
@@ -142,6 +157,25 @@ p {
 .posts-date, .posts-description {
   font-size: .618em;
 }
+.posts-date {
+  margin-right: 1rem;
+  line-height: 2.236;
+  margin-top: 0.191em;
+}
+.posts li:last-child .posts-date {
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+.posts-date-text {
+  background-color: white;
+  z-index: 1;
+  position: relative;
+}
+.posts-body {
+  flex: 1
+}
 .posts-description {
   text-align: justify;
+  font-style: italic;
 }

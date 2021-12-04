@@ -52,8 +52,7 @@
           </p>
         <% } %>
         <% if (post.properties.source && (!post.properties.type || post.properties.type === 'article')) { %>
-          <hr>
-          <p><a href="<%= post.properties.source %>">原文</a></p>
+          <footer><a href="<%= post.properties.source %>">原文</a></footer>
         <% } %>
       </article>
     </main>
