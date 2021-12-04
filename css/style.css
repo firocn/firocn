@@ -1,10 +1,16 @@
+:root {
+  --link-color: #9b1c2e;
+  --link-color-1: #ba2a45;
+  --link-color-2: #7c1624;
+  --background-color: white;
+}
 body {
   margin: 0;
   padding: 0 1.618rem 1.618rem;
   font-family: sans-serif;
 }
 ::selection {
-  background-color: #9b1c2e;
+  background-color: var(--link-color);
   color: white;
 }
 nav, body > main {
@@ -47,6 +53,22 @@ iframe {
 .iframe-wrapper {
   height: 22.5em;
   overflow: hidden;
+  position: relative;
+}
+.iframe-wrapper:after {
+  content: '加载中';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+.iframe-wrapper.loaded:after {
+  display: none;
 }
 @media (max-width: 43.236rem) {
   article img, .iframe-wrapper {
@@ -61,16 +83,16 @@ iframe {
   }
 }
 article a {
-  color: #9b1c2e;
+  color: var(--link-color);
   text-decoration: none;
 }
 @media (hover: hover) {
   article a:hover {
-    color: #ba2a45;
+    color: var(--link-color-1);
   }
   article a:active {
     color: white;
-    background-color: #7c1624;
+    background-color: var(--link-color-2);
   }
 }
 article > footer {
@@ -110,7 +132,7 @@ p {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: #9b1c2e;
+  color: var(--link-color);
   display: flex;
 }
 .menu li:not(:first-child) {
@@ -122,11 +144,11 @@ p {
 }
 @media (hover: hover) {
   .menu a:hover {
-    color: #ba2a45;
+    color: var(--link-color-1);
   }
   .menu a:active {
     color: white;
-    background-color: #7c1624;
+    background-color: var(--link-color-2);
   }
 }
 .posts {
@@ -163,12 +185,12 @@ p {
   margin-top: 0.191em;
 }
 .posts li:last-child .posts-date {
-  background-color: white;
+  background-color: var(--background-color);
   z-index: 1;
   position: relative;
 }
 .posts-date-text {
-  background-color: white;
+  background-color: var(--background-color);
   z-index: 1;
   position: relative;
 }
@@ -178,4 +200,24 @@ p {
 .posts-description {
   text-align: justify;
   font-style: italic;
+}
+.logo .logo-img-dark-mode {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    background-color: black;
+    --link-color: #ba2a45;
+    --link-color-1: #9b1c2e;
+  }
+  body {
+    color: white;
+  }
+  .logo .logo-img-default {
+    display: none;
+  }
+  .logo .logo-img-dark-mode {
+    display: block;
+  }
 }

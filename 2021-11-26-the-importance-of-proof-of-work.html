@@ -18,7 +18,10 @@
   </head>
   <body>
     <nav>
-      <a href="index.html" class="logo" target="_self"><img src="imgs/Firo logo dark.svg" alt="Firo" height="84"></a>
+      <a href="index.html" class="logo" target="_self">
+        <img class="logo-img-default" src="imgs/Firo logo.svg" alt="Firo 中文社区" height="84">
+        <img class="logo-img-dark-mode" src="imgs/Firo logo dark mode.svg" alt="Firo 中文社区" height="84">
+      </a>
       <ul class="menu">
         
           <li><a href="community.html" target="_self">社区</a></li>
@@ -47,8 +50,9 @@
         
         
         
+          <noscript>需要浏览器启用 JavaScript</noscript>
           <p class="iframe-wrapper">
-            <iframe src="https://h5.video.weibo.com/show/1034:4708415034032172" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no"></iframe>
+            <iframe onload="document.querySelector('.iframe-wrapper').classList.add('loaded')" src="https://h5.video.weibo.com/show/1034:4708415034032172" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no"></iframe>
           </p>
         
         
