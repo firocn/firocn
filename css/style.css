@@ -188,6 +188,9 @@ p {
 .logo .logo-img-dark-mode {
   display: none;
 }
+noscript {
+  display: none;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: black;
@@ -209,5 +212,8 @@ p {
   }
   .iframe-wrapper.loaded {
     visibility: visible;
+  }
+  noscript {
+    display: block;
   }
 }
