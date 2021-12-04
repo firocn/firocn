@@ -53,22 +53,6 @@ iframe {
 .iframe-wrapper {
   height: 22.5em;
   overflow: hidden;
-  position: relative;
-}
-.iframe-wrapper:after {
-  content: '加载中';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-color);
-}
-.iframe-wrapper.loaded:after {
-  display: none;
 }
 @media (max-width: 43.236rem) {
   article img, .iframe-wrapper {
@@ -219,5 +203,11 @@ p {
   }
   .logo .logo-img-dark-mode {
     display: block;
+  }
+  .iframe-wrapper {
+    visibility: hidden;
+  }
+  .iframe-wrapper.loaded {
+    visibility: visible;
   }
 }
