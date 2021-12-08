@@ -31,7 +31,6 @@ article {
 }
 article > header {
   margin-bottom: 2.618rem;
-  text-align: initial;
 }
 .article-header-bar {
   font-size: .618em;
