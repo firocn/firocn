@@ -3,6 +3,7 @@
   --link-color-1: #ba2a45;
   --link-color-2: #7c1624;
   --background-color: white;
+  --gray: #f4f4f4;
 }
 body {
   margin: 0;
@@ -53,7 +54,7 @@ iframe {
 .iframe-wrapper {
   height: 22.5em;
   overflow: hidden;
-  background-color: #f4f4f4;
+  background-color: var(--gray);
 }
 @media (max-width: 43.236rem) {
   article img, .iframe-wrapper {
@@ -61,6 +62,7 @@ iframe {
   }
   article img {
     max-width: calc(100% + 3.236rem);
+    width: calc(100% + 3.236rem);
   }
   .iframe-wrapper {
     width: calc(100% + 3.236rem);
@@ -90,7 +92,7 @@ hr {
   border: none;
   margin: 1.618rem 0;
   height: 1px;
-  background-color: #f4f4f4;
+  background-color: var(--gray);
 }
 h1 {
   font-size: 2.618rem;
@@ -150,6 +152,7 @@ p {
   top: -2.1545rem;
   bottom: 0;
   margin: auto;
+  pointer-events: none;
 }
 .posts li {
   margin: 2.0112785rem 0;
@@ -198,6 +201,7 @@ noscript {
     background-color: black;
     --link-color: #ba2a45;
     --link-color-1: #9b1c2e;
+    --gray: #0b0b0b;
   }
   body {
     color: white;
@@ -209,7 +213,7 @@ noscript {
     display: block;
   }
   .iframe-wrapper {
-    background-color: #0b0b0b;
+    background-color: var(--gray);
   }
   .iframe-wrapper iframe {
     visibility: hidden;
