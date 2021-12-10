@@ -116,6 +116,7 @@ p {
 .logo img {
   display: block;
   margin-left: -21px;
+  background: initial;
 }
 .menu {
   list-style: none;
