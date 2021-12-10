@@ -60,7 +60,7 @@ iframe {
   overflow: hidden;
   background-color: var(--gray);
 }
-@media (max-width: 43.236rem) {
+@media screen and (max-width: 43.236rem) {
   article img, .iframe-wrapper {
     margin-left: -1.618rem;
   }
