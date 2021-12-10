@@ -10,17 +10,12 @@
     <meta property="og:site_name" content="Firo 中文社区">
     <meta property="og:description" content="金融隐私焕新">
     <meta name="twitter:title" content="Firo 中文社区">
-    <meta name="theme-color" content="#9b1c2e">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://firo.org/img/meta/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://firo.org/img/meta/favicon-16x16.png">
+    <%- include('head-common') %>
   </head>
   <body>
     <nav>
       <a href="index.html" class="logo">
-        <img class="logo-img-default" src="<%= imgsURL %>/Firo logo.svg" alt="Firo 中文社区" height="84">
-        <img class="logo-img-dark-mode" src="<%= imgsURL %>/Firo logo dark mode.svg" alt="Firo 中文社区" height="84">
+        <%- include('logo-picture') %>
       </a>
       <ul class="menu">
         <li><a href="community.html">社区</a></li>
@@ -42,5 +37,6 @@
         </ul>
       </artiel>
     </main>
+    <script src="js/script.js"></script>
   </body>
 </html>

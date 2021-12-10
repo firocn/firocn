@@ -62,6 +62,7 @@ const _siteDir = `${__dirname}/_site`
   })
 
   copyDir('css')
+  copyDir('js')
   copyDir('imgs')
   copyFile('googleced77188be24025c.html')
 })()
