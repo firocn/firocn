@@ -26,8 +26,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: calc(1.618rem - 21px);
-  margin-bottom: calc(2.618rem - 21px);
+  padding-top: calc(1.618rem - 1.3125rem);
+  margin-bottom: calc(2.618rem - 1.3125rem);
 }
 article {
   line-height: 1.618;
@@ -41,6 +41,7 @@ article > header {
 }
 article img {
   max-width: 100%;
+  min-width: 38.2%;
   margin: 0 auto;
   padding: 0.309rem 0;
   display: block;
@@ -94,7 +95,7 @@ h1, h2 {
 hr {
   border: none;
   margin: 1.618rem 0;
-  height: 1px;
+  height: .0625rem;
   background-color: var(--gray);
 }
 h1 {
@@ -115,8 +116,9 @@ p {
 }
 .logo img {
   display: block;
-  margin-left: -21px;
+  margin-left: -1.3125rem;
   background: initial;
+  height: 5.25rem;
 }
 .menu {
   list-style: none;
@@ -150,9 +152,9 @@ p {
 }
 .posts:before {
   content: '';
-  border-left: 1px dashed;
+  border-left: .0625rem dashed;
   position: absolute;
-  left: calc(1.309rem - .5px);
+  left: calc(1.309rem - .03125rem);
   top: -2.1545rem;
   bottom: 0;
   margin: auto;
