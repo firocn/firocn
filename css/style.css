@@ -14,14 +14,6 @@ body {
   background-color: var(--link-color);
   color: white;
 }
-picture {
-  background-color: var(--gray);
-  background-clip: content-box;
-  display: block;
-}
-img {
-  background-color: var(--background-color);
-}
 nav, body > main {
   max-width: 40rem;
   margin: 0 auto;
@@ -49,12 +41,8 @@ article img {
   padding: 0.309rem 0;
   display: block;
   height: auto;
-}
-article picture {
-  padding: 0.309rem 0;
-}
-article picture img {
-  padding: 0;
+  background-color: var(--gray);
+  background-clip: content-box;
 }
 article a img {
   display: initial;
@@ -70,10 +58,10 @@ iframe {
   background-color: var(--gray);
 }
 @media (max-width: 43.236rem) {
-  article picture, article :not(picture) > img, .iframe-wrapper {
+  article img, .iframe-wrapper {
     margin-left: -1.618rem;
   }
-  article picture, article :not(picture) > img {
+  article img {
     max-width: calc(100% + 3.236rem);
     width: calc(100% + 3.236rem);
   }
