@@ -159,7 +159,7 @@ p {
   pointer-events: none;
 }
 .posts li {
-  margin: 2.0112785rem 0;
+  margin: 1.618rem 0;
   display: flex;
 }
 .posts li:first-child {
