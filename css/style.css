@@ -1,4 +1,5 @@
 :root {
+  --theme-color: #9b1c2e;
   --link-color: #9b1c2e;
   --link-color-1: #ba2a45;
   --link-color-2: #7c1624;
@@ -11,7 +12,7 @@ body {
   font-family: sans-serif;
 }
 ::selection {
-  background-color: var(--link-color);
+  background-color: var(--theme-color);
   color: white;
 }
 img:not(.complete) {
@@ -125,7 +126,6 @@ p {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: var(--link-color);
   display: flex;
 }
 .menu li:not(:first-child) {
@@ -133,7 +133,7 @@ p {
 }
 .menu a {
   text-decoration: none;
-  color: inherit;
+  color: var(--link-color);
 }
 @media (hover: hover) {
   .menu a:hover {
@@ -201,8 +201,8 @@ noscript {
   :root {
     --background-color: black;
     background-color: black;
-    --link-color: #ba2a45;
-    --link-color-1: #9b1c2e;
+    --link-color: #ff2e4c;
+    --link-color-1: #ff2e4c;
     --gray: #0b0b0b;
   }
   body {
