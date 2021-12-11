@@ -1,7 +1,7 @@
 :root {
-  --link-color: #9b1c2e;
-  --link-color-1: #ba2a45;
-  --link-color-2: #7c1624;
+  --theme-color: #9b1c2e;
+  --theme-color-1: #ba2a45;
+  --theme-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
 }
@@ -11,7 +11,7 @@ body {
   font-family: sans-serif;
 }
 ::selection {
-  background-color: var(--link-color);
+  background-color: var(--theme-color);
   color: white;
 }
 img:not(.complete) {
@@ -74,16 +74,16 @@ iframe {
   }
 }
 article a {
-  color: var(--link-color);
+  color: var(--theme-color);
   text-decoration: none;
 }
 @media (hover: hover) {
   article a:hover {
-    color: var(--link-color-1);
+    color: var(--theme-color-1);
   }
   article a:active {
     color: white;
-    background-color: var(--link-color-2);
+    background-color: var(--theme-color-2);
   }
 }
 article > footer {
@@ -125,7 +125,6 @@ p {
   margin: 0;
   padding: 0;
   font-weight: bold;
-  color: var(--link-color);
   display: flex;
 }
 .menu li:not(:first-child) {
@@ -133,15 +132,15 @@ p {
 }
 .menu a {
   text-decoration: none;
-  color: inherit;
+  color: var(--theme-color);
 }
 @media (hover: hover) {
   .menu a:hover {
-    color: var(--link-color-1);
+    color: var(--theme-color-1);
   }
   .menu a:active {
     color: white;
-    background-color: var(--link-color-2);
+    background-color: var(--theme-color-2);
   }
 }
 .posts {
@@ -201,9 +200,11 @@ noscript {
   :root {
     --background-color: black;
     background-color: black;
-    --link-color: #ba2a45;
-    --link-color-1: #9b1c2e;
     --gray: #0b0b0b;
+  }
+  .menu a, article a {
+    color: inherit;
+    border-bottom: .1em solid var(--theme-color);
   }
   body {
     color: white;
