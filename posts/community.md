@@ -3,7 +3,7 @@
     text-align: center;
   }
   article img {
-    width: 25em;
+    width: 21.63em;
     max-width: 100%;
     margin: 0 auto;
   }
