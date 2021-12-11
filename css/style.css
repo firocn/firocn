@@ -1,7 +1,8 @@
 :root {
   --theme-color: #9b1c2e;
-  --theme-color-1: #ba2a45;
-  --theme-color-2: #7c1624;
+  --link-color: #9b1c2e;
+  --link-color-1: #ba2a45;
+  --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
 }
@@ -74,16 +75,16 @@ iframe {
   }
 }
 article a {
-  color: var(--theme-color);
+  color: var(--link-color);
   text-decoration: none;
 }
 @media (hover: hover) {
   article a:hover {
-    color: var(--theme-color-1);
+    color: var(--link-color-1);
   }
   article a:active {
     color: white;
-    background-color: var(--theme-color-2);
+    background-color: var(--link-color-2);
   }
 }
 article > footer {
@@ -132,15 +133,15 @@ p {
 }
 .menu a {
   text-decoration: none;
-  color: var(--theme-color);
+  color: var(--link-color);
 }
 @media (hover: hover) {
   .menu a:hover {
-    color: var(--theme-color-1);
+    color: var(--link-color-1);
   }
   .menu a:active {
     color: white;
-    background-color: var(--theme-color-2);
+    background-color: var(--link-color-2);
   }
 }
 .posts {
@@ -200,8 +201,8 @@ noscript {
   :root {
     --background-color: black;
     background-color: black;
-    --theme-color: #ff2e4c;
-    --theme-color-1: #ff2e4c;
+    --link-color: #ff2e4c;
+    --link-color-1: #ff2e4c;
     --gray: #0b0b0b;
   }
   body {
