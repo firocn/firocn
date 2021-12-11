@@ -200,11 +200,9 @@ noscript {
   :root {
     --background-color: black;
     background-color: black;
+    --theme-color: #ff2e4c;
+    --theme-color-1: #ff2e4c;
     --gray: #0b0b0b;
-  }
-  .menu a, article a {
-    color: inherit;
-    border-bottom: .1em solid var(--theme-color);
   }
   body {
     color: white;
