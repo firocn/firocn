@@ -9,6 +9,9 @@
     <meta property="og:title" content="<%= post.title %>">
     <meta property="og:description" content="<%= post.properties.description %>">
     <meta name="twitter:title" content="<%= post.title %>">
+    <meta name="twitter:description" content="<%= post.properties.description %>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="<%= post.properties.img || 'https://firo.org/img/meta/apple-touch-icon.png' %>">
     <%- include('head-common') %>
     <base target="_blank" />
   </head>
