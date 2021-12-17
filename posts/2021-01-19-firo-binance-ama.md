@@ -50,7 +50,7 @@ Facebook: [facebook.com/firoorg](https://www.facebook.com/firoorg)
 Lelantus 在 4 天前刚刚在主网上线，你可以在这里看到一个 Lelantus 交易的样本。
 
 [explorer.firo.org/tx/cbfc81cd42b9f080ee285075c9c9a43b22ba6ab0d2d5ccc728134536c08f4b32](https://explorer.firo.org/tx/cbfc81cd42b9f080ee285075c9c9a43b22ba6ab0d2d5ccc728134536c08f4b32)
-![Lelantus 交易](<%= imgsURL %>/lelantus_transaction.webp)
+![Lelantus 交易](lelantus_transaction.webp)
 
 如你所见，资金来源完全不可见，甚至连找零金额都是隐藏的。在 Lelantus 的第二个版本中，用户甚至可以将兑换币的权利传递给其他人，这将隐藏所有的金额！
 
@@ -168,4 +168,4 @@ ChainLocks 应该很快就会到来，所以请继续关注公告！你可以阅
 
 更多项目动态，尽情持续关注 Firo 官网：[firo.org](https://firo.org)
 
-<footer>来源：<a href="https://twitter.com/chainnewscom">ChainNews</a></footer>
+<footer>来源：<a href="https://twitter.com/chainnewscom">链闻 ChainNews</a></footer>

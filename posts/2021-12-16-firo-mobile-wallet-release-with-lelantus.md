@@ -2,10 +2,12 @@
   "title": "Firo 手机钱包发布",
   "summary": "采用 Lelantus 隐私技术的本地手机钱包",
   "description": "采用 Lelantus 隐私技术的本地手机钱包",
+  "img": "firo-mobile-wallet-release.png",
+  "author": "Reuben Yap",
   "source": "https://firo.org/2021/12/16/firo-mobile-wallet-release-with-lelantus.html"
 } %>
 
-![Firo Mobile Wallet Release](<%= imgsURL %>/firo-mobile-wallet-release.webp)
+![Firo 手机钱包发布](firo-mobile-wallet-release.webp)
 
 我们很自豪地发布我们 [Firo 的原生手机钱包](https://firo.org/zh-cn/get-firo/download/)，默认启用 [Lelantus 隐私](https://eprint.iacr.org/2019/373)！Firo 的 Lelantus 技术允许你向他人发送没有任何交易记录的币，并隐藏发送方，不透露你的任何信息。
 

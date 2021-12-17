@@ -10,8 +10,12 @@
     <meta property="og:description" content="<%= post.properties.description %>">
     <meta name="twitter:title" content="<%= post.title %>">
     <meta name="twitter:description" content="<%= post.properties.description %>">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="<%= post.properties.img || 'https://firo.org/img/meta/apple-touch-icon.png' %>">
+    <% if (post.img) { %>
+      <meta name="twitter:card" content="summary_large_image">
+    <% } else { %>
+      <meta name="twitter:card" content="summary">
+    <% } %>
+    <meta name="twitter:image" content="<%= post.img || 'https://firo.org/img/meta/apple-touch-icon.png' %>">
     <%- include('head-common') %>
     <base target="_blank" />
   </head>
@@ -37,6 +41,10 @@
             <% } %>
             <p class="article-header-bar">
               <%= post.dateLocale %>
+              <% if (post.properties.author) { %>
+                ｜
+                <%= post.properties.author %>
+              <% } %>
               <% if (post.properties.source) { %>
                 ｜
                 <a href="<%= post.properties.source %>">

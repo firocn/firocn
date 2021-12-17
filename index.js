@@ -4,6 +4,8 @@ const fs = require('fs')
 const marked = require("marked")
 const sizeOf = require('image-size')
 
+const config = require('./config')
+
 marked.setOptions({ breaks: true })
 
 const siteData = { imgsURL: 'imgs' }
@@ -27,10 +29,10 @@ const _siteDir = `${__dirname}/_site`
     const imgMatchResults = html.matchAll(imgRegexp)
     for (result of imgMatchResults) {
       const originalImgTag = result[0]
-      const url = result[2]
+      const url = autoPrefixImgURL(result[2])
       if (url.startsWith('http')) continue
       const { width, height } = await sizeOf(url)
-      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="$2" width="${width}" height="${height}" $3>`)
+      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${url}" width="${width}" height="${height}" $3>`)
       html = html.replaceAll(originalImgTag, newImgTag)
     }
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
@@ -40,6 +42,7 @@ const _siteDir = `${__dirname}/_site`
       dateLocale,
       title,
       properties,
+      img: properties.img && autoPrefixImgURL(properties.img, config.siteURL),
       html
     }
   }))
@@ -122,4 +125,9 @@ function copyFile(fullFilename) {
     path.normalize(`${_siteDir}/${fullFilename}`),
     err => { if (err) throw err }
   )
+}
+
+function autoPrefixImgURL(url, siteURL) {
+  return url.startsWith('http') ? url :
+    (siteURL ? `${siteURL}/${siteData.imgsURL}/${url}` : `${siteData.imgsURL}/${url}`)
 }
