@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MTP 剥离在 Firo 上线｜Firo 中文社区 - 金融隐私焕新</title>
+    <meta name="description" content="MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下">
+    <meta property="og:image" content="https://firo.org/blog/assets/mtp-data-stripping.png">
+    <meta property="og:title" content="MTP 剥离在 Firo 上线">
+    <meta property="og:description" content="MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下">
+    <meta name="twitter:title" content="MTP 剥离在 Firo 上线">
+    <meta name="twitter:description" content="MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下">
+    
+      <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="twitter:image" content="https://firo.org/blog/assets/mtp-data-stripping.png">
+    <meta name="theme-color" content="#9b1c2e">
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+  <style>
+    img:not(.complete) {
+      background: initial;
+    }
+  </style>
+</noscript>
+<link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://firo.org/img/meta/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://firo.org/img/meta/favicon-16x16.png">
+
+    <base target="_blank" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo" target="_self">
+        <picture>
+  <source srcset="imgs/firo_logo_dark_mode.svg" media="(prefers-color-scheme: dark)">
+  <img importance="high" src="imgs/firo_logo.svg" alt="Firo 中文社区" height="84">
+</picture>
+
+      </a>
+      <ul class="menu">
+        
+          <li><a href="community.html" target="_self">社区</a></li>
+        
+        <li><a href="index.html" target="_self">动态</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        
+          <header>
+            <h1>MTP 剥离在 Firo 上线</h1>
+            
+              <p><em>更小的区块链来了！</em></p>
+            
+            <p class="article-header-bar">
+              2021 年 12 月 19 日
+              
+                ｜
+                Reuben Yap
+              
+              
+                ｜
+                <a href="https://firo.org/2021/12/19/mtp-stripping-live-on-firo.html">
+                  原文
+                </a>
+              
+            </p>
+          </header>
+        
+        <p><img src="https://firo.org/blog/assets/day-4-mtp-stripping.png" alt="MTP 剥离"></p>
+<p>在<a href="https://github.com/firoorg/firo/releases">我们的最新版本</a>中，<a href="https://firo.org/2021/11/08/mtp-data-stripping.html">MTP 剥离</a>现在已经在 Firo 上线。MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下，降低了节点要求，也使其可以在普通计算设备上运行，特别是在空间宝贵的 SSD 上。</p>
+<p>MTP 剥离的作用是删除我们之前 PoW 中不需要的 <a href="https://arxiv.org/pdf/1606.03588.pdf">MTP 数据证明</a>。如果需要，节点仍然可以选择保留这些证明。随着越来越多的节点使用 MTP 剥离模式，节点也会以剥离的形式推送旧块，大大减少了进行全新同步所需的数据量。</p>
+<h2 id="如何进行-mtp-剥离">如何进行 MTP 剥离</h2>
+<p>一次全新同步将自动剥离 MTP 证明。如果你有一个现有的钱包，你想使用剥离的版本，你将需要清除你现有的区块链（但不要删除你的钱包文件），并重新同步，这可能需要一段时间，所以只有在你不急于使用你的钱包时才这样做。</p>
+<p>按照<a href="https://github.com/firoorg/firo/wiki/MTP-stripping">这个指南</a>来进行 MTP 剥离。请务必备份你的钱包！</p>
+<ol>
+<li>确保你的 Firo-QT 钱包没有在运行</li>
+<li>在你的 <a href="https://github.com/firoorg/firo/wiki/Default-data-directories">Firo 数据目录</a>中，删除以下文件夹<ul>
+<li>blocks</li>
+<li>chainstate</li>
+<li>evodb</li>
+<li>llmq</li>
+</ul>
+</li>
+<li>再次启动你的 Firo-QT 钱包。它将从头开始同步</li>
+</ol>
+
+        
+        
+          <footer><a href="https://firo.org/2021/12/19/mtp-stripping-live-on-firo.html">原文</a></footer>
+        
+      </article>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
