@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Elysium 测试网以及图形用户界面｜Firo 中文社区 - 金融隐私焕新</title>
+    <meta name="description" content="Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门，使 Firo 成为整个加密经济的隐私基础设施。">
+    <meta property="og:image" content="https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png">
+    <meta property="og:title" content="Elysium 测试网以及图形用户界面">
+    <meta property="og:description" content="Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门，使 Firo 成为整个加密经济的隐私基础设施。">
+    <meta name="twitter:title" content="Elysium 测试网以及图形用户界面">
+    <meta name="twitter:description" content="Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门，使 Firo 成为整个加密经济的隐私基础设施。">
+    
+      <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="twitter:image" content="https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png">
+    <meta name="theme-color" content="#9b1c2e">
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+  <style>
+    img:not(.complete) {
+      background: initial;
+    }
+  </style>
+</noscript>
+<link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://firo.org/img/meta/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://firo.org/img/meta/favicon-16x16.png">
+
+    <base target="_blank" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo" target="_self">
+        <picture>
+  <source srcset="imgs/firo_logo_dark_mode.svg" media="(prefers-color-scheme: dark)">
+  <img importance="high" src="imgs/firo_logo.svg" alt="Firo 中文社区" height="84">
+</picture>
+
+      </a>
+      <ul class="menu">
+        
+          <li><a href="community.html" target="_self">社区</a></li>
+        
+        <li><a href="index.html" target="_self">动态</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article>
+        
+          <header>
+            <h1>Elysium 测试网以及图形用户界面</h1>
+            
+            <p class="article-header-bar">
+              2021 年 12 月 22 日
+              
+                ｜
+                Reuben Yap
+              
+              
+                ｜
+                <a href="https://firo.org/2021/12/22/elysium-testnet-and-gui.html">
+                  原文
+                </a>
+              
+            </p>
+          </header>
+        
+        <p><img src="https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png" alt="Elysium 测试网以及图形用户界面"></p>
+<p>Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门。今天，我们很高兴在我们的测试网中开放 Elysium 进行测试！</p>
+<p>我们也正在敲定架构，以便通过去中心化的托管方将资产从其他链桥接到 Elysium，使 Firo 成为整个加密经济的隐私基础设施，以利用直接内置于协议中的隐私技术，允许便宜的隐私交易。</p>
+<p>要在测试网上使用 Elysium，请看下面的说明。我们仍在对 Elysium 进行微调，感谢任何反馈或 <a href="https://github.com/firoorg/firo/issues">Github</a> 上的错误报告。</p>
+<p><strong>此版本仅用于测试网。请勿与你的主网钱包一起使用。</strong></p>
+<p>测试网的二进制文件可<a href="https://github.com/firoorg/firo/releases">在此获得</a>。它们被标记为 <strong>Elysium Testnet</strong>。</p>
+<h2 id="在测试网上使用-elysium-启动钱包">在测试网上使用 Elysium 启动钱包</h2>
+<h3 id="windows：">Windows：</h3>
+<pre><code>firo-qt.exe -testnet -elysium
+</code></pre>
+<h3 id="linux：">Linux：</h3>
+<pre><code>./firo-qt -testnet -elysium
+</code></pre>
+<h3 id="macos：">macOS：</h3>
+<pre><code>./firo-qt -testnet -elysium
+</code></pre>
+<p>如果你在 macOS 的安全性设置方面有问题，请修改你的 <strong>firo.conf</strong> 并添加 <strong><code>testnet=1</code></strong></p>
+<h2 id="要求">要求</h2>
+<p>请使用<a href="https://testexplorer.firo.org/faucet">测试网水龙头</a>来获得测试网 FIRO。如果你需要更多，请在公共 Telegram 或 Discord 频道中联系 Anwar。</p>
+<p>公开的 Elysium 操作需要使用公开的 FIRO，而隐私的 Elysium 操作需要隐私的 FIRO。请根据需要进行匿名。</p>
+<h2 id="指南">指南</h2>
+<p><a href="https://gist.github.com/sproxet/a39e152fdbc4e7d552d09bdbba881ad5">这里</a>有一份关于 Elysium 的粗略指南。一个更全面的指南正在制定中。</p>
+<p><img src="https://firo.org/blog/assets/elysium-testnet/elysium-testnet-01.png" alt="elysium-testnet-01"></p>
+<p><img src="https://firo.org/blog/assets/elysium-testnet/elysium-testnet-02.png" alt="elysium-testnet-02"></p>
+
+        
+        
+          <footer><a href="https://firo.org/2021/12/22/elysium-testnet-and-gui.html">原文</a></footer>
+        
+      </article>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
