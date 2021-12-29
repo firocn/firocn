@@ -52,8 +52,8 @@ article a img {
   display: initial;
   vertical-align: middle;
 }
-pre, code {
-  font-family: Consolas, Monaco, monospace;
+code {
+  font-family: Consolas, monospace;
 }
 iframe {
   width: 100%;
