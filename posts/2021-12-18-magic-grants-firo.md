@@ -7,7 +7,7 @@
   "source": "https://firo.org/2021/12/18/magic-grants-firo.html"
 } %>
 
-![MAGIC Grants 现在接受 Firo](https://firo.org/blog/assets/day-3-magic-and-firo.png)
+![MAGIC Grants 现在接受 Firo](https://firo.org/blog/assets/day-3-magic-and-firo.png#size=8000x4000)
 
 [加密货币的多学科学术资助（MAGIC）Grants](https://magicgrants.org/) 现在支持 Firo 捐款！
 

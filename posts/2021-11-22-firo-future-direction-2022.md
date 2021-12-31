@@ -5,7 +5,7 @@
   "source": "https://firo.org/2021/11/22/firo-future-direction-2022.html"
 } %>
 
-![展望 2022 年](https://firo.org/blog/assets/firo_looking_ahead_2022.png)
+![展望 2022 年](https://firo.org/blog/assets/firo_looking_ahead_2022.png#size=1920x960)
 
 随着 2021 年底的临近，我们想分享 Firo 的核心团队在未来一年的计划，以及项目的总体方向。
 

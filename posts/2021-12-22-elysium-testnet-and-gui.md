@@ -6,7 +6,7 @@
   "source": "https://firo.org/2021/12/22/elysium-testnet-and-gui.html"
 } %>
 
-![Elysium 测试网以及图形用户界面](https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png)
+![Elysium 测试网以及图形用户界面](https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png#size=8000x4000)
 
 Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门。今天，我们很高兴在我们的测试网中开放 Elysium 进行测试！
 

@@ -7,7 +7,7 @@
   "source": "https://firo.org/2021/12/17/firo-wallet-gui-refresh.html"
 } %>
 
-![Firo GUI 用户界面重新设计](https://firo.org/blog/assets/gui-refresh/day-2-firo-gui-ui-redesign.png)
+![Firo GUI 用户界面重新设计](https://firo.org/blog/assets/gui-refresh/day-2-firo-gui-ui-redesign.png#size=8000x4000)
 
 我们很高兴发布对 QT 图形用户界面的更新，使其更符合 Firo 品牌，同时保留了以前 QT 钱包的熟悉布局。QT 钱包将永远是第一个获得最新功能的钱包，并迎合更多高级用户或想要更细粒度控制的用户。这个新的图形用户界面在我们最新的钱包版本 v0.14.9.2 中可用。
 

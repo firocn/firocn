@@ -5,7 +5,7 @@
   "source": "https://firo.org/2021/06/09/introducing-receiver-address-privacy-for-firo.html"
 } %>
 
-![推出 RAP 地址](https://firo.org/blog/assets/rap-launch/rap-launch.png)
+![推出 RAP 地址](https://firo.org/blog/assets/rap-launch/rap-launch.png#size=1920x960)
 
 我们很自豪地宣布在 Firo 的主网上推出接收方地址隐私（RAP）！RAP 允许用户公开发布他们的 RAP 地址而不影响隐私。你可以像分享电子邮件地址一样分享你的 RAP 地址。即使他们有你的 RAP 地址，也没有人可以知道你收到了多少付款或哪些交易是你的。
 

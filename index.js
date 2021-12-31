@@ -30,9 +30,13 @@ const _siteDir = `${__dirname}/_site`
     for (result of imgMatchResults) {
       const originalImgTag = result[0]
       const url = autoPrefixImgURL(result[2])
-      if (url.startsWith('http')) continue
-      const { width, height } = await sizeOf(url)
-      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${url}" width="${width}" height="${height}" $3>`)
+      let [width, height] = (url.match(/size=(\d+)x(\d+)/) || []).slice(1)
+      if (!width || !height) {
+        if (url.startsWith('http')) continue
+        ({ width, height } = await sizeOf(url))
+      }
+      const pureURL = url.replace(/#size=.+$/, '')
+      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${pureURL}" width="${width}" height="${height}" $3>`)
       html = html.replaceAll(originalImgTag, newImgTag)
     }
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]

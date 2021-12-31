@@ -7,7 +7,7 @@
   "source": "https://firo.org/2021/12/19/mtp-stripping-live-on-firo.html"
 } %>
 
-![MTP 剥离](https://firo.org/blog/assets/day-4-mtp-stripping.png)
+![MTP 剥离](https://firo.org/blog/assets/day-4-mtp-stripping.png#size=8000x4000)
 
 在[我们的最新版本](https://github.com/firoorg/firo/releases)中，[MTP 剥离](https://firo.org/2021/11/08/mtp-data-stripping.html)现在已经在 Firo 上线。MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下，降低了节点要求，也使其可以在普通计算设备上运行，特别是在空间宝贵的固态硬盘上。
 

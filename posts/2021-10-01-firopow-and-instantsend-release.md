@@ -5,7 +5,7 @@
   "source": "https://firo.org/2021/10/01/firopow-and-instantsend-release.html"
 } %>
 
-![FiroPoW 和即时发送随 Firo v0.14.9.0 发布](https://firo.org/blog/assets/firopow-instantsend-release.png)
+![FiroPoW 和即时发送随 Firo v0.14.9.0 发布](https://firo.org/blog/assets/firopow-instantsend-release.png#size=8001x4001)
 
 我们很自豪地宣布 Firo v0.14.9.0 的发布，它将启用 FiroPoW 和即时发送。这是一个强制性的更新，将于 10 月 26 日 6:00 UTC 在主网生效，所以你必须在此日期之前[将你的钱包和节点更新到 v0.14.9.0](https://firo.org/zh-cn/get-firo/download/)，以实现无缝过渡。
 
