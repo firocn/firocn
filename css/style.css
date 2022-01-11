@@ -40,7 +40,7 @@ article > header {
 .article-header-bar {
   font-size: .618em;
 }
-article img {
+article img, article video {
   max-width: 100%;
   min-width: 38.2%;
   margin: 0 auto;
@@ -65,10 +65,10 @@ iframe {
   background-color: var(--gray);
 }
 @media screen and (max-width: 38.236rem) {
-  article img, .iframe-wrapper {
+  article img, .iframe-wrapper, article video {
     margin-left: -1.618rem;
   }
-  article img {
+  article img, article video {
     max-width: calc(100% + 3.236rem);
     width: calc(100% + 3.236rem);
   }
