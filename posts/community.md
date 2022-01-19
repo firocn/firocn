@@ -11,7 +11,7 @@
 
 # Firo 中文社区
 
-## 电报群
+## Telegram
 
 [t.me/firo_zh](https://t.me/firo_zh)
 
