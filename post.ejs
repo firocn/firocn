@@ -32,7 +32,11 @@
       </ul>
     </nav>
     <main>
-      <article>
+      <% if (post.properties.language) {%>
+        <article lang="<%= post.properties.language %>">
+      <% } else { %>
+        <article>
+      <% } %>
         <% if (post.properties.title) { %>
           <header>
             <h1><%= post.properties.title %></h1>
