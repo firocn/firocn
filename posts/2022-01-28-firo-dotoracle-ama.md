@@ -1,6 +1,7 @@
 <%# {
   "title": "Firo x DotOracle AMA 回顾",
-  "author": "Reuben Yap"
+  "author": "Reuben Yap",
+  "source": "firo-dotoracle-ama.html"
 } %>
 
 ## 你能向社区介绍你自己和你的团队吗？
