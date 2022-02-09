@@ -8,7 +8,7 @@ const config = require('./config')
 
 marked.setOptions({ breaks: true })
 
-const siteData = { imgsURL: 'imgs' }
+const siteData = { imgsURL: 'imgs', siteURL: config.siteURL }
 
 const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
