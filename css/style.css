@@ -118,6 +118,9 @@ p {
   margin: 1em 0;
   text-align: justify;
 }
+article[lang|='en'] p {
+  text-align: initial;
+}
 .logo img {
   display: block;
   margin-left: -1.3125rem;
