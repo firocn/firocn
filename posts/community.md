@@ -13,7 +13,9 @@
 
 ## Telegram
 
-[t.me/firo_zh](https://t.me/firo_zh)
+👑 官方：[t.me/firo_zh](https://t.me/firo_zh)
+
+<!-- ~~🏴‍☠️ 爱好者：[t.me/firofanscn](https://t.me/firofanscn)~~ -->
 
 ## 微信
 
