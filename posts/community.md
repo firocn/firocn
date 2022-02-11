@@ -11,6 +11,10 @@
 
 # Firo 中文社区
 
+## Twitter
+
+[@firofanscn](https://twitter.com/firofanscn)
+
 ## Telegram
 
 👑 官方：[t.me/firo_zh](https://t.me/firo_zh)
