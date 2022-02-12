@@ -13,7 +13,7 @@
 
 ## Twitter
 
-[@firofanscn](https://twitter.com/firofanscn)
+[@firo_cn](https://twitter.com/firo_cn)
 
 ## Telegram
 
