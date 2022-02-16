@@ -55,7 +55,7 @@ const _siteDir = `${__dirname}/_site`
 
   render(
     path.normalize(`${__dirname}/index.ejs`),
-    { posts: posts.filter(p => p.date) },
+    { posts: posts.filter(p => p.date && !p.properties.hidden) },
     path.normalize(`${__dirname}/_site/index.html`)
   )
 
