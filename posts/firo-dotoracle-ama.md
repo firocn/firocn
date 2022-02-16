@@ -1,5 +1,6 @@
 <%# {
   "title": "Firo x DotOracle AMA Recap",
+  "description": "January 28, 2022",
   "author": "Reuben Yap",
   "language": "en"
 } %>
