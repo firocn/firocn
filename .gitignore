@@ -118,4 +118,4 @@ dist
 .pnp.*
 
 _site
-config.*
+config.js
