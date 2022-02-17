@@ -2,7 +2,7 @@
 
 ## 添加文章
 
-文章使用 [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 格式。在 posts 文件夹下新建 `.md` 文件。文件名格式为 `yyyy-mm-dd-title.md`。
+文章使用 [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 格式。在 posts 目录下新建 `.md` 文件。文件名格式为 `yyyy-mm-dd-title.md`。
 
 文件内容顶部是文章的属性，被 `<%# %>` 包裹的 [JSON](https://zh.wikipedia.org/wiki/JSON)。例子：
 
@@ -32,7 +32,22 @@
   <!-- 来源地址（可选） -->
   "source": "https://firo.org/2022/01/28/helsing-private-firo-masternode.html"
 } %>
+
+<!-- 以下为正文 -->
+...
 ```
+
+视频类型的文章请添加 `type` 和 `iframe` 属性（目前只支持 h5.video.weibo.com 微博视频），例子：
+```html
+...
+"type": "video",
+"iframe": "https://h5.video.weibo.com/show/1034:4661069545930830",
+...
+```
+
+### 图片
+
+放在 imgs 目录下，`.md` 文件中 `img` 的 `src` 直接填写文件名即可。不需要翻译的图片也可以直接引用官网 firo.org 的外链。
 
 ## 生成页面
 
