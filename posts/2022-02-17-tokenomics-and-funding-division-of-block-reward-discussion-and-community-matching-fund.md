@@ -5,6 +5,7 @@
   "img": "firo-discuz.jpg",
   "card": "summary",
   "author": "Reuben Yap",
+  "type": "forum",
   "source": "https://forum.firo.org/t/tokenomics-and-funding-division-of-block-reward-discussion-and-community-matching-fund"
 } %>
 

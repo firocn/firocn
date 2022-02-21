@@ -52,7 +52,7 @@
               <% if (post.properties.source) { %>
                 ｜
                 <a href="<%= post.properties.source %>">
-                  <%= post.properties.type === 'video' ? '原视频' : '原文' %>
+                  <%= ({ video: '原视频', forum: '进入论坛', article: '原文' })[post.properties.type || 'article'] %>
                 </a>
               <% } %>
             </p>
@@ -65,8 +65,8 @@
             <iframe onload="setTimeout(function () { document.querySelector('.iframe-wrapper').classList.add('loaded') }, 100)" src="<%= post.properties.iframe %>" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no" width="640" height="480"></iframe>
           </p>
         <% } %>
-        <% if (post.properties.source && (!post.properties.type || post.properties.type === 'article')) { %>
-          <footer><a href="<%= post.properties.source %>">原文</a></footer>
+        <% if (post.properties.source && post.properties.type != 'video') { %>
+          <footer><a href="<%= post.properties.source %>"><%= post.properties.type === 'forum' ? '进入论坛' : '原文' %></a></footer>
         <% } %>
       </article>
     </main>
