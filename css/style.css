@@ -21,7 +21,7 @@ img:not(.complete) {
   background-clip: content-box;
 }
 nav, body > main {
-  max-width: 35rem;
+  max-width: 38rem;
   margin: 0 auto;
 }
 nav {
@@ -49,10 +49,10 @@ article img, article video {
   display: block;
   height: auto;
 }
-@media screen and (min-width: 38.236rem) {
+@media screen and (min-width: 41.236rem) {
   article img:not(.small) {
     max-width: min(161.8%, 100vw);
-    margin-left: max(-30.9%, calc((35em - 100vw) / 2));
+    margin-left: max(-30.9%, calc((38rem - 100vw) / 2));
   }
 }
 article a img {
@@ -67,11 +67,11 @@ iframe {
   height: 40em;
 }
 .iframe-wrapper {
-  height: 19.6875em;
+  height: 21.375em;
   overflow: hidden;
   background-color: var(--gray);
 }
-@media screen and (max-width: 38.236rem) {
+@media screen and (max-width: 41.236rem) {
   article img, .iframe-wrapper, article video {
     margin-left: -1.618rem;
   }
@@ -123,9 +123,11 @@ h3 {
 }
 p {
   margin: 1em 0;
+}
+p, li {
   text-align: justify;
 }
-article[lang|='en'] p {
+article[lang|='en'] p, article[lang|='en'] li {
   text-align: initial;
 }
 .logo img {
