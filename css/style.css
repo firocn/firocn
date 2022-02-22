@@ -5,6 +5,7 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
+  font-size: max(1.27779vw, 16px);
 }
 body {
   margin: 0;
