@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0 1.618rem 1.618rem;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 ::selection {
   background-color: var(--theme-color);
@@ -47,6 +48,12 @@ article img, article video {
   padding: 0.309rem 0;
   display: block;
   height: auto;
+}
+@media screen and (min-width: 38.236rem) {
+  article img:not(.small) {
+    max-width: min(161.8%, 100vw);
+    margin-left: max(-30.9%, calc((35em - 100vw) / 2));
+  }
 }
 article a img {
   display: initial;
