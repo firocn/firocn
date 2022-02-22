@@ -5,7 +5,7 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
-  font-size: max(1.6263vw, 16px);
+  font-size: max(1.315789vw, 16px);
 }
 body {
   margin: 0;
@@ -49,6 +49,11 @@ article img, article video {
   padding: 0.309rem 0;
   display: block;
   height: auto;
+}
+@media screen and (min-width: 61.484rem) {
+  article img, article video {
+    border-radius: 2.618rem;
+  }
 }
 @media screen and (min-width: 41.236rem) {
   article img:not(.small) {
