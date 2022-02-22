@@ -5,6 +5,7 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
+  font-size: max(1.005263vw, 16px);
 }
 body {
   margin: 0;
@@ -51,7 +52,8 @@ article img, article video {
 }
 @media screen and (min-width: 41.236rem) {
   article img:not(.small) {
-    max-width: min(161.8%, 100vw);
+    width: min(161.8%, 100vw);
+    max-width: initial;
     margin-left: max(-30.9%, calc((38rem - 100vw) / 2));
   }
 }
@@ -126,6 +128,13 @@ p {
 }
 p, li {
   text-align: justify;
+}
+ul, ol {
+  padding-inline-start: 2.5rem;
+}
+blockquote {
+  margin-inline-start: 2.5rem;
+  margin-inline-end: 2.5rem;
 }
 article[lang|='en'] p, article[lang|='en'] li {
   text-align: initial;
