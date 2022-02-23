@@ -3,9 +3,10 @@
     text-align: center;
   }
   article img {
-    width: 21.63em;
-    max-width: 100%;
-    margin: 0 auto;
+    width: 21.63em !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    border-radius: initial !important;
   }
 </style>
 

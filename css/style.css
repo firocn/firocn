@@ -5,11 +5,13 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
+  font-size: max(1.315789vw, 16px);
 }
 body {
   margin: 0;
   padding: 0 1.618rem 1.618rem;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 ::selection {
   background-color: var(--theme-color);
@@ -20,7 +22,7 @@ img:not(.complete) {
   background-clip: content-box;
 }
 nav, body > main {
-  max-width: 35rem;
+  max-width: 38rem;
   margin: 0 auto;
 }
 nav {
@@ -43,10 +45,21 @@ article > header {
 article img, article video {
   max-width: 100%;
   min-width: 38.2%;
-  margin: 0 auto;
-  padding: 0.309rem 0;
+  margin: 0.309rem auto;
   display: block;
   height: auto;
+}
+@media screen and (min-width: 61.484rem) {
+  article img, article video {
+    border-radius: 1.309rem;
+  }
+}
+@media screen and (min-width: 41.236rem) {
+  article img:not(.small) {
+    width: min(161.8%, 100vw);
+    max-width: initial;
+    margin-left: max(-30.9%, calc((38rem - 100vw) / 2));
+  }
 }
 article a img {
   display: initial;
@@ -60,11 +73,11 @@ iframe {
   height: 40em;
 }
 .iframe-wrapper {
-  height: 19.6875em;
+  height: 21.375em;
   overflow: hidden;
   background-color: var(--gray);
 }
-@media screen and (max-width: 38.236rem) {
+@media screen and (max-width: 41.236rem) {
   article img, .iframe-wrapper, article video {
     margin-left: -1.618rem;
   }
@@ -75,6 +88,11 @@ iframe {
   .iframe-wrapper {
     width: calc(100% + 3.236rem);
     height: 56.25vw;
+  }
+}
+@media (hover: hover) {
+  a:active {
+    border-radius: 2px;
   }
 }
 article a {
@@ -92,6 +110,10 @@ article a {
 }
 article > footer {
   margin: 2.618em 0 1em;
+}
+article > footer .menu {
+  font-weight: initial;
+  justify-content: space-evenly;
 }
 h1, h2 {
   text-align: left;
@@ -116,9 +138,19 @@ h3 {
 }
 p {
   margin: 1em 0;
+  display: flow-root;
+}
+p, li {
   text-align: justify;
 }
-article[lang|='en'] p {
+ul, ol {
+  padding-inline-start: 2.5rem;
+}
+blockquote {
+  margin-inline-start: 2.5rem;
+  margin-inline-end: 2.5rem;
+}
+article[lang|='en'] p, article[lang|='en'] li {
   text-align: initial;
 }
 .logo img {
@@ -175,6 +207,21 @@ article[lang|='en'] p {
 }
 .posts li a {
   font-weight: bold;
+}
+.posts li a:visited {
+  color: initial;
+}
+@media (hover: hover) {
+  .posts li a:visited:active {
+    color: white;
+    background-color: black;
+  }
+  @media (prefers-color-scheme: dark) {
+    .posts li a:visited:active {
+      color: black;
+      background-color: white;
+    }
+  }
 }
 .posts-date, .posts-description {
   font-size: .618em;
