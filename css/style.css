@@ -92,7 +92,7 @@ iframe {
 }
 @media (hover: hover) {
   a:active {
-    border-radius: .309em;
+    border-radius: 2px;
   }
 }
 article a {
