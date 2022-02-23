@@ -246,6 +246,7 @@ article[lang|='en'] p, article[lang|='en'] li {
 }
 .posts-icon {
   margin-right: .382em;
+  display: inline-block;
 }
 .posts-body {
   flex: 1
