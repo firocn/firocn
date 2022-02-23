@@ -3,7 +3,6 @@
   "description": "在 Web2 中，我们受制于那些垄断我们数据并从中获利的中心化实体。Web3 承诺将我们从这些桎梏中释放出来，使每个人都能访问在区块链上的数据。虽然机构不再有权力挟持我们的数据，这当然很有吸引力，但仍有必要问：Web3 的公共和开放性质对我们的隐私意味着什么？",
   "img": "https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fac443086-688b-4cdf-8266-fadc4ca800aa_2420x722.png",
   "author": "Shekar Ramaswamy",
-  "hidden": true,
   "source": "https://coinsights.substack.com/p/the-duality-of-web3"
 } %>
 
