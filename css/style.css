@@ -115,6 +115,9 @@ article > footer .menu {
   font-weight: initial;
   justify-content: space-evenly;
 }
+article > footer .menu li {
+  margin: 0 !important;
+}
 h1, h2 {
   text-align: left;
 }
