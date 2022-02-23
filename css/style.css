@@ -106,6 +106,10 @@ article a {
 article > footer {
   margin: 2.618em 0 1em;
 }
+article > footer .menu {
+  font-weight: initial;
+  justify-content: space-evenly;
+}
 h1, h2 {
   text-align: left;
 }
