@@ -4,6 +4,7 @@
   "img": "https://magicgrants.org/images/magic_logo.png",
   "card": "summary",
   "author": "MAGIC Grants 委员会",
+  "icon": "magic",
   "source": "https://magicgrants.org/Firo-Lelantus-Spark-Audit/"
 } %>
 

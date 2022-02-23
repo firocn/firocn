@@ -77,6 +77,9 @@ iframe {
   overflow: hidden;
   background-color: var(--gray);
 }
+.posts-description > .posts-icon {
+  display: none;
+}
 @media screen and (max-width: 41.236rem) {
   article img, .iframe-wrapper, article video {
     margin-left: -1.618rem;
@@ -88,6 +91,12 @@ iframe {
   .iframe-wrapper {
     width: calc(100% + 3.236rem);
     height: 56.25vw;
+  }
+  .posts-body > .posts-icon {
+    display: none;
+  }
+  .posts-description > .posts-icon {
+    display: inline-block;
   }
 }
 @media (hover: hover) {
@@ -212,7 +221,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   font-weight: bold;
 }
 .posts li a:visited {
-  color: initial;
+  color: inherit;
 }
 @media (hover: hover) {
   .posts li a:visited:active {
@@ -231,7 +240,6 @@ article[lang|='en'] p, article[lang|='en'] li {
 }
 .posts-date {
   margin-right: 1rem;
-  line-height: 2.236;
   margin-top: 0.191em;
 }
 .posts li:last-child .posts-date {
@@ -243,12 +251,14 @@ article[lang|='en'] p, article[lang|='en'] li {
   background-color: var(--background-color);
   z-index: 1;
   position: relative;
+  line-height: 2.236;
 }
 .posts-body {
-  flex: 1
+  flex: 1;
 }
 .posts-description {
   text-align: justify;
+  position: relative;
 }
 noscript {
   display: none;

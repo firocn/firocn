@@ -4,6 +4,7 @@
   "img": "https://magicgrants.org/images/magic_logo.png",
   "card": "summary",
   "author": "Reuben Yap",
+  "icon": "magic",
   "source": "https://firo.org/2021/12/18/magic-grants-firo.html"
 } %>
 

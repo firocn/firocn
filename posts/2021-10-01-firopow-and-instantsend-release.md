@@ -2,6 +2,7 @@
   "title": "FiroPoW 和即时发送随 Firo v0.14.9.0 发布",
   "summary": "硬分叉定于 10 月 26 日",
   "description": "硬分叉定于 10 月 26 日",
+  "type": "announcement",
   "source": "https://firo.org/2021/10/01/firopow-and-instantsend-release.html"
 } %>
 

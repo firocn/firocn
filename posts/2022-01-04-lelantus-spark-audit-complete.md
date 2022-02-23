@@ -4,6 +4,7 @@
   "summary": "查看 Lelantus Spark 审计报告",
   "img": "https://firo.org/blog/assets/spark-audit-report.png",
   "author": "Diego 'rehrar' Salazar",
+  "type": "research",
   "source": "https://firo.org/2022/01/04/lelantus-spark-audit-complete.html"
 } %>
 

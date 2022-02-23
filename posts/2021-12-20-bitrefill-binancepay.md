@@ -3,6 +3,7 @@
   "description": "BitRefill 现在可以通过币安支付选择 Firo，这为一系列礼品卡和大牌商家的充值券打开了大门，如 Google、Twitch、亚马逊、Grab、优步、Steam、宜家等等，总共有 4000 多种产品。",
   "img": "https://firo.org/blog/assets/day-5-firo-on-bitrefill.png",
   "author": "Reuben Yap",
+  "icon": "shopping",
   "source": "https://firo.org/2021/12/20/bitrefill-binancepay.html"
 } %>
 

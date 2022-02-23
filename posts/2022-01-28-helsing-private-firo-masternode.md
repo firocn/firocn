@@ -3,6 +3,7 @@
   "description": "Helsing 允许用户将他们的 FIRO 抵押在 Spark 上，并可以直接向 Spark 地址支付收益直接将其匿名化。这改善了 Firo 主节点运营者的隐私，增加了匿名集，也减少了对透明地址的需求。",
   "img": "https://firo.org/blog/assets/firo-helsing.png",
   "author": "Reuben Yap",
+  "type": "research",
   "source": "https://firo.org/2022/01/28/helsing-private-firo-masternode.html"
 } %>
 

@@ -3,6 +3,8 @@
   "description": "目前已开放交易。FIRO/BTC 将被取消，以便将流动性集中在 FIRO/USDT 上。",
   "img": "https://firo.org/blog/assets/usdt-firo-bittrex.png",
   "author": "Reuben Yap",
+  "type": "announcement",
+  "icon": "exchange",
   "source": "https://firo.org/2022/01/11/usdt-bittrex.html"
 } %>
 

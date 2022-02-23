@@ -31,11 +31,14 @@
         <ul class="posts">
           <% posts.forEach(post => { %>
             <li>
-              <div class="posts-date"><div class="posts-date-text"><%= post.date %></div></div>
+              <div class="posts-date">
+                <div class="posts-date-text"><%= post.date %></div>
+              </div>
               <div class="posts-body">
-                <span><%= ({ video: '📺', forum: '💬' })[post.properties.type || 'article'] %></span>
+                <% const icon = ({ video: '📺', forum: '💬', announcement: '📢', study: '📖', research: '📜', ama: '🙋', partnership: '🤝', atom: '⚛️', 'exchange': '💱', tech: '🧑‍💻', magic: '🪄', shopping: '🛍️', scissors: '✂️', laptop: '💻', mobile: '📱', family: '👪', mobilewitharrow: '📲', telescope: '🔭', memo: '📝', receive: '📨' })[post.properties.icon || post.properties.type || 'article'] %>
+                <span class="posts-icon"><%= icon %></span>
                 <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
-                <div class="posts-description"><%= post.properties.description %></div>
+                <div class="posts-description"><span class="posts-icon"><%= icon %>&nbsp;｜&nbsp;</span><%= post.properties.description %></div>
               </div>
             </li>
           <% }) %>

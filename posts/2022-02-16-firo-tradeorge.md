@@ -3,6 +3,8 @@
   "description": "在社区的共同努力下， Firo 现已上线 TradeOgre 交易所，这是一个专注于隐私加密货币的交易所。",
   "img": "firo-on-tradeogre.png",
   "author": "Reuben Yap",
+  "type": "announcement",
+  "icon": "exchange",
   "source": "https://firo.org/2022/02/16/firo-tradeorge.html"
 } %>
 

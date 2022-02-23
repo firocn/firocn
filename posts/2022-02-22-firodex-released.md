@@ -4,6 +4,8 @@
   "summary": "使用 FiroDEX 的原子交换进行无需信任的去中心化交换！",
   "img": "https://firo.org/blog/assets/firodex-beta-release.png",
   "author": "Reuben Yap",
+  "type": "announcement",
+  "icon": "atom",
   "source": "https://firo.org/2022/02/22/firodex-released.html"
 } %>
 

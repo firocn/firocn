@@ -4,6 +4,7 @@
   "description": "采用 Lelantus 隐私技术的本地手机钱包",
   "img": "firo-mobile-wallet-release.png",
   "author": "Reuben Yap",
+  "icon": "mobile",
   "source": "https://firo.org/2021/12/16/firo-mobile-wallet-release-with-lelantus.html"
 } %>
 

@@ -2,6 +2,7 @@
   "title": "Firo 的未来和方向",
   "summary": "展望 2022 年",
   "description": "Firo 的核心团队阐述了其即将到来的计划和项目方向，重点是 Lelantus Spark、互操作性和以 Elysium 成为加密货币生态系统的隐私基础设施。",
+  "icon": "telescope",
   "source": "https://firo.org/2021/11/22/firo-future-direction-2022.html"
 } %>
 

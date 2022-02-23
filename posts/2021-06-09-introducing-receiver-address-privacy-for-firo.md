@@ -2,6 +2,8 @@
   "title": "Firo 在主网上推出 RAP 地址以保护链上接收方隐私",
   "summary": "为经常性 Firo 付款引入接收方地址隐私",
   "description": "为经常性 Firo 付款引入接收方地址隐私",
+  "type": "announcement",  
+  "icon": "receive",
   "source": "https://firo.org/2021/06/09/introducing-receiver-address-privacy-for-firo.html"
 } %>
 
