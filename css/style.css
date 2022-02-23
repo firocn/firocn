@@ -203,6 +203,21 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts li a {
   font-weight: bold;
 }
+.posts li a:visited {
+  color: initial;
+}
+@media (hover: hover) {
+  .posts li a:visited:active {
+    color: white;
+    background-color: black;
+  }
+  @media (prefers-color-scheme: dark) {
+    .posts li a:visited:active {
+      color: black;
+      background-color: white;
+    }
+  }
+}
 .posts-date, .posts-description {
   font-size: .618em;
 }

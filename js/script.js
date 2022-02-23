@@ -5,10 +5,8 @@ Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
   })
 })
 
-;(function () {
+if (document.referrer.includes('firocn.org')) {
   const returnLink = document.querySelector('#return_link')
-  if (document.referrer.includes('firocn.org')) {
-    returnLink.href = 'javascript:history.back()'
-    returnLink.innerHTML = '返回'
-  }
-})()
+  returnLink.href = 'javascript:history.back()'
+  returnLink.innerHTML = '返回'
+}
