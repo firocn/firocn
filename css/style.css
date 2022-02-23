@@ -90,6 +90,11 @@ iframe {
     height: 56.25vw;
   }
 }
+@media (hover: hover) {
+  a:active {
+    border-radius: .309rem;
+  }
+}
 article a {
   color: var(--link-color);
   text-decoration: none;
