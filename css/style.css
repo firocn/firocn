@@ -46,13 +46,13 @@ article img, article video {
   max-width: 100%;
   min-width: 38.2%;
   margin: 0 auto;
-  padding: 0.309rem 0;
+  margin: 1.309rem 0;
   display: block;
   height: auto;
 }
 @media screen and (min-width: 61.484rem) {
   article img, article video {
-    border-radius: 2.618rem;
+    border-radius: 1.309rem;
   }
 }
 @media screen and (min-width: 41.236rem) {
