@@ -2,6 +2,7 @@
   "title": "Firo 团队加入三位新成员",
   "summary": "LC、Levon Hovhannisyan、Areg Vrtanesyan",
   "description": "LC、Levon Hovhannisyan、Areg Vrtanesyan",
+  "type": "he",
   "icon": "family",
   "source": "https://firo.org/2021/12/07/team-addition.html"
 } %>

@@ -3,6 +3,7 @@
   "summary": "硬分叉定于 10 月 26 日",
   "description": "硬分叉定于 10 月 26 日",
   "type": "announcement",
+  "icon": "nice",
   "source": "https://firo.org/2021/10/01/firopow-and-instantsend-release.html"
 } %>
 

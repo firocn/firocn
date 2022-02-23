@@ -4,6 +4,7 @@
   "description": "MTP 剥离使 Firo 的区块链大小从 60 多 GB 降至 4GB 以下",
   "img": "https://firo.org/blog/assets/day-4-mtp-stripping.png",
   "author": "Reuben Yap",
+  "type": "announcement",
   "icon": "scissors",
   "source": "https://firo.org/2021/12/19/mtp-stripping-live-on-firo.html"
 } %>

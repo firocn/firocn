@@ -4,6 +4,7 @@
   "description": "Firo 的 QT 钱包已根据 Firo 品牌指南进行了更新",
   "img": "https://firo.org/blog/assets/gui-refresh/qt-refresh-tx.png",
   "author": "Reuben Yap",
+  "type": "new",
   "icon": "laptop",
   "source": "https://firo.org/2021/12/17/firo-wallet-gui-refresh.html"
 } %>

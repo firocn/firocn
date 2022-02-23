@@ -35,10 +35,48 @@
                 <div class="posts-date-text"><%= post.date %></div>
               </div>
               <div class="posts-body">
-                <% const icon = ({ video: '📺', forum: '💬', announcement: '📢', study: '📖', research: '📜', ama: '🙋', partnership: '🤝', atom: '⚛️', 'exchange': '💱', tech: '🧑‍💻', magic: '🪄', shopping: '🛍️', scissors: '✂️', laptop: '💻', mobile: '📱', family: '👪', mobilewitharrow: '📲', telescope: '🔭', memo: '📝', receive: '📨' })[post.properties.icon || post.properties.type || 'article'] %>
+                <%
+                  const icons = {
+                    video: '📺',
+                    forum: '💬',
+                    announcement: '📢',
+                    study: '📖',
+                    research: '📜',
+                    file: '📄',
+                    ama: '🙋',
+                    partnership: '🤝',
+                    atom: '⚛️',
+                    'exchange': '💱',
+                    tech: '🧑‍💻',
+                    magic: '🪄',
+                    shopping: '🛍️',
+                    scissors: '✂️',
+                    laptop: '💻',
+                    mobile: '📱',
+                    family: '👪',
+                    mobilewitharrow: '📲',
+                    telescope: '🔭',
+                    memo: '📝',
+                    receive: '📨',
+                    mining: '⛏️',
+                    chart: '📊',
+                    web: '🕸️',
+                    news: '📰',
+                    moneybag: '💰',
+                    spark: '✨',
+                    new: '🆕',
+                    road: '🛣️',
+                    he: '🈴',
+                    moneyfly: '💸',
+                    nice: '👍',
+                    fire: '🔥'
+                  }
+                  const typeicon = icons[post.properties.type || 'article']
+                  const icon = icons[post.properties.icon || post.properties.type || 'article']
+                %>
                 <span class="posts-icon"><%= icon %></span>
                 <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
-                <div class="posts-description"><span class="posts-icon"><%= icon %>&nbsp;｜&nbsp;</span><%= post.properties.description %></div>
+                <div class="posts-description"><% if (typeicon && icon !== typeicon) { %><span class="posts-typeicon"><%= typeicon %>&nbsp;｜&nbsp;</span><% } %><span class="posts-icon"><%= icon %>&nbsp;｜&nbsp;</span><%= post.properties.description %></div>
               </div>
             </li>
           <% }) %>

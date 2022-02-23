@@ -2,7 +2,8 @@
   "title": "Firo x DotOracle AMA 回顾",
   "description": "2022 年 1 月 28 日",
   "author": "Reuben Yap",
-  "type": "ama",
+  "type": "memo",
+  "icon": "ama",
   "source": "firo-dotoracle-ama.html"
 } %>
 

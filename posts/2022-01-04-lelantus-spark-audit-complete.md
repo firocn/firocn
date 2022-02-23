@@ -5,6 +5,7 @@
   "img": "https://firo.org/blog/assets/spark-audit-report.png",
   "author": "Diego 'rehrar' Salazar",
   "type": "research",
+  "icon": "spark",
   "source": "https://firo.org/2022/01/04/lelantus-spark-audit-complete.html"
 } %>
 

@@ -2,6 +2,7 @@
   "title": "Firo 工作动态更新 2021 年 11 月",
   "summary": "手机钱包、Elysium、Lelantus Spark、QT 钱包界面重塑、Helsing",
   "description": "手机钱包、Elysium、Lelantus Spark、QT 钱包界面重塑、Helsing",
+  "type": "tech",
   "icon": "memo",
   "source": "https://forum.firo.org/t/what-firo-core-team-has-been-working-on"
 } %>

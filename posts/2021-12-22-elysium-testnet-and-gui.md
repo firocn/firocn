@@ -3,7 +3,8 @@
   "description": "Elysium 是 Firo 的代币化层，允许任何人创建自己的代币并享受 Lelantus 技术的所有隐私优势。它打开了通往隐私稳定币和投票代币的大门，使 Firo 成为整个加密经济的隐私基础设施。",
   "img": "https://firo.org/blog/assets/elysium-testnet/day-7-firo-gui-elysium.png",
   "author": "Reuben Yap",
-  "icon": "tech",
+  "type": "tech",
+  "icon": "road",
   "source": "https://firo.org/2021/12/22/elysium-testnet-and-gui.html"
 } %>
 

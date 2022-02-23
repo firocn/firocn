@@ -4,7 +4,8 @@
   "summary": "为 Elysium 带来跨链能力",
   "img": "https://firo.org/blog/assets/firo-dotoracle-elysium-upd.png",
   "author": "Reuben Yap",
-  "type": "partnership",
+  "type": "he",
+  "icon": "partnership",
   "source": "https://firo.org/2022/01/18/dotoracle-partnership.html"
 } %>
 

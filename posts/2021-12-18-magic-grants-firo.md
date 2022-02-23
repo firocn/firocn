@@ -1,16 +1,17 @@
 <%# {
   "title": "MAGIC Grants 接受 Firo",
-  "description": "加密货币的多学科学术资助（MAGIC）Grants 现在支持 Firo 捐款！",
+  "description": "MAGIC（加密货币的多学科学术资助）Grants 现在支持 Firo 捐款！",
   "img": "https://magicgrants.org/images/magic_logo.png",
   "card": "summary",
   "author": "Reuben Yap",
+  "type": "he",  
   "icon": "magic",
   "source": "https://firo.org/2021/12/18/magic-grants-firo.html"
 } %>
 
 ![MAGIC Grants 现在接受 Firo](https://firo.org/blog/assets/day-3-magic-and-firo.png#size=8000x4000)
 
-[加密货币的多学科学术资助（MAGIC）Grants](https://magicgrants.org/) 现在支持 Firo 捐款！
+[MAGIC（加密货币的多学科学术资助）Grants](https://magicgrants.org/) 现在支持 Firo 捐款！
 
 MAGIC Grants 是一个支持各种加密货币网络的公共慈善机构，他们认为这些网络是必不可少的公共支付基础设施。MAGIC Grants 授权社区为各种被认为必要的项目设立 MAGIC 基金。这些基金是半自治的，可以选择资助各种符合条件的活动，包括教育材料、基本的开发人员维护、研究和安全审计。
 
