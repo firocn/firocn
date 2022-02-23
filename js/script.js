@@ -7,5 +7,5 @@ Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
 
 if (document.referrer.includes(window.siteURL)) {
   const footerHome = document.querySelector('#footer_home')
-  footerHome.style.display = 'none'
+  if (footerHome) footerHome.style.display = 'none'
 }
