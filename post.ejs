@@ -55,7 +55,7 @@
               <% if (post.properties.source) { %>
                 ｜
                 <a href="<%= post.properties.source %>">
-                  <%= ({ video: '原视频', forum: '进入论坛', article: '原文' })[post.properties.type || 'article'] %>
+                  <%= ({ video: '原视频', forum: '进入论坛' })[post.properties.type] || '原文' %>
                 </a>
               <% } %>
               <% if (post.properties.hdurl) { %>
