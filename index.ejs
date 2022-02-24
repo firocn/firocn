@@ -29,10 +29,12 @@
     <main>
       <article>
         <ul class="posts">
+          <% let lastDate %>
           <% posts.forEach(post => { %>
             <li>
               <div class="posts-date">
-                <div class="posts-date-text"><%= post.date %></div>
+                <% const date = post.date.replace(dateRegexp, '$1-$2') %>
+                <div class="posts-date-text <%= date === lastDate ? 'hidden' : '' %>"><%= lastDate = date %></div>
               </div>
               <div class="posts-body">
                 <%

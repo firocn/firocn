@@ -8,14 +8,14 @@ const config = require('./config')
 
 marked.setOptions({ breaks: true })
 
-const siteData = { imgsURL: 'imgs', siteURL: config.siteURL }
+const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
+
+const siteData = { imgsURL: 'imgs', siteURL: config.siteURL, dateRegexp }
 
 const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
 ;(async () => {
-  const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
-
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
     const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]

@@ -5,7 +5,7 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
-  font-size: max(calc(50vw / 38), 16px);
+  font-size: max(calc(38.2vw / 38), 16px);
 }
 body {
   margin: 0;
@@ -246,6 +246,9 @@ article[lang|='en'] p, article[lang|='en'] li {
   z-index: 1;
   position: relative;
   line-height: 2.236;
+}
+.posts-date-text.hidden {
+  visibility: hidden;
 }
 .posts-body {
   flex: 1;
