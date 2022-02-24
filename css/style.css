@@ -5,7 +5,7 @@
   --link-color-2: #7c1624;
   --background-color: white;
   --gray: #f4f4f4;
-  font-size: max(1.315789vw, 16px);
+  font-size: max(calc(50vw / 38), 16px);
 }
 body {
   margin: 0;
@@ -45,7 +45,7 @@ article > header {
 article img, article video {
   max-width: 100%;
   min-width: 38.2%;
-  margin: 0.309rem auto;
+  margin: .309rem auto;
   display: block;
   height: auto;
 }
@@ -234,7 +234,7 @@ article[lang|='en'] p, article[lang|='en'] li {
 }
 .posts-date {
   margin-right: 1rem;
-  margin-top: 0.191em;
+  margin-top: .191em;
 }
 .posts li:last-child .posts-date {
   background-color: var(--background-color);
