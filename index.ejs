@@ -69,6 +69,9 @@
                     he: '🈴',
                     moneyfly: '💸',
                     nice: '👍',
+                    chain: '⛓️',
+                    academic: '🎓',
+                    globe: '🌐',
                     fire: '🔥'
                   }
                   const typeicon = icons[post.properties.type || 'article']
@@ -76,7 +79,10 @@
                 %>
                 <span class="posts-icon"><%= icon %></span>
                 <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
-                <div class="posts-description"><% if (typeicon && icon !== typeicon) { %><span class="posts-typeicon"><%= typeicon %>&nbsp;｜&nbsp;</span><% } %><span class="posts-icon"><%= icon %>&nbsp;｜&nbsp;</span><%= post.properties.description %></div>
+                <div class="posts-description">
+                  <% if (typeicon && icon !== typeicon) { %><span class="posts-typeicon"><%= typeicon %></span><% } %>
+                  <%= post.properties.description %>
+                </div>
               </div>
             </li>
           <% }) %>
