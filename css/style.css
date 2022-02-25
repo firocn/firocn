@@ -1,18 +1,3 @@
-@font-face {
-  font-family: FiroSans;
-  src: local("Alibaba PuHuiTi 2.0 1"),
-  local("Alibaba PuHuiTi 1"),
-  url(fonts/AlibabaPuHuiTi-2-55-Regular.ttf);
-  font-display: fallback;
-}
-@font-face {
-  font-family: FiroSans;
-  src: local("Alibaba PuHuiTi 2.0 1"),
-  local("Alibaba PuHuiTi 1"),
-  url(fonts/AlibabaPuHuiTi-2-85-Bold.ttf);
-  font-weight: bold;
-  font-display: fallback;
-}
 :root {
   --theme-color: #9b1c2e;
   --link-color: #9b1c2e;
@@ -25,7 +10,7 @@
 body {
   margin: 0;
   padding: 0 1.618rem 1.618rem;
-  font-family: FiroSans, sans-serif;
+  font-family: sans-serif;
   overflow-x: hidden;
 }
 ::selection {
