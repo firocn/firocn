@@ -42,7 +42,7 @@ article > header {
 .article-header-bar {
   font-size: .618em;
 }
-article img, article video {
+article:not(.index) img, article video {
   max-width: 100%;
   min-width: 38.2%;
   margin: .309rem auto;
@@ -50,12 +50,12 @@ article img, article video {
   height: auto;
 }
 @media screen and (min-width: 61.484rem) {
-  article img, article video {
+  article:not(.index) img, article video {
     border-radius: 1.309rem;
   }
 }
 @media screen and (min-width: 41.236rem) {
-  article img:not(.small) {
+  article:not(.index) img:not(.small) {
     width: min(161.8%, 100vw);
     max-width: initial;
     margin-left: max(-30.9%, calc((38rem - 100vw) / 2));
@@ -77,14 +77,11 @@ iframe {
   overflow: hidden;
   background-color: var(--gray);
 }
-.posts-description > .posts-icon {
-  display: none;
-}
 @media screen and (max-width: 41.236rem) {
-  article img, .iframe-wrapper, article video {
+  article:not(.index) img, .iframe-wrapper, article video {
     margin-left: -1.618rem;
   }
-  article img, article video {
+  article:not(.index) img, article video {
     max-width: calc(100% + 3.236rem);
     width: calc(100% + 3.236rem);
   }
@@ -199,7 +196,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   border-left: .0625rem dashed;
   position: absolute;
   left: calc(1.309rem - .03125rem);
-  top: -2.1545rem;
+  top: -2rem;
   bottom: 0;
   margin: auto;
   pointer-events: none;
@@ -214,49 +211,62 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts li a {
   font-weight: bold;
 }
-.posts li a:visited {
+.posts li a:visited, .menu a:visited {
   color: inherit;
 }
 @media (hover: hover) {
-  .posts li a:visited:active {
+  .posts li a:visited:active, .menu a:visited:active {
     color: white;
     background-color: black;
   }
   @media (prefers-color-scheme: dark) {
-    .posts li a:visited:active {
+    .posts li a:visited:active, .menu a:visited:active {
       color: black;
       background-color: white;
     }
   }
 }
-.posts-date, .posts-description {
-  font-size: .618em;
+.posts-icon-wrapper {
+  margin-right: 1.618rem;
+  position: relative;
 }
-.posts-date {
-  margin-right: 1rem;
-  margin-top: .191em;
-}
-.posts li:last-child .posts-date {
+.posts li:last-child .posts-icon-wrapper {
   background-color: var(--background-color);
   z-index: 1;
   position: relative;
 }
-.posts-date-text {
+.posts-icon {
+  position: absolute;
+  left: calc(1.309rem);
+  transform: translate(-50%);
   background-color: var(--background-color);
   z-index: 1;
   position: relative;
-  line-height: 2.236;
+  box-shadow: 0 0 0 .242874rem var(--background-color);
 }
-.posts-date-text.hidden {
-  visibility: hidden;
+.posts-iconfiro img {
+  width: 1.618em;
+  height: 1.618em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--background-color);
+  box-shadow: 0 0 0 .551874rem var(--background-color);
 }
 .posts-body {
   flex: 1;
   text-align: initial;
 }
 .posts-description {
+  font-size: .618em;
   text-align: justify;
-  position: relative;
+}
+.posts .lidate {
+  margin: 1.618rem 0;
+}
+.posts .lidate .posts-body {
+  font-weight: bold;
 }
 noscript {
   display: none;

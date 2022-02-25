@@ -27,67 +27,77 @@
       </ul>
     </nav>
     <main>
-      <article>
+      <article class="index">
         <ul class="posts">
           <% let lastDate %>
           <% posts.forEach(post => { %>
+            <%
+              const icons = {
+                video: '📺',
+                forum: '💬',
+                announcement: '📢',
+                study: '📖',
+                research: '📜',
+                file: '📄',
+                ama: '🙋',
+                partnership: '🤝',
+                atom: '⚛️',
+                'exchange': '💱',
+                tech: '🧑‍💻',
+                magic: '🪄',
+                shopping: '🛍️',
+                scissors: '✂️',
+                laptop: '💻',
+                mobile: '📱',
+                family: '👪',
+                mobilewitharrow: '📲',
+                telescope: '🔭',
+                memo: '📝',
+                receive: '📨',
+                mining: '⛏️',
+                chart: '📊',
+                web: '🕸️',
+                news: '📰',
+                moneybag: '💰',
+                spark: '✨',
+                new: '🆕',
+                road: '🛣️',
+                he: '🈴',
+                moneyfly: '💸',
+                nice: '👍',
+                chain: '⛓️',
+                academic: '🎓',
+                globe: '🌐',
+                fire: '🔥'
+              }
+              const typeicon = icons[post.properties.type || 'article']
+              const icon = icons[post.properties.icon || post.properties.type || 'article']
+              const [year, month] = post.date.match(dateRegexp).splice(1)
+              const date = year == new Date().getYear() + 1900 ? ([
+                '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'
+              ])[month - 1] + '月' : ({
+                [new Date().getYear() + 1900 - 1]: '去年',
+                [new Date().getYear() + 1900 - 2]: '前年'
+              })[year] || year
+            %>
+            <% if (lastDate && lastDate !== date) { %>
+              <li class="lidate">
+                <div class="posts-icon-wrapper">
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="<%= autoPrefixImgURL('firo_symbol_dark_mode.svg') %>" media="(prefers-color-scheme: dark)"><img src="<%= autoPrefixImgURL('firo_symbol.svg') %>"></picture></div>
+                </div>
+                <div class="posts-body"><%= date %></div>
+              </li>
+            <% } %>
             <li>
-              <div class="posts-date">
-                <% const date = post.date.replace(dateRegexp, '$1-$2') %>
-                <div class="posts-date-text <%= date === lastDate ? 'hidden' : '' %>"><%= lastDate = date %></div>
+              <div class="posts-icon-wrapper">
+                <div class="posts-icon"><%= icon %></div>
               </div>
               <div class="posts-body">
-                <%
-                  const icons = {
-                    video: '📺',
-                    forum: '💬',
-                    announcement: '📢',
-                    study: '📖',
-                    research: '📜',
-                    file: '📄',
-                    ama: '🙋',
-                    partnership: '🤝',
-                    atom: '⚛️',
-                    'exchange': '💱',
-                    tech: '🧑‍💻',
-                    magic: '🪄',
-                    shopping: '🛍️',
-                    scissors: '✂️',
-                    laptop: '💻',
-                    mobile: '📱',
-                    family: '👪',
-                    mobilewitharrow: '📲',
-                    telescope: '🔭',
-                    memo: '📝',
-                    receive: '📨',
-                    mining: '⛏️',
-                    chart: '📊',
-                    web: '🕸️',
-                    news: '📰',
-                    moneybag: '💰',
-                    spark: '✨',
-                    new: '🆕',
-                    road: '🛣️',
-                    he: '🈴',
-                    moneyfly: '💸',
-                    nice: '👍',
-                    chain: '⛓️',
-                    academic: '🎓',
-                    globe: '🌐',
-                    fire: '🔥'
-                  }
-                  const typeicon = icons[post.properties.type || 'article']
-                  const icon = icons[post.properties.icon || post.properties.type || 'article']
-                %>
-                <span class="posts-icon"><%= icon %></span>
                 <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
-                <div class="posts-description">
-                  <% if (typeicon && icon !== typeicon) { %><span class="posts-typeicon"><%= typeicon %></span><% } %>
-                  <%= post.properties.description %>
-                </div>
+                <div class="posts-description"><%= post.properties.description %></div>
               </div>
             </li>
-          <% }) %>
+          <% lastDate = date }) %>
         </ul>
         <footer>
           <ul class="menu">
