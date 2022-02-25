@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const marked = require("marked")
 const sizeOf = require('image-size')
+const Fontmin = require('fontmin')
 
 const config = require('./config')
 
@@ -53,25 +54,39 @@ const _siteDir = `${__dirname}/_site`
 
   await checkCreateDir(_siteDir)
 
-  render(
+  let text = await render(
     path.normalize(`${__dirname}/index.ejs`),
     { posts: posts.filter(p => p.date && !p.properties.hidden) },
     path.normalize(`${__dirname}/_site/index.html`)
   )
 
-  posts.forEach(async post => {
+  await Promise.all(posts.map(async post => {
     if (post.properties.url) return
-    render(
+    const html = await render(
       path.normalize(`${__dirname}/post.ejs`),
       { post },
       path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
-  })
-
+    text += html
+  }))
+console.log(text.length, posts.length)
   copyDir('css')
   copyDir('js')
   copyDir('imgs')
   copyFile('googleced77188be24025c.html')
+
+  new Fontmin()
+    .src('css/fonts/AlibabaPuHuiTi-2-55-Regular.ttf')
+    .use(Fontmin.glyph({ text, hinting: false }))
+    .use(Fontmin.ttf2woff2())
+    .dest('_site/css/fonts')
+    .run(function (err, files) { if (err) throw err })
+  new Fontmin()
+    .src('css/fonts/AlibabaPuHuiTi-2-85-Bold.ttf')
+    .use(Fontmin.glyph({ text, hinting: false }))
+    .use(Fontmin.ttf2woff2())
+    .dest('_site/css/fonts')
+    .run(function (err, files) { if (err) throw err })
 })()
 
 async function render(templateFile, data, destFile) {
@@ -80,7 +95,7 @@ async function render(templateFile, data, destFile) {
       if (err) return reject(err)
       fs.writeFile(destFile, str, err => {
         if (err) return reject(err)
-        resolve()
+        resolve(str)
       })
     })
   })
@@ -95,11 +110,11 @@ async function readFile(filename) {
   })
 }
 
-async function readdir(path) {
+async function readdir(path, options) {
   return new Promise((resolve, reject) => {
-    fs.readdir(path, (err, filenames) => {
+    fs.readdir(path, options, (err, files) => {
       if (err) return reject(err)
-      resolve(filenames)
+      resolve(files)
     })
   })
 }
@@ -119,8 +134,11 @@ async function checkCreateDir(dirname) {
 
 async function copyDir(dirname) {
   await checkCreateDir(path.normalize(`${_siteDir}/${dirname}`))
-  const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`))
-  filenames.forEach(filename => copyFile(`${dirname}/${filename}`))
+  const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`), { withFileTypes: true })
+  filenames.forEach(file => {
+    if (file.isDirectory()) return
+    copyFile(`${dirname}/${file.name}`)
+  })
 }
 
 function copyFile(fullFilename) {
