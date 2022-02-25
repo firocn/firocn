@@ -4,7 +4,7 @@
   "img": "https://firo.org/blog/assets/firo-helsing.png",
   "author": "Reuben Yap",
   "type": "research",
-  "icon": "master",
+  "icon": "moneybag",
   "source": "https://firo.org/2022/01/28/helsing-private-firo-masternode.html"
 } %>
 
