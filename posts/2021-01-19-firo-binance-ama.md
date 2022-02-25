@@ -3,7 +3,7 @@
   "summary": "旧貌换新颜，从 Zcoin 到 Firo",
   "description": "旧貌换新颜，从 Zcoin 到 Firo",
   "type": "memo",
-  "icon": "ama"
+  "icon": "firelove"
 } %>
 
 **整理：[Chloe](https://twitter.com/Chloe13429524)**
