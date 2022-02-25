@@ -6,9 +6,9 @@
   "icon": "firelove"
 } %>
 
-**整理：[Chloe](https://twitter.com/Chloe13429524)**
+**整理：[❤️Chloe](https://twitter.com/Chloe13429524)**
 
-隐私项目 Firo 已激活全新隐私协议 Lelantus，提供更高级别的匿名性。1 月 18 日晚六点，Firo 联合创始人 Reuben 做客币安英文电报群参与 AMA 活动，就 Firo 项目最新进展与用户现场互动问答，以下是 AMA 内容回顾。
+隐私项目 🔥Firo 已激活全新隐私协议 Lelantus，提供更高级别的匿名性。1 月 18 日晚六点，Firo 联合创始人 Reuben 做客币安英文电报群参与 AMA 活动，就 Firo 项目最新进展与用户现场互动问答，以下是 AMA 内容回顾。
 
 **主持人：**大家好，欢迎来到 Firo 团队的 AMA！很荣幸为大家介绍 Firo 的联合创始人 Reuben！
 
