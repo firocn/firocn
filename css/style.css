@@ -276,7 +276,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   text-align: justify;
 }
 .posts .lidate {
-  margin: 2.618rem 0 1.618rem;
+  margin: 1.618rem 0;
 }
 .posts .lidate .posts-body {
   font-weight: bold;
