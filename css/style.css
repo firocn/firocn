@@ -243,14 +243,15 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts-icon {
   background-color: var(--background-color);
   box-shadow: 0 0 0 .242874rem var(--background-color);
+  position: sticky;
+  top: 1.618rem;
 }
 .posts-iconfiro img {
   width: 1.618em;
   height: 1.618em;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 1.618em / 2);
+  top: calc(50% - 1.618em / 2);
   background-color: var(--background-color);
   box-shadow: 0 0 0 .551874rem var(--background-color);
 }
