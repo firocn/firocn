@@ -217,13 +217,6 @@ article[lang|='en'] p, article[lang|='en'] li {
 @media (hover: hover) {
   .posts li a:visited:active, .menu a:visited:active {
     color: white;
-    background-color: black;
-  }
-  @media (prefers-color-scheme: dark) {
-    .posts li a:visited:active, .menu a:visited:active {
-      color: black;
-      background-color: white;
-    }
   }
 }
 .posts-icon-wrapper {
