@@ -6,7 +6,7 @@ const sizeOf = require('image-size')
 
 const config = require('./config')
 
-marked.setOptions({ breaks: true })
+marked.setOptions({ breaks: true, mangle: false })
 
 const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
 
