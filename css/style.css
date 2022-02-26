@@ -211,8 +211,13 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts li a {
   font-weight: bold;
 }
-.posts li a:visited:not(:active), .menu a:visited:not(:active) {
+.posts li a:visited, .menu a:visited {
   color: inherit;
+}
+@media (hover: hover) {
+  .posts li a:visited:active, .menu a:visited:active {
+    color: white;
+  }
 }
 .posts-icon-wrapper {
   margin-right: 1rem;
