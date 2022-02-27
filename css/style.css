@@ -195,7 +195,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   content: '';
   border-left: .0625rem dashed;
   position: absolute;
-  left: calc(1.309rem - .03125rem);
+  left: calc(1.3125rem - .03125rem);
   top: -2rem;
   bottom: 0;
   margin: auto;
@@ -222,10 +222,10 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts-icon-wrapper {
   margin-right: 1rem;
   position: relative;
-  width: 1.309rem;
+  width: 1em;
   display: flex;
   justify-content: center;
-  margin-left: .6545rem;
+  margin-left: calc(1.3125rem - 1em / 2);
   align-items: flex-start;
 }
 .posts li:last-child .posts-icon-wrapper {
@@ -240,17 +240,19 @@ article[lang|='en'] p, article[lang|='en'] li {
   top: 1.618rem;
 }
 .posts-iconfiro img {
-  width: 1.618em;
-  height: 1.618em;
+  --size: max(1.618em - 1px, 31px);
+  width: var(--size);
+  height: var(--size);
   position: absolute;
-  left: calc(50% - 1.618em / 2);
-  top: calc(50% - 1.618em / 2);
+  left: calc(50% - var(--size) / 2);
+  top: calc(50% - var(--size) / 2);
   background-color: var(--background-color);
   box-shadow: 0 0 0 .551874rem var(--background-color);
 }
 .posts-body {
   flex: 1;
   text-align: initial;
+  z-index: 1;
 }
 .posts-description {
   font-size: .618em;
