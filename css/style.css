@@ -195,7 +195,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   content: '';
   border-left: .0625rem dashed;
   position: absolute;
-  left: calc(1.309rem - .03125rem);
+  left: calc(1.3125rem - .03125rem);
   top: -2rem;
   bottom: 0;
   margin: auto;
@@ -220,12 +220,12 @@ article[lang|='en'] p, article[lang|='en'] li {
   }
 }
 .posts-icon-wrapper {
-  margin-right: 1rem;
+  margin-right: calc(1.618rem - 1em / 2 + .03125rem);
   position: relative;
-  width: 1.309rem;
+  width: 1em;
   display: flex;
   justify-content: center;
-  margin-left: .6545rem;
+  margin-left: calc(1.3125rem - 1em / 2);
   align-items: flex-start;
 }
 .posts li:last-child .posts-icon-wrapper {
