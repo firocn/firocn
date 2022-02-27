@@ -240,11 +240,12 @@ article[lang|='en'] p, article[lang|='en'] li {
   top: 1.618rem;
 }
 .posts-iconfiro img {
-  width: 1.618em;
-  height: 1.618em;
+  --size: max(1.618em, 32px);
+  width: var(--size);
+  height: var(--size);
   position: absolute;
-  left: calc(50% - 1.618em / 2);
-  top: calc(50% - 1.618em / 2);
+  left: calc(50% - var(--size) / 2);
+  top: calc(50% - var(--size) / 2);
   background-color: var(--background-color);
   box-shadow: 0 0 0 .551874rem var(--background-color);
 }
