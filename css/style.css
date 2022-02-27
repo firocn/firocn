@@ -220,7 +220,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   }
 }
 .posts-icon-wrapper {
-  margin-right: calc(1.618rem - 1em / 2 + .03125rem);
+  margin-right: 1rem;
   position: relative;
   width: 1em;
   display: flex;
