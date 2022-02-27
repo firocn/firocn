@@ -240,7 +240,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   top: 1.618rem;
 }
 .posts-iconfiro img {
-  --size: max(1.618em, 32px);
+  --size: max(1.618em - 1px, 31px);
   width: var(--size);
   height: var(--size);
   position: absolute;
