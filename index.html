@@ -20,6 +20,10 @@
     <meta name="twitter:image" content="https://firocn.org/imgs/firocoin.png">
     <style>
       :root {
+        --theme-color: #9b1c2e;
+        --link-color: #9b1c2e;
+        --link-color-1: #ba2a45;
+        --link-color-2: #7c1624;
         font-size: max(calc(38.2vw / 38), 16px);
         background-color: #282c34;
       }
@@ -28,7 +32,10 @@
         color: #fefefe;
         font-family: sans-serif;
       }
-
+      h2, h3 {
+        text-align: center;
+        margin: 1.618em 0 1em;
+      }
       header {
         background-color: #fefefe;
         height: 3.618em;
@@ -128,6 +135,9 @@
         margin: 0;
         line-height: 1;
       }
+      .mobile-break-line {
+        display: none;
+      }
       @media screen and (max-width: 440px) {
         .download-title {
           font-size: 1.618rem;
@@ -135,58 +145,73 @@
         .download-subtitle {
           font-size: 1rem;
         }
+        .mobile-break-line {
+          display: inline;
+        }
       }
-      .download-button {
+      .card-button {
         background-color: #9b1c2e;
         color: #fefefe;
         text-decoration: none;
         display: inline-block;
         padding: 1em 1.618em;
         line-height: 1;
-        border-radius: 19.1%;
+        border-radius: 1.618rem;
         background-repeat: no-repeat;
         background-position: center 1em;
-        background-size: 2.618em;
+        background-size: auto 2em;
         box-sizing: border-box;
         width: 8.235625rem;
       }
-      .download-button:before {
+      .card-button.download:before {
         content: '下载';
         display: block;
         font-weight: bold;
         margin-bottom: 0.618em;
       }
-      .download-button.icon {
-        padding-top: 4.618em;
+      .card-button.icon {
+        padding-top: 3.618em;
       }
-      .download-button.android {
+      .card-button.download {
+        padding-top: 4.618em;
+        background-size: 2.618em;
+      }
+      .card-button.android {
         background-image: url(imgs/android.svg);
       }
-      .download-button.windows {
+      .card-button.windows {
         background-image: url(imgs/windows.svg);
       }
-      .download-button.macos {
+      .card-button.macos {
         background-image: url(imgs/apple.svg);
       }
-      .download-button.linux {
+      .card-button.linux {
         background-image: url(imgs/linux.svg);
       }
-      .download .download-button {
+      .card-button.binance {
+        background-image: url(imgs/binance.svg);
+      }
+      .card-button.aex {
+        background-image: url(imgs/aex.svg);
+      }
+      .card-button.huobi {
+        background-image: url(imgs/huobi.svg);
+      }
+      .card-button.firodex {
+        background-image: url(imgs/logo.svg);
+        background-size: 2rem;
+      }
+      .card-button {
         margin: 0 .5em;
       }
-      .download ul {
-        margin: 0;
+      .card-list {
+        margin: 1.618em 0 1.309em;
         padding: 0;
         list-style: none;
       }
-      .download li {
-        display: inline-block;
-      }
-      .download .download-list {
-        margin: 1.618em 0 1.309em;
-      }
-      .download .download-list li {
+      .card-list li {
         margin-top: 1em;
+        display: inline-block;
       }
       p {
         line-height: 1.618em;
@@ -196,6 +221,19 @@
         text-align: center;
         margin: 2.309rem 0 2.618rem;
         line-height: 1;
+      }
+
+      #get_firo, #get_firo p {
+        text-align: center;
+      }
+
+      #exchanges {
+        list-style: none;
+        padding: 0;
+      }
+      #exchanges li {
+        display: inline-block;
+        margin-top: 1em;
       }
     </style>
   </head>
@@ -217,16 +255,28 @@
         </div>
         <h1 class="download-title">Firo 是专注隐私的加密货币</h1>
         <h2 class="download-subtitle">📥 下载钱包开始使用 Firo 📥</h2>
-        <ul class="download-list">
-          <li><a href="https://github.com/firoorg/mobile/releases/download/v0.1.16/Firo-v0.1.16.apk" class="download-button icon android">Android</a></li><!--
-          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-win64-setup.exe" class="download-button icon windows">Windows</a></li><!--
-          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-macos.dmg" class="download-button icon macos">macOS</a></li><!--
-          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="download-button icon linux">Linux</a></li>
+        <ul class="card-list">
+          <li><a href="https://github.com/firoorg/mobile/releases/download/v0.1.16/Firo-v0.1.16.apk" class="card-button icon android download">Android</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-win64-setup.exe" class="card-button icon windows download">Windows</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-macos.dmg" class="card-button icon macos download">macOS</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="card-button icon linux download">Linux</a></li>
         </ul>
       </div>
       <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
       <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
       <p>Firo 是完整意义上的「钱」。</p>
+      <section id="get_firo">
+        <h2>获得 Firo</h2>
+        <p>你可以在主流交易所上买到 Firo，<span class="mobile-break-line"><br></span>也可以通过显卡挖矿获得 Firo。</p>
+        <p>通过运行主节点（1000 FIRO）<span class="mobile-break-line"><br></span>可以获得约 10% 的年收益。</p>
+        <h3>Firo 主要交易所</h3>
+        <ul id="exchanges">
+          <li><a href="https://www.binance.com/en/trade/FIRO_USDT" target="_blank" class="card-button binance icon">币安</a></li><!--
+          --><li><a href="https://www.aex.com/page/trade.html#/?symbol=FIRO_USDT" target="_blank" class="card-button aex icon">安银</a></li><!--
+          --><li><a href="https://www.huobi.com/en-us/exchange/firo_usdt" target="_blank" class="card-button huobi icon">火币</a></li><!--
+          --><li><a href="https://github.com/firoorg/FiroDEX-Desktop/releases" target="_blank" class="card-button firodex icon">FiroDEX</a></li>
+        </ul>
+      </section>
     </main>
     <footer class="footer">© Firo 中文社区 2016-2022</footer>
   </body>
