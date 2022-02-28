@@ -2,8 +2,13 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Firo 中文 - 分享 Firo 动态</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no'">
+    <meta name="theme-color" content="#9b1c2e">
+    <link rel="icon" href="imgs/logo.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://firo.org/img/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://firo.org/img/meta/favicon-16x16.png">
+    <title>Firo 中文 | Firo 是专注隐私的加密货币</title>
     <meta name="description" content="Firo 是专注隐私的加密货币">
     <meta property="og:image" content="<%- siteURL + '/' + imgsURL + '/firocoin.png' %>">
     <meta property="og:title" content="Firo 中文">
@@ -13,104 +18,216 @@
     <meta name="twitter:description" content="Firo 是专注隐私的加密货币">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="<%- siteURL + '/' + imgsURL + '/firocoin.png' %>">
-    <%- include('head-common') %>
+    <style>
+      :root {
+        font-size: max(calc(38.2vw / 38), 16px);
+        background-color: #282c34;
+      }
+      body {
+        margin: 0;
+        color: #fefefe;
+        font-family: sans-serif;
+      }
+
+      header {
+        background-color: #fefefe;
+        height: 3.618em;
+        color: #3d3939;
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      nav > * {
+        margin-left: 1.618em;
+        line-height: 1;
+      }
+      main {
+        max-width: 38rem;
+        margin: 0 auto;
+      }
+      .header-inner {
+        max-width: calc(38rem / .618);
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1em;
+      }
+      .header-title {
+        margin: 0;
+      }
+      .header-title a {
+        color: inherit;
+        text-decoration: none;
+        background: left center url(imgs/logo.svg) no-repeat;
+        background-size: 2.618rem;
+        padding-left: 2.618rem;
+        line-height: 3.618rem;
+        height: 3.618rem;
+        font-size: 1.618rem;
+        display: inline-block;
+        font-style: italic;
+      }
+
+      .link {
+        color: #9b1c2e;
+        text-decoration: none;
+      }
+      .linkbutton {
+        background-color: #9b1c2e;
+        text-decoration: none;
+        color: #fefefe;
+        border-radius: .382em;
+        padding: .236em .382em;
+      }
+      .button {
+        background-color: #9b1c2e;
+        color: #fefefe;
+        text-decoration: none;
+        padding: .382em;
+        border-radius: .382em;
+        display: inline-block;
+        line-height: 1;
+      }
+
+      main {
+        padding: 3.618rem 1rem 0;
+      }
+
+      .download {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .download-logo-wrapper {
+        margin-bottom: 2.618em;
+        display: flex;
+        align-items: center;
+        height: 8.75rem;
+        transition: all .1s;
+        user-select: none;
+      }
+      .download-logo-wrapper:active {
+        transform: rotate(90deg);
+      }
+      .download-logo-wrapper > * {
+        pointer-events: none;
+      }
+      .download-title {
+        font-size: 2.618rem;
+        margin: 0;
+        margin-bottom: 1.618rem;
+        line-height: 1;
+      }
+      .download-subtitle {
+        font-size: 1.618rem;
+        margin: 0;
+        line-height: 1;
+      }
+      @media screen and (max-width: 440px) {
+        .download-title {
+          font-size: 1.618rem;
+        }
+        .download-subtitle {
+          font-size: 1rem;
+        }
+      }
+      .download-button {
+        background-color: #9b1c2e;
+        color: #fefefe;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1em 1.618em;
+        line-height: 1;
+        border-radius: 19.1%;
+        background-repeat: no-repeat;
+        background-position: center 1em;
+        background-size: 2.618em;
+        box-sizing: border-box;
+        width: 8.235625rem;
+      }
+      .download-button:before {
+        content: '下载';
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.618em;
+      }
+      .download-button.icon {
+        padding-top: 4.618em;
+      }
+      .download-button.android {
+        background-image: url(imgs/android.svg);
+      }
+      .download-button.windows {
+        background-image: url(imgs/windows.svg);
+      }
+      .download-button.macos {
+        background-image: url(imgs/apple.svg);
+      }
+      .download-button.linux {
+        background-image: url(imgs/linux.svg);
+      }
+      .download .download-button {
+        margin: 0 .5em;
+      }
+      .download ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .download li {
+        display: inline-block;
+      }
+      .download .download-list {
+        margin: 1.618em 0 1.309em;
+      }
+      .download .download-list li {
+        margin-top: 1em;
+      }
+      p {
+        line-height: 1.618em;
+        text-align: justify;
+      }
+      footer {
+        text-align: center;
+        margin: 2.309rem 0 2.618rem;
+        line-height: 1;
+      }
+    </style>
   </head>
   <body>
-    <nav>
-      <a href="index.html" class="logo">
-        <%- include('logo-picture') %>
-      </a>
-      <ul class="menu">
-        <li><a target="_blank" href="https://twitter.com/firo_cn">推特</a></li>
-        <li><a target="_blank" href="https://t.me/firo_zh">电报</a></li>
-        <li><a href="community.html">社区</a></li>
-      </ul>
-    </nav>
+    <header>
+      <div class="header-inner">
+        <h1 class="header-title"><a href="index.html">Firo 中文</a></h1>
+        <nav class="header-nav-bar">
+          <a class="link" href="https://twitter.com/firo_cn" target="_blank">推特</a>
+          <a class="link" href="https://t.me/firo_zh" target="_blank">电报</a>
+          <a class="button" href="news.html">新闻</a>
+        </nav>
+      </div>
+    </header>
     <main>
-      <article class="index">
-        <ul class="posts">
-          <% let lastDate %>
-          <% posts.forEach(post => { %>
-            <%
-              const icons = {
-                video: '📺',
-                forum: '💬',
-                announcement: '📢',
-                study: '📖',
-                research: '📜',
-                file: '📄',
-                ama: '🙋',
-                partnership: '🤝',
-                atom: '⚛️',
-                'exchange': '💱',
-                tech: '🧑‍💻',
-                magic: '🪄',
-                shopping: '🛍️',
-                scissors: '✂️',
-                laptop: '💻',
-                mobile: '📱',
-                family: '👪',
-                mobilewitharrow: '📲',
-                telescope: '🔭',
-                memo: '📝',
-                receive: '📨',
-                mining: '⛏️',
-                chart: '📊',
-                web: '🕸️',
-                news: '📰',
-                moneybag: '💰',
-                spark: '✨',
-                new: '🆕',
-                road: '🛣️',
-                he: '🈴',
-                moneyfly: '💸',
-                nice: '👍',
-                chain: '⛓️',
-                academic: '🎓',
-                globe: '🌐',
-                master: '👑',
-                firelove: '❤️‍🔥',
-                abacus: '🧮',
-                fire: '🔥'
-              }
-              const typeicon = icons[post.properties.type || 'article']
-              const icon = icons[post.properties.icon || post.properties.type || 'article']
-              const [year, month] = post.date.match(dateRegexp).splice(1)
-              const date = year == new Date().getYear() + 1900 ? ([
-                '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'
-              ])[month - 1] + '月' : ({
-                [new Date().getYear() + 1900 - 1]: '去年',
-                [new Date().getYear() + 1900 - 2]: '前年'
-              })[year] || year
-            %>
-            <% if (lastDate && lastDate !== date) { %>
-              <li class="lidate">
-                <div class="posts-icon-wrapper">
-                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="<%= autoPrefixImgURL('firo_symbol_dark_mode.svg') %>" media="(prefers-color-scheme: dark)"><img src="<%= autoPrefixImgURL('firo_symbol.svg') %>"></picture></div>
-                </div>
-                <div class="posts-body"><%= date %></div>
-              </li>
-            <% } %>
-            <li>
-              <div class="posts-icon-wrapper">
-                <div class="posts-icon"><%= icon %></div>
-              </div>
-              <div class="posts-body">
-                <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
-                <div class="posts-description"><%= post.properties.description %></div>
-              </div>
-            </li>
-          <% lastDate = date }) %>
+      <div class="download">
+        <div class="download-logo-wrapper">
+          <img src="imgs/logo2.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
+        </div>
+        <h1 class="download-title">Firo 是专注隐私的加密货币</h1>
+        <h2 class="download-subtitle">📥 下载钱包开始使用 Firo 📥</h2>
+        <ul class="download-list">
+          <li><a href="https://github.com/firoorg/mobile/releases/download/v0.1.16/Firo-v0.1.16.apk" class="download-button icon android">Android</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-win64-setup.exe" class="download-button icon windows">Windows</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-macos.dmg" class="download-button icon macos">macOS</a></li><!--
+          --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="download-button icon linux">Linux</a></li>
         </ul>
-        <footer>
-          <ul class="menu">
-            <li><a target="_blank" href="https://firo.org/">官网</a></li>
-            <li><a target="_blank" href="https://twitter.com/firo_cn">推特</a></li>
-            <li><a target="_blank" href="https://t.me/firo_zh">电报</a></li>
-          </ul>
-        </footer>
-      </article>
+      </div>
+      <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
+      <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
+      <p>Firo 是完整意义上的「钱」。</p>
     </main>
-    <script src="js/script.js"></script>
+    <footer class="footer">© Firo 中文社区 2016-2022</footer>
   </body>
 </html>

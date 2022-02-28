@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Firo 中文 - 分享 Firo 动态</title>
+    <meta name="description" content="Firo 是专注隐私的加密货币">
+    <meta property="og:image" content="<%- siteURL + '/' + imgsURL + '/firocoin.png' %>">
+    <meta property="og:title" content="Firo 中文">
+    <meta property="og:site_name" content="Firo 中文">
+    <meta property="og:description" content="Firo 是专注隐私的加密货币">
+    <meta name="twitter:title" content="Firo 中文">
+    <meta name="twitter:description" content="Firo 是专注隐私的加密货币">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="<%- siteURL + '/' + imgsURL + '/firocoin.png' %>">
+    <%- include('head-common') %>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">
+        <%- include('logo-picture') %>
+      </a>
+      <ul class="menu">
+        <li><a target="_blank" href="https://twitter.com/firo_cn">推特</a></li>
+        <li><a href="index.html">下载</a></li>
+        <li><a href="community.html">社区</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article class="index">
+        <ul class="posts">
+          <% let lastDate %>
+          <% posts.forEach(post => { %>
+            <%
+              const icons = {
+                video: '📺',
+                forum: '💬',
+                announcement: '📢',
+                study: '📖',
+                research: '📜',
+                file: '📄',
+                ama: '🙋',
+                partnership: '🤝',
+                atom: '⚛️',
+                'exchange': '💱',
+                tech: '🧑‍💻',
+                magic: '🪄',
+                shopping: '🛍️',
+                scissors: '✂️',
+                laptop: '💻',
+                mobile: '📱',
+                family: '👪',
+                mobilewitharrow: '📲',
+                telescope: '🔭',
+                memo: '📝',
+                receive: '📨',
+                mining: '⛏️',
+                chart: '📊',
+                web: '🕸️',
+                news: '📰',
+                moneybag: '💰',
+                spark: '✨',
+                new: '🆕',
+                road: '🛣️',
+                he: '🈴',
+                moneyfly: '💸',
+                nice: '👍',
+                chain: '⛓️',
+                academic: '🎓',
+                globe: '🌐',
+                master: '👑',
+                firelove: '❤️‍🔥',
+                abacus: '🧮',
+                fire: '🔥'
+              }
+              const typeicon = icons[post.properties.type || 'article']
+              const icon = icons[post.properties.icon || post.properties.type || 'article']
+              const [year, month] = post.date.match(dateRegexp).splice(1)
+              const date = year == new Date().getYear() + 1900 ? ([
+                '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二'
+              ])[month - 1] + '月' : ({
+                [new Date().getYear() + 1900 - 1]: '去年',
+                [new Date().getYear() + 1900 - 2]: '前年'
+              })[year] || year
+            %>
+            <% if (lastDate && lastDate !== date) { %>
+              <li class="lidate">
+                <div class="posts-icon-wrapper">
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="<%= autoPrefixImgURL('firo_symbol_dark_mode.svg') %>" media="(prefers-color-scheme: dark)"><img src="<%= autoPrefixImgURL('firo_symbol.svg') %>"></picture></div>
+                </div>
+                <div class="posts-body"><%= date %></div>
+              </li>
+            <% } %>
+            <li>
+              <div class="posts-icon-wrapper">
+                <div class="posts-icon"><%= icon %></div>
+              </div>
+              <div class="posts-body">
+                <a href="<%= post.properties.url || post.filename.replace(/\.md$/, '.html') %>"><%= post.title %></a>
+                <div class="posts-description"><%= post.properties.description %></div>
+              </div>
+            </li>
+          <% lastDate = date }) %>
+        </ul>
+        <footer>
+          <ul class="menu">
+            <li><a target="_blank" href="https://firo.org/">官网</a></li>
+            <li><a target="_blank" href="https://twitter.com/firo_cn">推特</a></li>
+            <li><a target="_blank" href="https://t.me/firo_zh">电报</a></li>
+          </ul>
+        </footer>
+      </article>
+    </main>
+    <footer>© Firo 中文社区 2016-2022</footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

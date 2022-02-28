@@ -21,16 +21,16 @@
   </head>
   <body>
     <nav>
-      <a href="index.html" class="logo" target="_self">
+      <a href="news.html" class="logo" target="_self">
         <%- include('logo-picture') %>
       </a>
       <ul class="menu">
         <li><a href="https://twitter.com/firo_cn">推特</a></li>
-        <li><a href="https://t.me/firo_zh">电报</a></li>
+        <li><a href="index.html" target="_self">下载</a></li>
         <% if (!post.filename.startsWith('community.')) { %>
           <li><a href="community.html" target="_self">社区</a></li>
         <% } else { %>
-          <li><a href="index.html" target="_self">首页</a></li>
+          <li><a href="news.html" target="_self">新闻</a></li>
         <% } %>
       </ul>
     </nav>
@@ -84,6 +84,7 @@
         </footer>
       </article>
     </main>
+    <footer>© Firo 中文社区 2016-2022</footer>
     <script src="js/script.js"></script>
   </body>
 </html>

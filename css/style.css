@@ -13,6 +13,10 @@ body {
   font-family: sans-serif;
   overflow-x: hidden;
 }
+body > footer {
+  text-align: center;
+  margin: 2.618em 0 1em;
+}
 ::selection {
   background-color: var(--theme-color);
   color: white;
