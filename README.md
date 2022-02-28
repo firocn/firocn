@@ -29,6 +29,12 @@
   <!-- 是否隐藏（可选） -->
   "hidden": true,
 
+  <!-- 类型（可选）：article、video、forum（默认为 article） -->
+  "type": "forum",
+
+  <!-- 图标（可选） -->
+  "icon": "fire",
+
   <!-- 来源地址（可选） -->
   "source": "https://firo.org/2022/01/28/helsing-private-firo-masternode.html"
 } %>
