@@ -26,12 +26,14 @@ body > header {
 .hide-header > header {
   top: calc(-3.618em - 1px);
 }
-body > header nav {
+body > header nav > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  list-style: none;
+  padding: 0;
 }
-body > header nav > * {
+body > header nav > ul > * {
   margin-left: 1.618em;
   line-height: 1;
 }
