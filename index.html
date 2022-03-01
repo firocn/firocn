@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta name="theme-color" content="#9b1c2e">
-    <link rel="icon" href="imgs/logo.svg">
+    <link rel="icon" href="imgs/logo-whitebg.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://firo.org/img/meta/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://firo.org/img/meta/favicon-16x16.png">
@@ -25,11 +25,9 @@
         --link-color-1: #ba2a45;
         --link-color-2: #7c1624;
         font-size: max(calc(38.2vw / 38), 16px);
-        background-color: #282c34;
       }
       body {
         margin: 0;
-        color: #fefefe;
         font-family: sans-serif;
       }
       h2, h3 {
@@ -37,9 +35,16 @@
         margin: 1.618em 0 1em;
       }
       header {
-        background-color: #fefefe;
         height: 3.618em;
         color: #3d3939;
+        padding: 0 1em;
+        border-bottom: 1px solid #f4f4f4;
+        background-color: white;
+        transition: top .382s;
+        top: 0;
+      }
+      .hide-header > header {
+        top: calc(-3.618em - 1px);
       }
       nav {
         display: flex;
@@ -61,7 +66,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 1em;
       }
       .header-title {
         margin: 0;
@@ -69,7 +73,7 @@
       .header-title a {
         color: inherit;
         text-decoration: none;
-        background: left center url(imgs/logo.svg) no-repeat;
+        background: left center url("imgs/logo-whitebg.svg") no-repeat;
         background-size: 2.618rem;
         padding-left: 2.618rem;
         line-height: 3.618rem;
@@ -77,8 +81,8 @@
         font-size: 1.618rem;
         display: inline-block;
         font-style: italic;
+        font-weight: bold;
       }
-
       .link {
         color: #9b1c2e;
         text-decoration: none;
@@ -87,7 +91,7 @@
         background-color: #9b1c2e;
         text-decoration: none;
         color: #fefefe;
-        border-radius: .382em;
+        border-radius: .309em;
         padding: .236em .382em;
       }
       .button {
@@ -95,7 +99,7 @@
         color: #fefefe;
         text-decoration: none;
         padding: .382em;
-        border-radius: .382em;
+        border-radius: .309em;
         display: inline-block;
         line-height: 1;
       }
@@ -156,7 +160,7 @@
         display: inline-block;
         padding: 1em 1.618em;
         line-height: 1;
-        border-radius: 1.618rem;
+        border-radius: 1.309rem;
         background-repeat: no-repeat;
         background-position: center 1em;
         background-size: auto 2em;
@@ -177,28 +181,28 @@
         background-size: 2.618em;
       }
       .card-button.android {
-        background-image: url(imgs/android.svg);
+        background-image: url("imgs/android.svg");
       }
       .card-button.windows {
-        background-image: url(imgs/windows.svg);
+        background-image: url("imgs/windows.svg");
       }
       .card-button.macos {
-        background-image: url(imgs/apple.svg);
+        background-image: url("imgs/apple.svg");
       }
       .card-button.linux {
-        background-image: url(imgs/linux.svg);
+        background-image: url("imgs/linux.svg");
       }
       .card-button.binance {
-        background-image: url(imgs/binance.svg);
+        background-image: url("imgs/binance.svg");
       }
       .card-button.aex {
-        background-image: url(imgs/aex.svg);
+        background-image: url("imgs/aex.svg");
       }
       .card-button.huobi {
-        background-image: url(imgs/huobi.svg);
+        background-image: url("imgs/huobi.svg");
       }
       .card-button.firodex {
-        background-image: url(imgs/logo.svg);
+        background-image: url("imgs/logo-whitebg.svg");
         background-size: 2rem;
       }
       .card-button {
@@ -236,6 +240,23 @@
         margin-top: 1em;
       }
 
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background-color: #282c34;
+        }
+        body {
+          color: #fefefe;
+        }
+        header {
+          background-color: #282c34;
+          color: white;
+          border-color: #33373f;
+        }
+        .header-title a {
+          background-image: url("imgs/logo2.svg");
+        }
+      }
+
       .rotate {
         animation: rotate .618s;
       }
@@ -248,7 +269,7 @@
   <body>
     <header>
       <div class="header-inner">
-        <h1 class="header-title"><a href="index.html">Firo 中文</a></h1>
+        <div class="header-title"><a href="index.html">Firo 中文</a></div>
         <nav class="header-nav-bar">
           <a class="link" href="https://twitter.com/firo_cn" target="_blank">推特</a>
           <a class="link" href="https://t.me/firo_zh" target="_blank">电报</a>
@@ -259,7 +280,10 @@
     <main>
       <div class="download">
         <div class="download-logo-wrapper" id="logo_wrapper">
-          <img src="imgs/logo2.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
+          <picture>
+            <source srcset="imgs/logo2.svg" media="(prefers-color-scheme: dark)">
+            <img src="imgs/logo-whitebg.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
+          </picture>
         </div>
         <h1 class="download-title">Firo 是专注隐私的加密货币</h1>
         <h2 class="download-subtitle">📥 下载钱包开始使用 Firo 📥</h2>
@@ -287,6 +311,7 @@
       </section>
     </main>
     <footer class="footer">© Firo 中文社区 2016-2022</footer>
+    <script src="js/script.js"></script>
     <script>
       ;(function () {
         const logoWrapper = document.querySelector('#logo_wrapper')

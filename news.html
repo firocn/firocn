@@ -31,19 +31,29 @@
 
   </head>
   <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-title"><a href="index.html">Firo 中文</a></div>
+        <nav class="header-nav-bar">
+          <a class="link" href="https://twitter.com/firo_cn" target="_blank">推特</a>
+          <a class="link" href="community.html">社区</a>
+          <a class="button" href="index.html">下载</a>
+        </nav>
+      </div>
+    </header>
     <nav>
-      <a href="index.html" class="logo">
+      <a href="news.html" class="logo">
         <picture>
   <source srcset="imgs/firo_logo_dark_mode.svg" media="(prefers-color-scheme: dark)">
   <img importance="high" src="imgs/firo_logo.svg" alt="Firo 中文社区" height="84" title="Firo 是专注隐私的加密货币">
 </picture>
 
       </a>
-      <ul class="menu">
+      <!-- <ul class="menu">
         <li><a target="_blank" href="https://twitter.com/firo_cn">推特</a></li>
         <li><a href="index.html">下载</a></li>
         <li><a href="community.html">社区</a></li>
-      </ul>
+      </ul> -->
     </nav>
     <main>
       <article class="index">
@@ -114,7 +124,7 @@
             
               <li class="lidate">
                 <div class="posts-icon-wrapper">
-                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg"></picture></div>
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg" class="complete"></picture></div>
                 </div>
                 <div class="posts-body">一月</div>
               </li>
@@ -193,7 +203,7 @@
             
               <li class="lidate">
                 <div class="posts-icon-wrapper">
-                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg"></picture></div>
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg" class="complete"></picture></div>
                 </div>
                 <div class="posts-body">去年</div>
               </li>
@@ -380,7 +390,7 @@
             
               <li class="lidate">
                 <div class="posts-icon-wrapper">
-                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg"></picture></div>
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg" class="complete"></picture></div>
                 </div>
                 <div class="posts-body">前年</div>
               </li>
@@ -406,6 +416,7 @@
       </article>
     </main>
     <footer>© Firo 中文社区 2016-2022</footer>
+    <div id="scroll_to_top" onclick="window.scrollTo(0, 0)">🔝</div>
     <script src="js/script.js"></script>
   </body>
 </html>
