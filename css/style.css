@@ -16,7 +16,6 @@ body {
 }
 body > header {
   height: 3.618em;
-  color: #3d3939;
   padding: 0 1em;
   border-bottom: 1px solid var(--gray);
   background-color: white;
@@ -325,7 +324,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   box-shadow: 0 0 0 .242874rem var(--background-color);
   position: sticky;
   top: 1.618rem;
-  transition: .382s top;
+  transition: top .382s;
 }
 .show-header .posts-icon {
   top: calc(3.618em + 1px);
