@@ -36,9 +36,14 @@
       }
       header {
         height: 3.618em;
-        color: #3d3939;
         padding: 0 1em;
         border-bottom: 1px solid #f4f4f4;
+        background-color: white;
+        transition: top .382s;
+        top: 0;
+      }
+      .hide-header > header {
+        top: calc(-3.618em - 1px);
       }
       nav {
         display: flex;
@@ -81,6 +86,9 @@
         color: #9b1c2e;
         text-decoration: none;
       }
+      .link:visited {
+        color: inherit;
+      }
       .linkbutton {
         background-color: #9b1c2e;
         text-decoration: none;
@@ -97,7 +105,11 @@
         display: inline-block;
         line-height: 1;
       }
-
+      @media (hover: hover) {
+        .button:active {
+          border-radius: .125rem;
+        }
+      }
       main {
         padding: 3.618rem 1rem 0;
       }
@@ -121,6 +133,7 @@
       .download-logo-wrapper img {
         width: 12.5rem;
         height: 12.5rem;
+        vertical-align: middle;
       }
       .download-title {
         font-size: 2.618rem;
@@ -197,7 +210,6 @@
       }
       .card-button.firodex {
         background-image: url("imgs/logo-whitebg.svg");
-        background-size: 2rem;
       }
       .card-button {
         margin: 0 .5em;
@@ -214,10 +226,11 @@
       p {
         line-height: 1.618em;
         text-align: justify;
+        padding: 0 0.618rem;
       }
       footer {
         text-align: center;
-        margin: 2.309rem 0 2.618rem;
+        margin: 2.618rem 0;
         line-height: 1;
       }
 
@@ -242,11 +255,11 @@
           color: #fefefe;
         }
         header {
-          background-color: #fefefe;
-          box-shadow: none;
+          background-color: #282c34;
+          border-color: #33373f;
         }
         .header-title a {
-          background-image: url("imgs/logo.svg");
+          background-image: url("imgs/logo2.svg");
         }
       }
 
@@ -296,14 +309,15 @@
         <p>通过运行主节点（1000 FIRO）<span class="mobile-break-line"><br></span>可以获得约 10% 的年收益。</p>
         <h3>Firo 主要交易所</h3>
         <ul id="exchanges">
-          <li><a href="https://www.binance.com/en/trade/FIRO_USDT" target="_blank" class="card-button binance icon">币安</a></li><!--
+          <li><a href="https://www.binance.com/zh-CN/trade/FIRO_USDT" target="_blank" class="card-button binance icon">币安</a></li><!--
           --><li><a href="https://www.aex.com/page/trade.html#/?symbol=FIRO_USDT" target="_blank" class="card-button aex icon">安银</a></li><!--
-          --><li><a href="https://www.huobi.com/en-us/exchange/firo_usdt" target="_blank" class="card-button huobi icon">火币</a></li><!--
+          --><li><a href="https://www.huobi.com/zh-cn/exchange/firo_usdt" target="_blank" class="card-button huobi icon">火币</a></li><!--
           --><li><a href="https://github.com/firoorg/FiroDEX-Desktop/releases" target="_blank" class="card-button firodex icon">FiroDEX</a></li>
         </ul>
       </section>
     </main>
     <footer class="footer">© Firo 中文社区 2016-2022</footer>
+    <script src="js/script.js"></script>
     <script>
       ;(function () {
         const logoWrapper = document.querySelector('#logo_wrapper')

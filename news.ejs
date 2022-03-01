@@ -96,7 +96,7 @@
             <% if (lastDate && lastDate !== date) { %>
               <li class="lidate">
                 <div class="posts-icon-wrapper">
-                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="<%= autoPrefixImgURL('firo_symbol_dark_mode.svg') %>" media="(prefers-color-scheme: dark)"><img src="<%= autoPrefixImgURL('firo_symbol.svg') %>"></picture></div>
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="<%= autoPrefixImgURL('firo_symbol_dark_mode.svg') %>" media="(prefers-color-scheme: dark)"><img src="<%= autoPrefixImgURL('firo_symbol.svg') %>" class="complete"></picture></div>
                 </div>
                 <div class="posts-body"><%= date %></div>
               </li>
@@ -122,6 +122,7 @@
       </article>
     </main>
     <footer>© Firo 中文社区 2016-2022</footer>
+    <div id="scroll_to_top" onclick="window.scrollTo(0, 0)">🔝</div>
     <script src="js/script.js"></script>
   </body>
 </html>
