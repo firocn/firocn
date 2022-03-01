@@ -2,7 +2,7 @@
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no'">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
     <meta name="theme-color" content="#9b1c2e">
     <link rel="icon" href="imgs/logo.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="https://firo.org/img/meta/apple-touch-icon.png">
@@ -115,11 +115,7 @@
         display: flex;
         align-items: center;
         height: 8.75rem;
-        transition: all .1s;
         user-select: none;
-      }
-      .download-logo-wrapper:active {
-        transform: rotate(90deg);
       }
       .download-logo-wrapper > * {
         pointer-events: none;
@@ -239,6 +235,14 @@
         display: inline-block;
         margin-top: 1em;
       }
+
+      .rotate {
+        animation: rotate .618s;
+      }
+      @keyframes rotate {
+        from { transform: rotate(0); }
+        to { transform: rotate(-1080deg); }
+      }
     </style>
   </head>
   <body>
@@ -254,7 +258,7 @@
     </header>
     <main>
       <div class="download">
-        <div class="download-logo-wrapper">
+        <div class="download-logo-wrapper" id="logo_wrapper">
           <img src="imgs/logo2.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
         </div>
         <h1 class="download-title">Firo 是专注隐私的加密货币</h1>
@@ -283,5 +287,16 @@
       </section>
     </main>
     <footer class="footer">© Firo 中文社区 2016-2022</footer>
+    <script>
+      ;(function () {
+        const logoWrapper = document.querySelector('#logo_wrapper')
+        logoWrapper.addEventListener('click', e => {
+          e.currentTarget.classList.add('rotate')
+        })
+        logoWrapper.addEventListener('animationend', e => {
+          e.currentTarget.classList.remove('rotate')
+        })
+      })()
+    </script>
   </body>
 </html>
