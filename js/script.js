@@ -23,7 +23,7 @@ if (document.referrer.includes(window.siteURL)) {
       } else {
         document.body.classList.remove('show-topbtn')
       }
-    } else {
+    } else if (window.pageYOffset > window.lastPageY + 10) {
       document.body.classList.remove('show-header')
       document.body.classList.add('hide-header')
       document.body.classList.remove('show-topbtn')
