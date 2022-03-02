@@ -135,6 +135,7 @@
         align-items: center;
         height: 8.75rem;
         user-select: none;
+        -webkit-tap-highlight-color: transparent;
       }
       .download-logo-wrapper > * {
         pointer-events: none;
@@ -146,7 +147,7 @@
       }
       .download-title {
         font-size: 2.618rem;
-        margin: 0 -1.618rem 1.618rem;
+        margin: 0 -.618rem 1.618rem;
         line-height: 1;
       }
       .download-subtitle {
@@ -166,6 +167,11 @@
         }
         .mobile-break-line {
           display: inline;
+        }
+      }
+      @media screen and (max-width: 360px) {
+        .hidden-360 {
+          display: none;
         }
       }
       .card-button {
@@ -286,7 +292,7 @@
         <nav class="header-nav-bar">
           <ul>
             <li><a class="link" href="https://twitter.com/firo_cn" target="_blank">推特</a></li>
-            <li><a class="link" href="https://t.me/firo_zh" target="_blank">电报</a></li>
+            <li class="hidden-360"><a class="link" href="https://t.me/firo_zh" target="_blank">电报</a></li>
             <li><a class="button" href="news.html">新闻</a></li>
           </ul>
         </nav>

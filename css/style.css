@@ -181,6 +181,11 @@ iframe {
     height: 56.25vw;
   }
 }
+@media screen and (max-width: 360px) {
+  .hidden-360 {
+    display: none;
+  }
+}
 @media (hover: hover) {
   a:active {
     border-radius: .125rem;
