@@ -37,6 +37,9 @@ body > header nav > ul > * {
   margin-left: 1.618em;
   line-height: 1;
 }
+body > header nav > ul > *:first-child {
+  margin-left: 0;
+}
 .header-inner {
   max-width: calc(38rem / .618);
   margin: 0 auto;
@@ -176,6 +179,11 @@ iframe {
   .iframe-wrapper {
     width: calc(100% + 3.236rem);
     height: 56.25vw;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hidden-360 {
+    display: none;
   }
 }
 @media (hover: hover) {
