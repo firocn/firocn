@@ -187,8 +187,11 @@ iframe {
   }
 }
 @media (hover: hover) {
-  a:active {
+  a:not(.button):active {
     border-radius: .125rem;
+  }
+  .button:active {
+    background-color: var(--link-color-2);
   }
 }
 article a {
