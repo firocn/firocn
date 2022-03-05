@@ -141,7 +141,7 @@ article:not(.index) img, article video {
   height: auto;
 }
 @media screen and (min-width: 61.484rem) {
-  article:not(.index) img, article video {
+  article:not(.index) img {
     border-radius: 1.309rem;
   }
 }
@@ -150,6 +150,9 @@ article:not(.index) img, article video {
     width: min(161.8%, 100vw);
     max-width: initial;
     margin-left: max(-30.9%, calc((38rem - 100vw) / 2));
+  }
+  article:not(.index) img.small, article video {
+    border-radius: 1.309rem;
   }
 }
 article a img {
