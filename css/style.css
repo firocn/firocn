@@ -102,6 +102,7 @@ body > header nav > ul > *:first-child {
 body > footer {
   text-align: center;
   margin: 2.618em 0 1em;
+  font-size: .618em;
 }
 ::selection {
   background-color: var(--theme-color);
