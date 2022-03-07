@@ -93,7 +93,7 @@
         <p><img src="https://firo.org/blog/assets/spats-paper.png" width="1018" height="866"   alt="Spats：用户定义的用于 Spark 交易协议的机密资产" title="Spats：用户定义的用于 Spark 交易协议的机密资产"></p>
 <p>我们很自豪地揭示 Firo 的研究论文 <a href="https://eprint.iacr.org/2022/288">Spats（Spark Assets 的缩写）</a>，它扩展了 <a href="https://eprint.iacr.org/2021/1173">Lelantus Spark</a>，以支持机密资产，这与 Firo 致力于为更广泛的加密货币生态系统提供隐私的重点相一致。</p>
 <p>大多数加密货币生态系统平台，如以太坊、币安智能链、Solana 和 Avalanche，在设计时都没有考虑到隐私问题。虽然有各种尝试为这些生态系统添加隐私，但由于这些链的架构，它们要么依赖第二层解决方案，要么使用复杂而昂贵的智能合约，并经常以各种方式泄露数据。此外，这些隐私解决方案往往是零散的，或相互竞争，稀释了每种方法的匿名集。</p>
-<p>Firo 的 <a href="https://firo.org/2021/08/24/presenting-lelantus-spark.html">Lelantus Spark</a> 是一个完整的隐私协议，可以隐藏发送方、接收方和传输的金额，而不需要预信任机制。随着 Firo 开始使用 <a href="https://firo.org/2021/12/22/elysium-testnet-and-gui.html">Elysium</a> 支持代币化以构建隐私生态系统，Spats 扩展了 Spark 的功能，以隐藏正在传输的资产类型。</p>
+<p>Firo 的 <a href="https://mp.weixin.qq.com/s/Dr-6efV-bZyZyns6qSHEKw">Lelantus Spark</a> 是一个完整的隐私协议，可以隐藏发送方、接收方和传输的金额，而不需要预信任机制。随着 Firo 开始使用 <a href="2021-12-22-elysium-testnet-and-gui.html">Elysium</a> 支持代币化以构建隐私生态系统，Spats 扩展了 Spark 的功能，以隐藏正在传输的资产类型。</p>
 <p>在许多现有的代币生态系统的链上隐私机制中，如 Tornado Cash，资产类型仍然是可见的，这限制了每个资产类型中的匿名集。Spats 允许代币化层的所有资产共享同一个匿名池，从而极大地提高了隐私性。此外，它保留了 Lelantus Spark 的所有优点，因此无需在固定面额中进行匿名，因为金额是隐藏的。同时，由于 Firo 是为隐私而设计的，因此可以在不透露来源的情况下支付交易费，这与其他代币生态系统不同。</p>
 <p>为了举例说明这在全面部署后的样子，设想你在 Elysium 2.0 上创建或桥接了一个名为 fUSD 的资产，然后你还有另一个资产 fDAI。当使用 Spats 发送时，发送 fUSD 的交易与发送 fDAI 是没有区别的。因此，Elysium 2.0 代币化层上的任何交易也提高了 Elysium 中所有其他资产的匿名性。</p>
 <h2 id="spats-如何融入-firo-的路线图？">Spats 如何融入 Firo 的路线图？</h2>
