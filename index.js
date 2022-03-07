@@ -36,7 +36,7 @@ const _siteDir = `${__dirname}/_site`
         ({ width, height } = await sizeOf(url))
       }
       const pureURL = url.replace(/#size=.+$/, '')
-      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${pureURL}" width="${width}" height="${height}" ${width < 608 ? 'class="small"' : ''} $3>`)
+      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${pureURL}" width="${width}" height="${height}" ${width <= 608 ? 'class="small"' : ''} $3>`)
       html = html.replaceAll(originalImgTag, newImgTag)
     }
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
