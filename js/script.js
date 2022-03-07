@@ -14,7 +14,6 @@ if (document.referrer.includes(window.siteURL)) {
   const header = document.querySelector('body > header')
   const scrollToTop = document.querySelector('#scroll_to_top')
   header.style.position = 'sticky'
-  setTimeout(() => { document.documentElement.style = 'scroll-behavior: smooth;' }, 1000)
   window.addEventListener('scroll', e => {
     if (window.pageYOffset < window.lastPageY) {
       document.body.classList.add('show-header')
