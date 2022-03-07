@@ -8,7 +8,7 @@
   "source": "https://firo.org/2022/03/01/campfire-firo-wallet.html"
 } %>
 
-![介绍 Campfire：Firo 手机钱包](https://firo.org/blog/assets/introducing-campfire.png#size=8000x4000)
+![介绍 Campfire：Firo 手机钱包](https://firo.org/blog/assets/introducing-campfire.png#size=8000x4000 "介绍 Campfire：Firo 手机钱包")
 
 [Cypher Stack](https://cypherstack.com/) 和 [The Arcadia Group](https://www.arcadiamgroup.com/) 在 Firo 核心团队的协助下，发布了 Campfire，这是一个默认隐私的开源 Firo 手机钱包！Campfire 的名字是参考 Firo 的隐私「燃烧」机制，但它是一种温暖、友好和符合社交的方式。
 
