@@ -24,7 +24,9 @@ body > header {
   top: 0;
 }
 .hide-header > header {
+  transition: top .382s, opacity .382s .382s;
   top: calc(-3.618em - 1px);
+  opacity: 0;
 }
 body > header nav > ul {
   display: flex;
@@ -379,6 +381,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   font-size: 1.618rem;
   line-height: 1;
   bottom: -1.618rem;
+  opacity: 0;
   right: max(calc(50% - calc(38rem / .618 / 2)), 1rem);
   display: flex;
   justify-content: center;
@@ -386,11 +389,13 @@ article[lang|='en'] p, article[lang|='en'] li {
   z-index: 1;
   cursor: pointer;
   user-select: none;
-  transition: bottom .382s;
+  transition: bottom .382s, opacity .382s .382s;
   -webkit-tap-highlight-color: transparent;
 }
 .show-topbtn #scroll_to_top {
+  transition: bottom .382s;
   bottom: 1.618rem;
+  opacity: 1;
 }
 
 noscript {
