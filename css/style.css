@@ -71,13 +71,13 @@ body > header nav > ul > *:first-child {
 .linkbutton {
   background-color: #9b1c2e;
   text-decoration: none;
-  color: #fefefe;
+  color: #fff;
   border-radius: .309em;
   padding: .236em .382em;
 }
 .button {
   background-color: #9b1c2e;
-  color: #fefefe;
+  color: #fff;
   text-decoration: none;
   padding: .382em;
   border-radius: .309em;
