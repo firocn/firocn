@@ -1,7 +1,13 @@
+let bodyHeight = document.body.offsetHeight
+let windowHeight = window.innerHeight
+
+window.addEventListener('resize', () => { windowHeight = window.innerHeight })
+
 Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
   if (img.complete) return img.classList.add('complete')
   img.addEventListener('load', e => {
     e.target.classList.add('complete')
+    bodyHeight = document.body.offsetHeight
   })
 })
 
@@ -22,7 +28,7 @@ if (document.referrer.includes(window.siteURL)) {
     } else {
       header.classList.remove('visible')
     }
-    if (scrollY < lastPageY - deadzone || scrollY < deadzone) {
+    if (scrollY < lastPageY - deadzone || scrollY < deadzone || scrollY + windowHeight >= bodyHeight - 100) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
