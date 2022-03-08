@@ -2,14 +2,14 @@
   "title": "Spats：由 Spark 支持的机密资产",
   "description": "揭示 Spats，它扩展了 Spark 技术，以支持机密代币/资产。Spats 不仅隐藏发送方、接收方、金额，而且还隐藏资产类型！Spats 将构成 Firo 隐私生态系统层的基础。",
   "summary": "用户定义的用于 Spark 交易协议的机密资产",
-  "img": "https://firo.org/blog/assets/spats-paper.png",
+  "img": "https://firo.org/blog/assets/spark-assets.png",
   "author": "Reuben Yap",
   "type": "announcement",
   "icon": "spats",
   "source": "https://firo.org/2022/03/07/spats-confidential-assets-lelantus-spark.html"
 } %>
 
-![Spats：用户定义的用于 Spark 交易协议的机密资产](https://firo.org/blog/assets/spats-paper.png#size=1018x866 "Spats：用户定义的用于 Spark 交易协议的机密资产")
+![Spark 资产：将 Lelantus Spark 扩展到机密资产](https://firo.org/blog/assets/spark-assets.png#size=1920x960 "Spark 资产：将 Lelantus Spark 扩展到机密资产")
 
 我们很自豪地揭示 Firo 的研究论文 [Spats（Spark Assets 的缩写）](https://eprint.iacr.org/2022/288)，它扩展了 [Lelantus Spark](https://eprint.iacr.org/2021/1173)，以支持机密资产，这与 Firo 致力于为更广泛的加密货币生态系统提供隐私的重点相一致。
 
@@ -23,7 +23,7 @@ Firo 的 [Lelantus Spark](https://mp.weixin.qq.com/s/Dr-6efV-bZyZyns6qSHEKw) 是
 
 ## Spats 如何融入 Firo 的路线图？
 
-Spats 使用 Lelantus Spark（已处于后期开发状态）作为基础，我们计划今年在主网上部署 Lelantus Spark。Spats 与 Lelantus Spark 共享许多相同的密码学管道，因此许多现有的代码可以被调整以支持它。
+Spats 使用 Lelantus Spark（已处于后期开发状态）作为基础，我们计划今年在主网上部署 Lelantus Spark。Spats 与 Lelantus Spark 共享许多相同的密码学构建基础，因此许多现有的代码可以被调整以支持它。
 
 Elysium 1.0 即将发布，目前在测试网上，使用的 Lelantus（不是 Spark），因此尚不支持 Spats。我们已经在计划 Elysium 的继任者 Elysium 2.0 及其扩展功能，例如更容易与其他链桥接或更高级的脚本/智能合约功能，而 Spats 将成为 Elysium 2.0 的一部分。
 
