@@ -13,11 +13,15 @@ if (document.referrer.includes(window.siteURL)) {
 ;(function () {
   const header = document.querySelector('body > header')
   const scrollToTop = document.querySelector('#scroll_to_top')
-  header.style.position = 'sticky'
-  const deadzone = 10
+  const deadzone = 10, headerHeight = header.offsetHeight
   let lastPageY
   window.addEventListener('scroll', e => {
     const scrollY = window.pageYOffset
+    if (scrollY < headerHeight) {
+      header.classList.add('visible')
+    } else {
+      header.classList.remove('visible')
+    }
     if (scrollY < lastPageY - deadzone || scrollY < deadzone) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
@@ -34,3 +38,5 @@ if (document.referrer.includes(window.siteURL)) {
     lastPageY = scrollY
   })
 })()
+
+document.body.classList.add('initialized')
