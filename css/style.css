@@ -20,12 +20,10 @@ body > header {
   border-bottom: 1px solid var(--gray);
   background-color: white;
   z-index: 2;
-  transition: top .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: top .382s;
 }
 body > header.visible {
-  transition: top .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: top .382s;
   opacity: 1;
 }
 .initialized > header {
@@ -35,8 +33,7 @@ body > header.visible {
   margin-top: -1px;
 }
 .hide-header > header {
-  transition: top .618s, opacity .618s .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: top .382s, opacity .382s .382s;
   top: calc(-3.618em - 2px);
   opacity: 0;
 }
@@ -355,8 +352,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   box-shadow: 0 0 0 .242874rem var(--background-color);
   position: sticky;
   top: 1.618rem;
-  transition: top .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: top .382s;
 }
 .show-header .posts-icon {
   top: calc(3.618em + 1px);
@@ -402,13 +398,11 @@ article[lang|='en'] p, article[lang|='en'] li {
   z-index: 1;
   cursor: pointer;
   user-select: none;
-  transition: bottom .618s, opacity .618s .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: bottom .382s, opacity .382s .382s;
   -webkit-tap-highlight-color: transparent;
 }
 .show-topbtn #scroll_to_top {
-  transition: bottom .618s;
-  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: bottom .382s;
   bottom: 1.618rem;
   opacity: 1;
 }
