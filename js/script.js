@@ -50,5 +50,8 @@ if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefo
 document.body.classList.add('initialized')
 
 function onUIUpdated() {
-  requestAnimationFrame(() => { windowHeight = window.innerHeight })
+  requestAnimationFrame(() => {
+    bodyHeight = document.body.offsetHeight
+    windowHeight = window.innerHeight
+  })
 }

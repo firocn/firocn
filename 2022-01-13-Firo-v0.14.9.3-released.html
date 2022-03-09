@@ -191,8 +191,10 @@ Firo 中文</a></div>
       })
   }
 
-  updateInfos()
-  setInterval(() => { updateInfos() }, 10000)
+  setTimeout(() => {
+    updateInfos()
+    setInterval(() => { updateInfos() }, 10000)
+  }, 3000)
 </script>
 
     <div id="scroll_to_top" onclick="window.scrollTo(0, 0)">🔝</div>
