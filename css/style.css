@@ -367,7 +367,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   transition: top .382s;
 }
 .show-header .posts-icon {
-  top: calc(3.618em + 1px);
+  top: calc(3.618rem + 1px + 1.618rem);
 }
 .posts-iconfiro img {
   --size: max(1.618em - 1px, 31px);
