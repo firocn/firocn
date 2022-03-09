@@ -29,6 +29,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="imgs/logo-transparentbg16.svg">
 <script>
   window.siteURL = 'https://firocn.org'
+  window.siteDomain = 'firocn.org'
 </script>
 
     <base target="_blank" />
@@ -103,7 +104,7 @@
 <p>我们相信隐私技术与良好的用户体验是相辅相成的，我们将在这方面努力工作，原生手机钱包和快速同步钱包即将到来。</p>
 
         
-        <footer>
+        <!-- <footer>
           <ul class="menu">
             
               <li><a href="https://firo.org/2021/10/01/firopow-and-instantsend-release.html">原文</a></li>
@@ -112,13 +113,19 @@
             <li><a href="https://twitter.com/firo_cn">推特</a></li>
             <li><a href="https://t.me/firo_zh">电报</a></li>
           </ul>
-        </footer>
+        </footer> -->
       </article>
     </main>
     <footer>
-  © Firo 中文社区 2016-2022
-  <span id="latest_block" style="display: none;">｜ 高度：<span id="latest_block_value"></span></span>
-  <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  <p>© Firo 中文社区 2016-2022
+    ｜ <a target="_blank" href="https://firo.org/">官网</a>
+    ｜ <a target="_blank" href="https://twitter.com/firo_cn">推特</a>
+    ｜ <a target="_blank" href="https://t.me/firo_zh">电报</a>
+  </p>
+  <p>
+    <span id="latest_block" style="display: none;"> 高度：<span id="latest_block_value"></span></span>
+    <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  </p>
 </footer>
 <script>
   const latestBlock = document.querySelector('#latest_block')
@@ -127,13 +134,21 @@
   const latestPriceValue = document.querySelector('#latest_price_value')
 
   const updateInfos = function () {
-    fetch(`getblockcount.txt?_=${new Date().getTime()}`)
-      .then(res => res.text())
-      .then(height => {
-        latestBlockValue.innerHTML = height
+    if (location.href.includes(siteDomain)) {
+      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
+        .then(res => res.text())
+        .then(height => {
+          latestBlockValue.innerHTML = height
+          latestBlock.style.display = 'inline'
+          onUIUpdated()
+        })
+    } else {
+      requestAnimationFrame(() => {
+        latestBlockValue.innerHTML = '888888'
         latestBlock.style.display = 'inline'
         onUIUpdated()
       })
+    }
     fetch('https://explorer.firo.org/insight-api-zcoin/currency')
       .then(res => res.json())
       .then(json => {

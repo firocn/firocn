@@ -112,10 +112,12 @@ body > header nav > ul > *:first-child {
   }
 }
 body > footer {
-  text-align: center;
   margin: 2.309rem 0 1rem;
   font-size: .618em;
-  line-height: 1.618rem;
+  line-height: 1.618;
+}
+body > footer > p {
+  text-align: center;
 }
 ::selection {
   background-color: var(--theme-color);
@@ -225,11 +227,10 @@ article a {
   }
 }
 article > footer {
-  margin: 2.618em 0 1em;
+  margin: 2.309em 0 1em;
 }
 article > footer .menu {
   font-weight: initial;
-  justify-content: space-evenly;
 }
 article > footer .menu li {
   margin: 0 !important;
@@ -288,15 +289,15 @@ article[lang|='en'] p, article[lang|='en'] li {
 .menu li:not(:first-child) {
   margin-left: 1.618em;
 }
-.menu a {
+.menu a, footer a {
   text-decoration: none;
   color: var(--link-color);
 }
 @media (hover: hover) {
-  .menu a:hover {
+  .menu a:hover, footer a:hover {
     color: var(--link-color-1);
   }
-  .menu a:active {
+  .menu a:active, footer a:active {
     color: white;
     background-color: var(--link-color-2);
   }
@@ -327,11 +328,11 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts li a {
   font-weight: bold;
 }
-.posts li a:visited, .menu a:visited, .link:visited {
+.posts li a:visited, .menu a:visited, .link:visited, footer a:visited {
   color: inherit;
 }
 @media (hover: hover) {
-  .posts li a:visited:active, .menu a:visited:active {
+  .posts li a:visited:active, .menu a:visited:active, footer a:visited:active {
     color: white;
   }
 }

@@ -29,6 +29,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="imgs/logo-transparentbg16.svg">
 <script>
   window.siteURL = 'https://firocn.org'
+  window.siteDomain = 'firocn.org'
 </script>
 
     <base target="_blank" />
@@ -107,7 +108,7 @@
 <p>我们很高兴在 Firo 中成功实现了 RAP 地址；解决了链上隐私的一个重要部分，即接收方隐私。我们还要特别感谢我们的核心开发人员 Andrey Bezrukov，他在实现 RAP 地址方面做了大部分繁重的工作，以及 <a href="https://arcadiamgroup.com/">Arcadia 集团</a>，他们提供了一个早期的工作实现，这是由我们的<a href="https://ccs.firo.org/">社区众筹系统</a>提供部分资金。</p>
 
         
-        <footer>
+        <!-- <footer>
           <ul class="menu">
             
               <li><a href="https://firo.org/2021/06/09/introducing-receiver-address-privacy-for-firo.html">原文</a></li>
@@ -116,13 +117,19 @@
             <li><a href="https://twitter.com/firo_cn">推特</a></li>
             <li><a href="https://t.me/firo_zh">电报</a></li>
           </ul>
-        </footer>
+        </footer> -->
       </article>
     </main>
     <footer>
-  © Firo 中文社区 2016-2022
-  <span id="latest_block" style="display: none;">｜ 高度：<span id="latest_block_value"></span></span>
-  <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  <p>© Firo 中文社区 2016-2022
+    ｜ <a target="_blank" href="https://firo.org/">官网</a>
+    ｜ <a target="_blank" href="https://twitter.com/firo_cn">推特</a>
+    ｜ <a target="_blank" href="https://t.me/firo_zh">电报</a>
+  </p>
+  <p>
+    <span id="latest_block" style="display: none;"> 高度：<span id="latest_block_value"></span></span>
+    <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  </p>
 </footer>
 <script>
   const latestBlock = document.querySelector('#latest_block')
@@ -131,13 +138,21 @@
   const latestPriceValue = document.querySelector('#latest_price_value')
 
   const updateInfos = function () {
-    fetch(`getblockcount.txt?_=${new Date().getTime()}`)
-      .then(res => res.text())
-      .then(height => {
-        latestBlockValue.innerHTML = height
+    if (location.href.includes(siteDomain)) {
+      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
+        .then(res => res.text())
+        .then(height => {
+          latestBlockValue.innerHTML = height
+          latestBlock.style.display = 'inline'
+          onUIUpdated()
+        })
+    } else {
+      requestAnimationFrame(() => {
+        latestBlockValue.innerHTML = '888888'
         latestBlock.style.display = 'inline'
         onUIUpdated()
       })
+    }
     fetch('https://explorer.firo.org/insight-api-zcoin/currency')
       .then(res => res.json())
       .then(json => {

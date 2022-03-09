@@ -29,6 +29,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="imgs/logo-transparentbg16.svg">
 <script>
   window.siteURL = 'https://firocn.org'
+  window.siteDomain = 'firocn.org'
 </script>
 
     <base target="_blank" />
@@ -98,7 +99,7 @@
 <p>目前的计划是先在 Firo 的主网上部署 Lelantus Spark（预计 2022 年第二季度），然后再实现 Helsing。由于 Helsing 仍然是一项正在进行中的工作，尚待正式和外部审查，这使我们有时间从 Firo 社区和更广泛的技术社区获得反馈、评论和建议。我们建议将反馈意见张贴在我们的<a href="https://forum.firo.org/t/helsing-private-masternode-staking-in-lelantus-spark">论坛</a>上！</p>
 
         
-        <footer>
+        <!-- <footer>
           <ul class="menu">
             
               <li><a href="https://firo.org/2022/01/28/helsing-private-firo-masternode.html">原文</a></li>
@@ -107,13 +108,19 @@
             <li><a href="https://twitter.com/firo_cn">推特</a></li>
             <li><a href="https://t.me/firo_zh">电报</a></li>
           </ul>
-        </footer>
+        </footer> -->
       </article>
     </main>
     <footer>
-  © Firo 中文社区 2016-2022
-  <span id="latest_block" style="display: none;">｜ 高度：<span id="latest_block_value"></span></span>
-  <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  <p>© Firo 中文社区 2016-2022
+    ｜ <a target="_blank" href="https://firo.org/">官网</a>
+    ｜ <a target="_blank" href="https://twitter.com/firo_cn">推特</a>
+    ｜ <a target="_blank" href="https://t.me/firo_zh">电报</a>
+  </p>
+  <p>
+    <span id="latest_block" style="display: none;"> 高度：<span id="latest_block_value"></span></span>
+    <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+  </p>
 </footer>
 <script>
   const latestBlock = document.querySelector('#latest_block')
@@ -122,13 +129,21 @@
   const latestPriceValue = document.querySelector('#latest_price_value')
 
   const updateInfos = function () {
-    fetch(`getblockcount.txt?_=${new Date().getTime()}`)
-      .then(res => res.text())
-      .then(height => {
-        latestBlockValue.innerHTML = height
+    if (location.href.includes(siteDomain)) {
+      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
+        .then(res => res.text())
+        .then(height => {
+          latestBlockValue.innerHTML = height
+          latestBlock.style.display = 'inline'
+          onUIUpdated()
+        })
+    } else {
+      requestAnimationFrame(() => {
+        latestBlockValue.innerHTML = '888888'
         latestBlock.style.display = 'inline'
         onUIUpdated()
       })
+    }
     fetch('https://explorer.firo.org/insight-api-zcoin/currency')
       .then(res => res.json())
       .then(json => {
