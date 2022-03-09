@@ -9,12 +9,12 @@
   --gray-alpha: rgba(0, 0, 0, calc(1 - 244 / 255));
   font-size: max(calc(38.2vw / 38), 16px);
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 body {
   margin: 0;
   padding: 0 0 1.618rem;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 body > header {
   height: 3.618em;
