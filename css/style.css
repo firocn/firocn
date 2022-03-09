@@ -121,12 +121,15 @@ body > header nav > ul > *:first-child {
   }
 }
 body > footer {
-  margin: 2.309rem 0 1rem;
+  margin: 2.618rem 0 0;
   font-size: .618em;
   line-height: 1.618;
 }
 body > footer > p {
   text-align: center;
+}
+body > footer > p:last-child {
+  margin-bottom: 0;
 }
 ::selection {
   background-color: var(--theme-color);
