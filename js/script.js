@@ -1,7 +1,7 @@
 let bodyHeight = document.body.offsetHeight
 let windowHeight = window.innerHeight
 
-window.addEventListener('resize', () => { windowHeight = window.innerHeight })
+window.addEventListener('resize', () => { onUIUpdated() })
 
 Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
   if (img.complete) return img.classList.add('complete')
@@ -48,3 +48,7 @@ if (document.referrer.includes(window.siteURL)) {
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
 
 document.body.classList.add('initialized')
+
+function onUIUpdated() {
+  windowHeight = window.innerHeight
+}

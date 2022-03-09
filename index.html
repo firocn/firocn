@@ -268,7 +268,8 @@
 
       #exchanges {
         list-style: none;
-        padding: 0;
+        padding: .309em 0;
+        margin-top: -1em;
       }
       #exchanges li {
         display: inline-block;
@@ -346,7 +347,39 @@
         </ul>
       </section>
     </main>
-    <footer class="footer">© Firo 中文社区 2016-2022</footer>
+    <footer>
+  © Firo 中文社区 2016-2022
+  <span id="latest_block" style="display: none;">｜ 高度：<span id="latest_block_value"></span></span>
+  <span id="latest_price" style="display: none;">｜ 价格：<span id="latest_price_value"></span></span>
+</footer>
+<script>
+  const latestBlock = document.querySelector('#latest_block')
+  const latestBlockValue = document.querySelector('#latest_block_value')
+  const latestPrice = document.querySelector('#latest_price')
+  const latestPriceValue = document.querySelector('#latest_price_value')
+
+  const updateInfos = function () {
+    fetch(`getblockcount.txt?_=${new Date().getTime()}`)
+      .then(res => res.text())
+      .then(height => {
+        latestBlockValue.innerHTML = height
+        latestBlock.style.display = 'inline'
+        onUIUpdated()
+      })
+    fetch('https://explorer.firo.org/insight-api-zcoin/currency')
+      .then(res => res.json())
+      .then(json => {
+        latestPriceValue.innerHTML = `$${json.data.zcoin_usd}`
+        latestPrice.style.display = 'inline'
+        onUIUpdated()
+      })
+  }
+
+  updateInfos()
+  setTimeou(() => { updateInfos() }, 10000)
+
+</script>
+
     <script src="js/script.js"></script>
     <script>
       ;(function () {
