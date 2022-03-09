@@ -50,6 +50,32 @@
       h3 {
         font-size: 1em;
       }
+      footer a {
+        text-decoration: none;
+        color: var(--link-color);
+      }
+      @media (hover: hover) {
+        footer a:hover {
+          color: var(--link-color-1);
+        }
+        footer a:active {
+          color: white;
+          background-color: var(--link-color-2);
+        }
+      }
+      footer a:visited {
+        color: inherit;
+      }
+      @media (hover: hover) {
+        footer a:visited:active {
+          color: white;
+        }
+      }
+      @media (hover: hover) {
+        a:not(.button):active {
+          border-radius: .125rem;
+        }
+      }
       header {
         height: 3.618em;
         padding: 0 1em;
@@ -266,10 +292,11 @@
       footer {
         text-align: center;
         margin: 2.309rem 0 2.618rem;
-        line-height: 1.618rem;
         font-size: .618em;
       }
-
+      footer > p {
+        text-align: center;
+      }
       #get_firo, #get_firo p {
         text-align: center;
       }
@@ -311,6 +338,10 @@
         to { transform: rotate(-1080deg); }
       }
     </style>
+    <script>
+      window.siteURL = '<%= siteURL %>'
+      window.siteDomain = '<%= siteDomain %>'
+    </script>
   </head>
   <body>
     <header>

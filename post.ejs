@@ -88,7 +88,7 @@
             <iframe onload="setTimeout(function () { document.querySelector('.iframe-wrapper').classList.add('loaded') }, 100)" src="<%= post.properties.iframe %>" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no" width="640" height="480"></iframe>
           </p>
         <% } %>
-        <footer>
+        <!-- <footer>
           <ul class="menu">
             <% if (post.properties.source && post.properties.type != 'video') { %>
               <li><a href="<%= post.properties.source %>"><%= post.properties.type === 'forum' ? '原文（进入论坛）' : '原文' %></a></li>
@@ -97,7 +97,7 @@
             <li><a href="https://twitter.com/firo_cn">推特</a></li>
             <li><a href="https://t.me/firo_zh">电报</a></li>
           </ul>
-        </footer>
+        </footer> -->
       </article>
     </main>
     <%- include('footer') %>

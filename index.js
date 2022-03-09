@@ -10,7 +10,7 @@ marked.setOptions({ breaks: true, mangle: false })
 
 const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
 
-const siteData = { imgsURL: 'imgs', siteURL: config.siteURL, dateRegexp, autoPrefixImgURL }
+const siteData = { imgsURL: 'imgs', siteURL: config.siteURL, dateRegexp, autoPrefixImgURL, siteDomain: config.siteDomain }
 
 const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
