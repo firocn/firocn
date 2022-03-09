@@ -217,13 +217,11 @@ Firo 中文</a></div>
         .then(height => {
           latestBlockValue.innerHTML = height
           latestBlock.style.display = 'inline'
-          onUIUpdated()
         })
     } else {
       requestAnimationFrame(() => {
         latestBlockValue.innerHTML = '888888'
         latestBlock.style.display = 'inline'
-        onUIUpdated()
       })
     }
     fetch('https://explorer.firo.org/insight-api-zcoin/currency')
@@ -231,14 +229,13 @@ Firo 中文</a></div>
       .then(json => {
         latestPriceValue.innerHTML = `$${json.data.zcoin_usd}`
         latestPrice.style.display = 'inline'
-        onUIUpdated()
       })
   }
 
   setTimeout(() => {
     updateInfos()
     setInterval(() => { updateInfos() }, 10000)
-  }, 3000)
+  }, 1000)
 </script>
 
     <div id="scroll_to_top" onclick="window.scrollTo(0, 0)">🔝</div>
