@@ -34,9 +34,21 @@
         margin: 0;
         font-family: sans-serif;
       }
+      p, h2, h3 {
+        line-height: 1.618;
+      }
+      p {
+        text-align: justify;
+      }
       h2, h3 {
         text-align: center;
         margin: 1.618em 0 1em;
+      }
+      h2 {
+        font-size: 1.618em;
+      }
+      h3 {
+        font-size: 1em;
       }
       header {
         height: 3.618em;
@@ -251,14 +263,10 @@
         margin-top: 1em;
         display: inline-block;
       }
-      p {
-        line-height: 1.618em;
-        text-align: justify;
-      }
       footer {
         text-align: center;
-        margin: 2.618rem 0;
-        line-height: 1;
+        margin: 2.309rem 0 2.618rem;
+        line-height: 1.618rem;
         font-size: .618em;
       }
 
@@ -268,7 +276,8 @@
 
       #exchanges {
         list-style: none;
-        padding: 0;
+        padding: .309em 0;
+        margin-top: -1em;
       }
       #exchanges li {
         display: inline-block;
@@ -346,7 +355,7 @@
         </ul>
       </section>
     </main>
-    <footer class="footer">© Firo 中文社区 2016-2022</footer>
+    <%- include('footer') %>
     <script src="js/script.js"></script>
     <script>
       ;(function () {
