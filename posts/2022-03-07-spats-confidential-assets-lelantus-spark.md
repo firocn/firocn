@@ -25,7 +25,7 @@ Firo 的 [Lelantus Spark](https://mp.weixin.qq.com/s/Dr-6efV-bZyZyns6qSHEKw) 是
 
 Spats 使用 Lelantus Spark（已处于后期开发状态）作为基础，我们计划今年在主网上部署 Lelantus Spark。Spats 与 Lelantus Spark 共享许多相同的密码学构建基础，因此许多现有的代码可以被调整以支持它。
 
-Elysium 1.0 即将发布，目前在测试网上，使用的 Lelantus（不是 Spark），因此尚不支持 Spats。我们已经在计划 Elysium 的继任者 Elysium 2.0 及其扩展功能，例如更容易与其他链桥接或更高级的脚本/智能合约功能，而 Spats 将成为 Elysium 2.0 的一部分。
+Elysium 1.0 即将发布，目前在测试网上，使用的是 Lelantus（不是 Spark），因此尚不支持 Spats。我们已经在计划 Elysium 的继任者 Elysium 2.0 及其扩展功能，例如更容易与其他链桥接或更高级的脚本/智能合约功能，而 Spats 将成为 Elysium 2.0 的一部分。
 
 随着 Lelantus Spark 研究的完成，我们将重点转移到扩大其实用性和用例，而不仅仅是支持隐私支付，并希望向社区介绍我们的 Elysium 2.0 提案，作为一个完整的整体隐私生态系统，可以作为整个加密货币生态系统的基础设施。
 
