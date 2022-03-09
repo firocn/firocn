@@ -42,19 +42,20 @@
         height: 3.618em;
         padding: 0 1em;
         border-bottom: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
-        background-color: rgba(255, 255, 255, .618);
-        backdrop-filter: saturate(180%) blur(20px);
+        background-color: white;
         transition: top .382s;
+        position: sticky;
+        border-top: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
+        top: -1px;
+        margin-top: -1px;
       }
       body > header.visible {
         transition: top .382s;
         opacity: 1;
       }
-      .initialized > header {
-        position: sticky;
-        border-top: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
-        top: -1px;
-        margin-top: -1px;
+      .initialized:not(.firefox) > header {
+        background-color: rgba(255, 255, 255, .618);
+        backdrop-filter: saturate(180%) blur(20px);
       }
       .hide-header > header {
         transition: top .382s, opacity .382s .382s;
@@ -281,8 +282,11 @@
           color: #fff;
         }
         header {
-          background-color: rgba(0, 0, 0, .618);
+          background-color: black;
           border-color: rgba(255, 255, 255, calc(1 - 244 / 255)) !important;
+        }
+        .initialized:not(.firefox) > header {
+          background-color: rgba(0, 0, 0, .618);
         }
         .header-title a {
           background-image: url("imgs/logodark.svg");
