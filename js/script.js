@@ -16,8 +16,7 @@ if (document.referrer.includes(window.siteURL)) {
   if (footerHome) footerHome.style.display = 'none'
 }
 
-
-requestAnimationFrame(function () {
+;(function () {
   const header = document.querySelector('body > header')
   const scrollToTop = document.querySelector('#scroll_to_top')
   const deadzone = 10, headerHeight = header.offsetHeight
@@ -43,11 +42,12 @@ requestAnimationFrame(function () {
       document.body.classList.remove('show-topbtn')
     }
     lastPageY = scrollY
-
-    document.body.classList.add('initialized')
-})
+  })
+})()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
+
+document.body.classList.add('initialized')
 
 function onUIUpdated() {
   windowHeight = window.innerHeight
