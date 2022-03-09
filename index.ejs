@@ -53,8 +53,9 @@
         transition: top .382s;
         opacity: 1;
       }
-      .initialized:not(.firefox) > header {
-        background-color: rgba(255, 255, 255, .618);
+      body:not(.firefox) > header {
+        background-color: rgba(255, 255, 255, .7);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
       }
       .hide-header > header {
@@ -286,7 +287,7 @@
           border-color: rgba(255, 255, 255, calc(1 - 244 / 255)) !important;
         }
         .initialized:not(.firefox) > header {
-          background-color: rgba(0, 0, 0, .618);
+          background-color: rgba(0, 0, 0, .7);
         }
         .header-title a {
           background-image: url("imgs/logodark.svg");
