@@ -45,4 +45,6 @@ if (document.referrer.includes(window.siteURL)) {
   })
 })()
 
+if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
+
 document.body.classList.add('initialized')

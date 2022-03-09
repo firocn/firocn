@@ -41,19 +41,21 @@
       header {
         height: 3.618em;
         padding: 0 1em;
-        border-bottom: 1px solid #f4f4f4;
+        border-bottom: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
         background-color: white;
         transition: top .382s;
+        position: sticky;
+        border-top: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
+        top: -1px;
+        margin-top: -1px;
       }
       body > header.visible {
         transition: top .382s;
         opacity: 1;
       }
-      .initialized > header {
-        position: sticky;
-        border-top: 1px solid #f4f4f4;
-        top: -1px;
-        margin-top: -1px;
+      .initialized:not(.firefox) > header {
+        background-color: rgba(255, 255, 255, .618);
+        backdrop-filter: saturate(180%) blur(20px);
       }
       .hide-header > header {
         transition: top .382s, opacity .382s .382s;
@@ -281,7 +283,10 @@
         }
         header {
           background-color: black;
-          border-color: #0b0b0b !important;
+          border-color: rgba(255, 255, 255, calc(1 - 244 / 255)) !important;
+        }
+        .initialized:not(.firefox) > header {
+          background-color: rgba(0, 0, 0, .618);
         }
         .header-title a {
           background-image: url("imgs/logodark.svg");
@@ -313,10 +318,7 @@
     <main>
       <div class="download">
         <div class="download-logo-wrapper" id="logo_wrapper">
-          <picture>
-            <source srcset="imgs/logodark.svg" media="(prefers-color-scheme: dark)">
-            <img src="imgs/logo-whitebg.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
-          </picture>
+          <img src="imgs/logo-transparentbg.svg" width="200" height="200" alt="Firo 中文" title="Firo 是专注隐私的加密货币">
         </div>
         <h1 class="download-title">Firo 是专注隐私的加&#xFEFF;密&#xFEFF;货&#xFEFF;币</h1>
         <h2 class="download-subtitle">📥 下载钱包开始使用 Firo 📥</h2>
