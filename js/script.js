@@ -21,7 +21,7 @@ if (document.referrer.includes(window.siteURL)) {
   const scrollToTop = document.querySelector('#scroll_to_top')
   const deadzone = 10, headerHeight = header.offsetHeight
   let lastPageY
-  window.addEventListener('scroll', e => {
+  window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset
     if (scrollY < headerHeight) {
       header.classList.add('visible')
