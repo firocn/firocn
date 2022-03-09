@@ -115,7 +115,7 @@ body > footer {
   text-align: center;
   margin: 2.309rem 0 1rem;
   font-size: .618em;
-  line-height: 1;
+  line-height: 1.618rem;
 }
 ::selection {
   background-color: var(--theme-color);
