@@ -4,7 +4,7 @@
   --link-color-1: #ba2a45;
   --link-color-2: #7c1624;
   --background-color: white;
-  --background-color-alpha: rgba(255, 255, 255, .618);
+  --background-color-alpha: rgba(255, 255, 255, .7);
   --gray: #f4f4f4;
   --gray-alpha: rgba(0, 0, 0, calc(1 - 244 / 255));
   font-size: max(calc(38.2vw / 38), 16px);
@@ -34,6 +34,7 @@ body > header.visible {
 }
 body:not(.firefox) > header {
   background-color: var(--background-color-alpha);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .hide-header > header {
@@ -414,7 +415,7 @@ noscript {
   :root {
     --background-color: black;
     background-color: black;
-    --background-color-alpha: rgba(0, 0, 0, .618);
+    --background-color-alpha: rgba(0, 0, 0, .7);
     --link-color: #ff2e4c;
     --link-color-1: #ff2e4c;
     --gray: #0b0b0b;
