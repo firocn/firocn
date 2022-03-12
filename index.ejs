@@ -115,8 +115,22 @@
         margin-left: 0;
       }
       main {
+        padding-top: 4.236rem;
+      }
+      main > * {
         max-width: 38rem;
         margin: 0 auto;
+        padding: 0 1.618rem;
+      }
+      @media screen and (min-width: 41.236rem) {
+        main {
+          /* padding-top: 4.236rem; */
+        }
+        /* @media screen and (min-height: 1300px) {
+          main {
+            padding-top: 6.854rem;
+          }
+        } */
       }
       .header-inner {
         max-width: calc(38rem / .618);
@@ -179,10 +193,6 @@
           background-color: #7c1624;
         }
       }
-      main {
-        padding: 3.618rem 1.618rem 0;
-      }
-
       .download {
         text-align: center;
         display: flex;
@@ -289,7 +299,7 @@
         margin: 0 .5em;
       }
       .card-list {
-        margin: 1.618em 0 1.309em;
+        margin: 1.618em 0 0;
         padding: 0;
         list-style: none;
       }
@@ -299,11 +309,24 @@
       }
       footer {
         text-align: center;
-        margin: 2.618rem 0 1.618rem;
+        margin: 4.236rem 0 0;
         font-size: .618em;
+        line-height: 1;
       }
       footer > p {
         text-align: center;
+        margin: 0;
+        line-height: inherit;
+      }
+      footer > p:last-child {
+        border-top: 1px solid #f4f4f4;
+        margin-top: 1em;
+        padding: 1em 0 1.618rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        footer > p:last-child {
+          border-top: 1px solid #0b0b0b;
+        }
       }
       #get_firo, #get_firo p {
         text-align: center;
@@ -342,6 +365,29 @@
         from { transform: rotate(0); }
         to { transform: rotate(-1080deg); }
       }
+      #bands {
+        max-width: 100%;
+        padding: 0;
+        margin: 4.236rem 0 calc(2.618rem - .309rem);
+        border-top: 1px solid #f4f4f4;
+        border-bottom: 1px solid #f4f4f4;
+        line-height: 1.618;
+        text-align: center;
+      }
+      .line-band {
+        max-width: calc(38rem / .618);
+        margin: 0 auto;
+        padding: 1em 1.618rem;
+        font-family: serif;
+      }
+      @media (prefers-color-scheme: dark) {
+        .line-band {
+          border-color: #0b0b0b;
+        }
+      }
+      .hidden {
+        display: none;
+      }
     </style>
     <script>
       window.siteURL = '<%= siteURL %>'
@@ -375,9 +421,42 @@
           --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="card-button icon linux download">Linux</a></li>
         </ul>
       </div>
-      <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
-      <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
-      <p>Firo 是完整意义上的「钱」。</p>
+      <div id="bands">
+        <blockquote id="band0" class="line-band">迄今为止，现金是最主要的匿名交易系统。 ——&#xFEFF; &#xFEFF;《密码朋克宣言》</blockquote>
+        <blockquote id="band1" class="line-band hidden">当我的身份被交易的底层机制泄露时，我&#xFEFF;就没有隐私了。 —— Eric Hughes</blockquote>
+        <blockquote id="band2" class="line-band hidden">如果你不相信我，或者看不懂我讲什么，那么不好意思，我没空搭理你。 —— 中本聪</blockquote>
+        <blockquote id="band3" class="line-band hidden">在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。 —— Aaron Swartz</blockquote>
+        <blockquote id="band4" class="line-band hidden">幸福的秘密是自由，自由的秘密是勇敢。 —— 修昔底德</blockquote>
+      </div>
+      <script>
+        ;(function () {
+          const total = 4
+          let n = Math.floor(Math.random() * 2)
+
+          // const timeout = setTimeout(() => {
+            document.querySelector('#band0').classList.add('hidden')
+            document.querySelector(`#band${n}`).classList.remove('hidden')
+          // }, 10000)
+
+          document.querySelector('#bands').addEventListener('dblclick', () => {
+            // clearTimeout(timeout)
+            n++
+            n = n % total
+            Array.prototype.forEach.call(document.querySelectorAll('.line-band'), (band, i) => {
+              if (i === n) {
+                band.classList.remove('hidden')
+              } else {
+                band.classList.add('hidden')
+              }
+            })
+          })
+        })()
+      </script>
+      <section>
+        <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
+        <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
+        <p>Firo 是完整意义上的「钱」。</p>
+      </section>
       <section id="get_firo">
         <h2>获得 Firo</h2>
         <p>你可以在主流交易所上买到 Firo，<span class="mobile-break-line"><br></span>也可以通过显卡挖矿获得 Firo。</p>

@@ -121,15 +121,20 @@ body > header nav > ul > *:first-child {
   }
 }
 body > footer {
-  margin: 2.618rem 0 0;
+  margin: 4.236rem 0 0;
   font-size: .618em;
-  line-height: 1.618;
+  line-height: 1;
 }
 body > footer > p {
   text-align: center;
+  margin: 0;
+  line-height: inherit;
 }
 body > footer > p:last-child {
   margin-bottom: 0;
+  border-top: 1px solid var(--gray);
+  margin-top: 1em;
+  padding: 1em 0 0;
 }
 ::selection {
   background-color: var(--theme-color);
