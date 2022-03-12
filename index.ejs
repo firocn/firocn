@@ -85,6 +85,7 @@
         border-top: 1px solid rgba(0, 0, 0, calc(1 - 244 / 255));
         top: -1px;
         margin-top: -1px;
+        z-index: 1;
       }
       body > header.visible {
         transition: top .382s;
@@ -115,7 +116,9 @@
         margin-left: 0;
       }
       main {
-        padding-top: 4.236rem;
+        padding-top: calc(2.618rem + 3.618rem + 1px);
+        margin-top: calc(-3.618rem - 1px);
+        overflow: hidden;
       }
       main > * {
         max-width: 38rem;
@@ -203,7 +206,7 @@
         margin-bottom: 2.618em;
         display: flex;
         align-items: center;
-        height: 8.75rem;
+        height: 13.326rem;
         user-select: none;
         -webkit-tap-highlight-color: transparent;
       }
@@ -211,8 +214,8 @@
         pointer-events: none;
       }
       .download-logo-wrapper svg {
-        width: 12.5rem;
-        height: 12.5rem;
+        width: 13.326rem;
+        height: 13.326rem;
         vertical-align: middle;
       }
       .download-title {
@@ -359,11 +362,11 @@
       }
 
       .rotate {
-        animation: rotate .618s;
+        animation: rotate 3.6s linear infinite;
       }
       @keyframes rotate {
         from { transform: rotate(0); }
-        to { transform: rotate(-1080deg); }
+        to { transform: rotate(-360deg); }
       }
       #bands {
         max-width: 100%;
@@ -374,24 +377,49 @@
         line-height: 1.618;
         text-align: center;
       }
+      @font-face {
+        font-family: FiroQuote;
+        src: url("css/fonts/SourceHanSerifCN-Regular.woff2");
+        font-display: block;
+      }
       .line-band {
         max-width: calc(38rem / .618);
         margin: 0 auto;
         padding: 1em 1.618rem;
-        font-family: serif;
+        font-family: FiroQuote, serif;
       }
       @media (prefers-color-scheme: dark) {
-        .line-band {
+        #bands {
           border-color: #0b0b0b;
         }
       }
       .hidden {
         display: none;
       }
+      @keyframes fade-out {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+      @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      @keyframes scale-in {
+        from { transform: scale(11.09); }
+        to { transform: scale(1); }
+      }
+      .paused {
+        animation-play-state: paused;
+      }
     </style>
     <script>
       window.siteURL = '<%= siteURL %>'
       window.siteDomain = '<%= siteDomain %>'
+
+      if (!localStorage.getItem('animated') || !location.href.includes(siteDomain)) {
+        document.documentElement.classList.add('animation')
+        localStorage.setItem('animated', true)
+      }
     </script>
   </head>
   <body>
@@ -410,7 +438,32 @@
     <main>
       <div class="download">
         <div class="download-logo-wrapper" id="logo_wrapper">
-          <%- include('imgs/logo-transparentbg.svg') %>
+          <audio id="audio" src="imgs/fly_me_to_the_moon.m4a" style="display: none;" loop="loop"></audio>
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          	 viewBox="6 6 508 508" style="enable-background:new 6 6 508 508;" xml:space="preserve">
+          <style type="text/css">
+            .st1{ fill:#9B1C2E; }
+            .japan { display: none; }
+          	.animation .st1{ fill:#9B1C2E; }
+            .animation .japan { display: inline; animation: fade-out 1s 5.236s both; transform-origin: center; }
+            .animation .download-logo-wrapper > svg { animation: scale-in 4.236s both; }
+            .animation .download-title { animation: fade-in 1s 6.236s both; }
+            .animation .download-subtitle { animation: fade-in 1s 7.236s both; }
+            .animation .card-list { animation: fade-in 1s 8.236s both; }
+            .animation main > .download ~ *, .animation footer, .animation header { animation: fade-in 1s 8.236s both; }
+          </style>
+          <circle class="japan" cx="260" cy="260" r="252.7" fill="#9B1C2E" />
+          <g>
+          	<g>
+          		<path class="st1" d="M155.6,370.7c5.9,0,11.2-3.2,14-8.4l37.3-70.6h-57.5c-8.7,0-15.8-7.1-15.8-15.8v-31.6
+          			c0-8.7,7.1-15.8,15.8-15.8h90.9l70.6-133.9c2.7-5.2,8.1-8.4,14-8.4h118.8C397.5,37.4,332.3,7,260,7C120.3,7,7,120.3,7,260
+          			c0,39.7,9.2,77.3,25.5,110.7H155.6z"/>
+          		<path class="st1" d="M364.4,149.3c-5.9,0-11.2,3.2-14,8.4l-37.3,70.6h57.5c8.7,0,15.8,7.1,15.8,15.8v31.6
+          			c0,8.7-7.1,15.8-15.8,15.8h-90.9l-70.6,133.9c-2.7,5.2-8.1,8.4-14,8.4H76.4C122.5,482.6,187.7,513,260,513
+          			c139.7,0,253-113.3,253-253c0-39.7-9.2-77.3-25.5-110.7H364.4z"/>
+          	</g>
+          </g>
+          </svg>
         </div>
         <h1 class="download-title">Firo 是专注隐私的加&#xFEFF;密&#xFEFF;货&#xFEFF;币</h1>
         <h2 class="download-subtitle">📥 下载钱包开始使用 Firo 📥</h2>
@@ -421,16 +474,9 @@
           --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="card-button icon linux download">Linux</a></li>
         </ul>
       </div>
-      <div id="bands">
-        <blockquote id="band0" class="line-band">迄今为止，现金是最主要的匿名交易系统。 ——&#xFEFF; &#xFEFF;《密码朋克宣言》</blockquote>
-        <blockquote id="band1" class="line-band hidden">当我的身份被交易的底层机制泄露时，我&#xFEFF;就没有隐私了。 —— Eric Hughes</blockquote>
-        <blockquote id="band2" class="line-band hidden">如果你不相信我，或者看不懂我讲什么，那么不好意思，我没空搭理你。 —— 中本聪</blockquote>
-        <blockquote id="band3" class="line-band hidden">在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。 —— Aaron Swartz</blockquote>
-        <blockquote id="band4" class="line-band hidden">幸福的秘密是自由，自由的秘密是勇敢。 —— 修昔底德</blockquote>
-      </div>
+      <div id="bands"><%- include('quotes.ejs') %></div>
       <script>
         ;(function () {
-          const total = 4
           let n = Math.floor(Math.random() * 2)
 
           // const timeout = setTimeout(() => {
@@ -441,7 +487,7 @@
           document.querySelector('#bands').addEventListener('dblclick', () => {
             // clearTimeout(timeout)
             n++
-            n = n % total
+            n = n % document.querySelectorAll('.line-band').length
             Array.prototype.forEach.call(document.querySelectorAll('.line-band'), (band, i) => {
               if (i === n) {
                 band.classList.remove('hidden')
@@ -476,11 +522,19 @@
       ;(function () {
         const logoWrapper = document.querySelector('#logo_wrapper')
         logoWrapper.addEventListener('click', e => {
-          e.currentTarget.classList.add('rotate')
+          const audio = document.querySelector('#audio')
+          if (audio.paused) {
+            audio.play()
+            e.currentTarget.classList.remove('paused')
+            e.currentTarget.classList.add('rotate')
+          } else {
+            audio.pause()
+            e.currentTarget.classList.add('paused')
+          }
         })
-        logoWrapper.addEventListener('animationend', e => {
-          e.currentTarget.classList.remove('rotate')
-        })
+        // logoWrapper.addEventListener('animationend', e => {
+        //   e.currentTarget.classList.remove('rotate')
+        // })
       })()
     </script>
   </body>

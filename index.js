@@ -3,6 +3,7 @@ const path = require('path')
 const fs = require('fs')
 const marked = require("marked")
 const sizeOf = require('image-size')
+const Fontmin = require('fontmin')
 
 const config = require('./config')
 
@@ -65,7 +66,7 @@ const _siteDir = `${__dirname}/_site`
     path.normalize(`${__dirname}/_site/news.html`)
   )
 
-  posts.forEach(async post => {
+  posts.forEach(post => {
     if (post.properties.url) return
     render(
       path.normalize(`${__dirname}/post.ejs`),
@@ -78,6 +79,13 @@ const _siteDir = `${__dirname}/_site`
   copyDir('js')
   copyDir('imgs')
   copyFile('googleced77188be24025c.html')
+
+  new Fontmin()
+    .src(path.normalize(`${__dirname}/css/fonts/SourceHanSerifCN-Regular.ttf`))
+    .use(Fontmin.glyph({ text: fs.readFileSync(path.normalize(`${__dirname}/quotes.ejs`)), hinting: false }))
+    .use(Fontmin.ttf2woff2())
+    .dest('_site/css/fonts')
+    .run(function (err, files) { if (err) throw err })
 })()
 
 async function render(templateFile, data, destFile) {
@@ -86,7 +94,7 @@ async function render(templateFile, data, destFile) {
       if (err) return reject(err)
       fs.writeFile(destFile, str, err => {
         if (err) return reject(err)
-        resolve()
+        resolve(str)
       })
     })
   })
@@ -101,11 +109,11 @@ async function readFile(filename) {
   })
 }
 
-async function readdir(path) {
+async function readdir(path, options) {
   return new Promise((resolve, reject) => {
-    fs.readdir(path, (err, filenames) => {
+    fs.readdir(path, options, (err, files) => {
       if (err) return reject(err)
-      resolve(filenames)
+      resolve(files)
     })
   })
 }
@@ -125,8 +133,11 @@ async function checkCreateDir(dirname) {
 
 async function copyDir(dirname) {
   await checkCreateDir(path.normalize(`${_siteDir}/${dirname}`))
-  const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`))
-  filenames.forEach(filename => copyFile(`${dirname}/${filename}`))
+  const filenames = await readdir(path.normalize(`${__dirname}/${dirname}`), { withFileTypes: true })
+  filenames.forEach(file => {
+    if (file.isDirectory()) return
+    copyFile(`${dirname}/${file.name}`)
+  })
 }
 
 function copyFile(fullFilename) {
