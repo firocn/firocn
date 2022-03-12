@@ -121,12 +121,12 @@ body > header nav > ul > *:first-child {
   }
 }
 body > footer {
-  margin: 2.618rem 0 0;
+  margin: 2.927rem 0 0;
   font-size: .618em;
-  line-height: 1.618;
 }
 body > footer > p {
   text-align: center;
+  line-height: 1;
 }
 body > footer > p:last-child {
   margin-bottom: 0;
