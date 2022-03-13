@@ -423,9 +423,6 @@ article[lang|='en'] p, article[lang|='en'] li {
   opacity: 1;
 }
 
-noscript {
-  display: none;
-}
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: black;
@@ -447,8 +444,5 @@ noscript {
   }
   .iframe-wrapper.loaded iframe {
     visibility: visible;
-  }
-  noscript {
-    display: block;
   }
 }
