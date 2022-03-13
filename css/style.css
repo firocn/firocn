@@ -48,6 +48,7 @@ body > header nav > ul {
   align-items: center;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 body > header nav > ul > * {
   margin-left: 1.618em;
