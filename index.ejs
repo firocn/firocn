@@ -306,7 +306,7 @@
         text-align: center;
         line-height: 1;
       }
-      #get_firo, #get_firo p {
+      section, section p {
         text-align: center;
       }
 
@@ -342,6 +342,22 @@
       @keyframes rotate {
         from { transform: rotate(0); }
         to { transform: rotate(-1080deg); }
+      }
+
+      .button-list {
+        list-style: none;
+        padding: .309em 0;
+        margin-top: -1rem;
+      }
+      .button-list li {
+        display: inline-block;
+        margin-top: 1rem;
+      }
+      .button-list li:not(:first-child) {
+        margin-left: 1rem;
+      }
+      .button-list .button {
+        padding: .618em;
       }
     </style>
     <script>
@@ -389,6 +405,13 @@
           --><li><a href="https://www.aex.com/page/trade.html#/?symbol=FIRO_USDT" target="_blank" class="card-button aex icon">安银</a></li><!--
           --><li><a href="https://www.huobi.com/zh-cn/exchange/firo_usdt" target="_blank" class="card-button huobi icon">火币</a></li><!--
           --><li><a href="https://github.com/firoorg/FiroDEX-Desktop/releases" target="_blank" class="card-button firodex icon">FiroDEX</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>玩 Firo</h2>
+        <ul class="button-list">
+          <li><a href="https://firorunner.com/" class="button" target="_blank">Firo Runner</a></li><!--
+          --><li><a href="https://firopunks.com/" class="button" target="_blank">Firo Punks NFT</a></li>
         </ul>
       </section>
     </main>
