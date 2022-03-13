@@ -27,7 +27,6 @@ body > header {
   border-top: 1px solid var(--gray);
   top: -1px;
   margin-top: -1px;
-  background-clip: padding-box;
 }
 body > header.visible {
   transition: top .382s;
