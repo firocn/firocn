@@ -18,11 +18,18 @@ const _siteDir = `${__dirname}/_site`
 ;(async () => {
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
-    const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0]
-    const dateMatchResult = date && date.match(dateRegexp)
+
     const propertiesMatchResult = markdownRaw.match(/^<%#(.+?)%>/s)
-    const dateLocale = dateMatchResult && `${dateMatchResult[1]} 年 ${+dateMatchResult[2]} 月 ${+dateMatchResult[3]} 日`
     const properties = propertiesMatchResult && propertiesMatchResult[1] ? JSON.parse(propertiesMatchResult[1]) : {}
+
+    const date = postFilename.match(dateRegexp) && postFilename.match(dateRegexp)[0] || properties.date
+    const dateMatchResult = date && date.match(dateRegexp)
+    const dateLocale = dateMatchResult && (
+      !properties.language || properties.language.match(/^zh/) ?
+        `${dateMatchResult[1]} 年 ${+dateMatchResult[2]} 月 ${+dateMatchResult[3]} 日` :
+        new Date(date).toLocaleDateString(properties.language, { year: 'numeric', month: 'long', day: 'numeric' })
+    )
+
     const markdown = ejs.render(markdownRaw, siteData)
     let html = marked.parse(markdown)
     const imgRegexp = /<img(.+?)src="(.+?)"(.+?)>/g
