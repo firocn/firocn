@@ -26,6 +26,9 @@
   <!-- 作者（可选） -->
   "author": "Reuben Yap",
 
+  <!-- 语言（可选。设置 article 标签的语言。html 标签上语言已为 zh-CN） -->
+  "language": "en",
+
   <!-- 是否隐藏（可选） -->
   "hidden": true,
 
