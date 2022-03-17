@@ -16,6 +16,11 @@ const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
 
 ;(async () => {
+  copyDir('css')
+  copyDir('js')
+  copyDir('imgs')
+  copyFile('googleced77188be24025c.html')
+
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
     const markdownRaw = await readFile(path.normalize(`${postsDir}/${postFilename}`))
 
@@ -37,13 +42,15 @@ const _siteDir = `${__dirname}/_site`
     for (result of imgMatchResults) {
       const originalImgTag = result[0]
       const url = autoPrefixImgURL(result[2])
+      const pureURL = url.replace(/#.+$/, '')
       let [width, height] = (url.match(/size=(\d+)x(\d+)/) || []).slice(1)
       if (!width || !height) {
         if (url.startsWith('http')) continue
-        ({ width, height } = await sizeOf(url))
+        ({ width, height } = await sizeOf(pureURL))
       }
-      const pureURL = url.replace(/#size=.+$/, '')
-      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${pureURL}" width="${width}" height="${height}" ${width <= 608 ? 'class="small"' : ''} $3>`)
+      const isSmall = url.includes('#small')
+      const isSmallRadius = url.includes('#smallradius')
+      const newImgTag = originalImgTag.replace(imgRegexp, `<img$1src="${pureURL}" width="${width}" height="${height}" class="${width <= 608 || isSmall ? 'small' : ''} ${ isSmallRadius ? 'small-radius' : '' }" $3>`)
       html = html.replaceAll(originalImgTag, newImgTag)
     }
     const title = properties.title || markdown.match(/^#\s(.+)/m)[1]
@@ -80,11 +87,6 @@ const _siteDir = `${__dirname}/_site`
       path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
     )
   })
-
-  copyDir('css')
-  copyDir('js')
-  copyDir('imgs')
-  copyFile('googleced77188be24025c.html')
 })()
 
 async function render(templateFile, data, destFile) {

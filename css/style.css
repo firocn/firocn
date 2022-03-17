@@ -176,6 +176,9 @@ article:not(.index) img, article video {
   article:not(.index) img {
     border-radius: 1.309rem;
   }
+  img.small-radius {
+    border-radius: .382rem !important;
+  }
 }
 @media screen and (min-width: 41.236rem) {
   article:not(.index) img:not(.small) {
