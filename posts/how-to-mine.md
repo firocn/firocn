@@ -35,9 +35,9 @@ _**警告：**为方便起见，这里列出了多个挖矿软件。非官方挖
 
 有几个矿池在运行 FiroPoW。为了去中心化，请尽量分散算力，以便没有一个矿池的算力超过总算力的 50%！请注意，由于 ChainLocks 技术，纯 51% 攻击在 Firo 上是不可能的，这需要同时破坏或关闭主节点网络并拥有必要的算力。你可以在[这里](https://poolbay.io/crypto/317/firo)查看当前的算力分布。
 
-* [Mintpond](https://mintpond.com/#!/firo)
+* [MintPond](https://mintpond.com/#!/firo)
   * firo.mintpond.com:3000
-  * [Mintpond 的 Firo 挖矿指南](https://mintpond.com/getting-started-guide/firo)
+  * [MintPond 的 Firo 挖矿指南](https://mintpond.com/getting-started-guide/firo)
 * [WoolyPooly](https://woolypooly.com/en/coin/firo)
   * pool.woolypooly.com:3104
 * [2Miners](https://2miners.com/firo-mining-pool)
@@ -62,16 +62,16 @@ _**警告：**为方便起见，这里列出了多个挖矿软件。非官方挖
 
 #### Firominer
 
-Nvidia:
+NVIDIA：
 ```
-firominer -U -P stratum+tcp://用户名或FIRO地址.worker:password@POOLADDRESS:PORT
+firominer -U -P stratum+tcp://用户名或FIRO地址.worker:password@矿池地址:端口
 ```
-AMD:
+AMD：
 ```
 firominer -G -P stratum+tcp://用户名或FIRO地址.worker:password@矿池地址:端口
 ```
 
-#### T-Rex Miner（Nvidia）
+#### T-Rex Miner（NVIDIA）
 
 ```
 t-rex.exe -a firopow -o stratum+tcp://矿池地址:端口 -u 用户名或FIRO地址.worker -p password
@@ -83,7 +83,7 @@ t-rex.exe -a firopow -o stratum+tcp://矿池地址:端口 -u 用户名或FIRO地
 teamredminer.exe -a firopow -o stratum+tcp://矿池地址:端口 -u 用户名或FIRO地址.worker -p password
 ```
 
-#### SRBMiner-Multi (AMD)
+#### SRBMiner-Multi（AMD）
 
 ```
 SRBMiner-MULTI.exe --disable-cpu --algorithm firopow --pool 矿池地址:端口 --wallet 用户名或FIRO地址.worker --gpu-boost 3
