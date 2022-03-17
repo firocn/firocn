@@ -49,15 +49,15 @@
       h3 {
         font-size: 1em;
       }
-      footer a {
+      .article-link, footer a {
         text-decoration: none;
         color: var(--link-color);
       }
       @media (hover: hover) {
-        footer a:hover {
+        .article-link:hover, footer a:hover {
           color: var(--link-color-1);
         }
-        footer a:active {
+        .article-link:active, footer a:active {
           color: white;
           background-color: var(--link-color-2);
         }
@@ -164,6 +164,9 @@
         color: #fff;
         border-radius: .309em;
         padding: .236em .382em;
+      }
+      .inline-button {
+        margin-top: -.382em;
       }
       .button {
         background-color: #9b1c2e;
@@ -407,7 +410,7 @@
       <p>Firo 是完整意义上的「钱」。</p>
       <section id="get_firo">
         <h2>获得 Firo</h2>
-        <p>你可以在主流交易所上买到 Firo，<span class="mobile-break-line"><br></span>也可以通过显卡挖矿获得 Firo。</p>
+        <p>你可以在主流交易所上买到 Firo，<span class="mobile-break-line"><br></span>也可以通过显卡<a href="how-to-mine.html" class="article-link">挖矿</a>获得 Firo。</p>
         <p>通过运行主节点（1000 FIRO）<span class="mobile-break-line"><br></span>可以获得约 10% 的年收益。</p>
         <h3>Firo 主要交易所</h3>
         <ul id="exchanges">

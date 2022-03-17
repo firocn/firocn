@@ -57,6 +57,9 @@ body > header nav > ul > * {
 body > header nav > ul > *:first-child {
   margin-left: 0;
 }
+pre {
+  overflow: auto;
+}
 .header-inner {
   max-width: calc(38rem / .618);
   margin: 0 auto;
@@ -189,7 +192,7 @@ article a img {
   vertical-align: middle;
 }
 code {
-  font-family: Consolas, monospace;
+  font-family: Consolas, Monaco, monospace;
 }
 iframe {
   width: 100%;
