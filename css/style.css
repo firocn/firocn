@@ -189,6 +189,9 @@ article:not(.index) img, article video {
   article:not(.index) img.small, article video {
     border-radius: 1.309rem;
   }
+  img.small.small-radius {
+    border-radius: .382rem !important;
+  }
 }
 article a img {
   display: initial;
