@@ -416,7 +416,7 @@
       window.siteURL = '<%= siteURL %>'
       window.siteDomain = '<%= siteDomain %>'
 
-      if (!localStorage.getItem('animated') || !location.href.includes(siteDomain)) {
+      if (!localStorage.getItem('animated') /*|| !location.href.includes(siteDomain)*/) {
         document.documentElement.classList.add('animation')
         localStorage.setItem('animated', true)
       }
