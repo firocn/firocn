@@ -26,6 +26,7 @@
         --color: black;
         --background-color: white;
         font-size: max(calc(38.2vw / 38), 16px);
+        scroll-behavior: smooth;
       }
       ::selection {
         background-color: var(--theme-color);
@@ -385,6 +386,7 @@
       main video {
         width: 100%;
         vertical-align: middle;
+        background-color: black;
       }
       video::cue {
         color: white;
@@ -645,7 +647,26 @@ Firo 中文</a></div>
 
       ;(function () {
         const introducingFiro = document.querySelector('#introducing_firo')
+        const checkbox = document.querySelector('#checkbox_introducing_firo')
+
         introducingFiro.addEventListener('playing', onUIUpdated)
+        introducingFiro.addEventListener('ended', e => {
+          checkbox.checked = false
+        })
+
+        checkbox.addEventListener('change', e => {
+          if (!e.target.checked) return
+          lastScrollY = window.pageYOffset
+          onUIUpdated()
+          requestAnimationFrame(() => {
+            const windowWidth = window.innerWidth
+            const windowHeight = window.innerHeight
+            if (windowWidth <= windowHeight) return
+            const rect = introducingFiro.getBoundingClientRect()
+            const top = (window.pageYOffset + rect.top) - (windowHeight - rect.height) * 0.382
+            window.scrollTo(0, top)
+          })
+        })
       })()
     </script>
   </body>
