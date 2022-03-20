@@ -386,7 +386,6 @@
       main video {
         width: 100%;
         vertical-align: middle;
-        background-color: black;
       }
       video::cue {
         color: white;
@@ -649,13 +648,14 @@ Firo 中文</a></div>
         const introducingFiro = document.querySelector('#introducing_firo')
         const checkbox = document.querySelector('#checkbox_introducing_firo')
 
-        introducingFiro.addEventListener('playing', onUIUpdated)
-        introducingFiro.addEventListener('ended', e => {
-          checkbox.checked = false
+        introducingFiro.addEventListener('playing', e => {
+          onUIUpdated()
+          e.target.style.backgroundColor = 'initial'
         })
 
         checkbox.addEventListener('change', e => {
           if (!e.target.checked) return
+          introducingFiro.style.backgroundColor = 'black'
           lastScrollY = window.pageYOffset
           onUIUpdated()
           requestAnimationFrame(() => {
