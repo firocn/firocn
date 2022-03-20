@@ -8,7 +8,6 @@
   --gray: #f4f4f4;
   --gray-alpha: rgba(0, 0, 0, calc(1 - 244 / 255));
   font-size: max(calc(38.2vw / 38), 16px);
-  scroll-behavior: smooth;
 }
 body {
   margin: 0;
