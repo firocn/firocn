@@ -23,6 +23,8 @@
         --link-color: #9b1c2e;
         --link-color-1: #ba2a45;
         --link-color-2: #7c1624;
+        --color: black;
+        --background-color: white;
         font-size: max(calc(38.2vw / 38), 16px);
       }
       ::selection {
@@ -116,8 +118,22 @@
         margin-left: 0;
       }
       main {
+        padding-top: 3.618rem;
+      }
+      main > * {
         max-width: 38rem;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 1.618rem;
+      }
+      main > .fat {
+        max-width: calc(38rem / .618);
+        padding: 0;
+      }
+      @media screen and (min-width: 61.484rem) {
+        main > .fat > * {
+          border-radius: 1.309rem;
+        }
       }
       .header-inner {
         max-width: calc(38rem / .618);
@@ -182,9 +198,6 @@
         .button:active, .card-button:active {
           background-color: #7c1624;
         }
-      }
-      main {
-        padding: 3.618rem 1.618rem 0;
       }
 
       .download {
@@ -326,7 +339,9 @@
 
       @media (prefers-color-scheme: dark) {
         :root {
+          --color: white;
           background-color: black;
+          --background-color: black;
         }
         body {
           color: #fff;
@@ -362,6 +377,17 @@
       }
       .button-list .button {
         padding: .618em;
+      }
+
+      main video {
+        width: 100%;
+        vertical-align: middle;
+        margin: .309em 0;
+      }
+      video::cue {
+        color: white;
+        background: none;
+        text-shadow: 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black;
       }
     </style>
     <noscript>
@@ -441,6 +467,11 @@ Firo 中文</a></div>
           --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="card-button icon linux download">Linux</a></li>
         </ul>
       </div>
+      <p class="fat">
+        <video src="imgs/introducing_firo.mp4" controls poster="imgs/introducing_firo_poster2.webp" autoplay muted preload="metadata" id="introducing_firo">
+          <track kind="subtitles" src="imgs/introducing_firo.vtt" srclang="zh-CN" default label="中文字幕">
+        </video>
+      </p>
       <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
       <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
       <p>Firo 是完整意义上的「<span onclick="alert('根据定义，钱必须包含以下属性：\n\n可互换性：它的各个单位必须能够相互替换（Firo 的特点）\n耐用：能够经得起反复使用\n可分割：可分割成小单位\n携带：易于携带和运输\n供应有限：它在流通中的供应必须是有限的')" title="根据定义，钱必须包含以下属性：&NewLine;&NewLine;可互换性：它的各个单位必须能够相互替换（Firo 的特点）&NewLine;耐用：能够经得起反复使用&NewLine;可分割：可分割成小单位&NewLine;携带：易于携带和运输&NewLine;供应有限：它在流通中的供应必须是有限的" style="cursor: zoom-in;">钱</span>」。</p>
