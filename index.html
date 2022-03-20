@@ -562,7 +562,7 @@ Firo 中文</a></div>
       <section class="fat" id="introducing_firo_wrapper">
         <input id="checkbox_introducing_firo" type="checkbox">
         <p><label class="button big has-icon icon-play" for="checkbox_introducing_firo" onclick="document.querySelector('#introducing_firo').play()">为什么我们需要 Firo</label></p>
-        <video src="imgs/introducing_firo.mp4" controls poster="imgs/introducing_firo_poster.webp" preload="none" id="introducing_firo">
+        <video src="imgs/introducing_firo.mp4" controls preload="none" id="introducing_firo" style="aspect-ratio: 1920 / 1080;">
           <track kind="subtitles" src="imgs/introducing_firo.vtt" srclang="zh-CN" default label="中文字幕">
         </video>
       </section>
@@ -641,6 +641,11 @@ Firo 中文</a></div>
         logoWrapper.addEventListener('animationend', e => {
           e.currentTarget.classList.remove('rotate')
         })
+      })()
+
+      ;(function () {
+        const introducingFiro = document.querySelector('#introducing_firo')
+        introducingFiro.addEventListener('playing', onUIUpdated)
       })()
     </script>
   </body>

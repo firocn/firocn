@@ -1,7 +1,7 @@
 let bodyHeight = document.body.offsetHeight
 let windowHeight = window.innerHeight
 
-window.addEventListener('resize', () => { onUIUpdated() })
+window.addEventListener('resize', onUIUpdated)
 
 Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
   if (img.complete) return img.classList.add('complete')
