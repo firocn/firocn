@@ -558,7 +558,7 @@ Firo 中文</a></div>
       </script>
       <section class="fat" id="introducing_firo_wrapper">
         <input id="checkbox_introducing_firo" type="checkbox">
-        <p><label class="button big has-icon icon-play" for="checkbox_introducing_firo" onclick="document.querySelector('#introducing_firo').play()">为什么我们需要 Firo</label></p>
+        <p><label class="button big has-icon icon-play" for="checkbox_introducing_firo">为什么我们需要 Firo</label></p>
         <video src="imgs/introducing_firo.mp4" controls preload="none" id="introducing_firo" style="aspect-ratio: 1920 / 1080;">
           <track kind="subtitles" src="imgs/introducing_firo.vtt" srclang="zh-CN" default label="中文字幕">
         </video>
@@ -659,7 +659,7 @@ Firo 中文</a></div>
         checkbox.addEventListener('change', e => {
           if (!e.target.checked) return
           introducingFiro.style.backgroundColor = 'black'
-          lastScrollY = window.pageYOffset
+          introducingFiro.play()
           onUIUpdated()
           requestAnimationFrame(() => {
             const windowWidth = window.innerWidth
