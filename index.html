@@ -651,6 +651,10 @@ Firo 中文</a></div>
           onUIUpdated()
           e.target.style.backgroundColor = 'initial'
         })
+        introducingFiro.addEventListener('timeupdate', e => {
+          const video = e.target
+          if (video.duration - video.currentTime <= 0) checkbox.checked = false
+        })
 
         checkbox.addEventListener('change', e => {
           if (!e.target.checked) return
@@ -664,6 +668,8 @@ Firo 中文</a></div>
             const rect = introducingFiro.getBoundingClientRect()
             const top = (window.pageYOffset + rect.top) - (windowHeight - rect.height) * 0.382
             window.scrollTo({ top, behavior: 'smooth' })
+            document.body.classList.remove('show-header')
+            document.body.classList.add('hide-header')
           })
         })
       })()
