@@ -193,6 +193,8 @@
         border-radius: .309em;
         display: inline-block;
         line-height: 1;
+        user-select: none;
+        cursor: pointer;
       }
       @media (hover: hover) {
         .button:active, .card-button:active {
@@ -375,19 +377,75 @@
       .button-list li:not(:first-child) {
         margin-left: 1rem;
       }
-      .button-list .button {
+      .button-list .button, .button.big {
         padding: .618em;
       }
 
       main video {
         width: 100%;
         vertical-align: middle;
-        margin: .309em 0;
       }
       video::cue {
         color: white;
         background: none;
         text-shadow: 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black, 0 0 1.4px black;
+      }
+
+      #introducing_firo_wrapper {
+        display: flow-root;
+        margin-top: 2em;
+      }
+      #introducing_firo_wrapper > * {
+        margin: .309em 0;
+      }
+      #checkbox_introducing_firo {
+        display: none;
+      }
+      #checkbox_introducing_firo:not(:checked) ~ video {
+        display: none;
+      }
+      #checkbox_introducing_firo:checked ~ :not(video) {
+        display: none;
+      }
+
+      .button.has-icon {
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGQ9Ik01MCwzLjhDMjQuNSwzLjgsMy44LDI0LjUsMy44LDUwUzI0LjUsOTYuMiw1MCw5Ni4yUzk2LjIsNzUuNSw5Ni4yLDUwUzc1LjUsMy44LDUwLDMuOHogTTcxLjIsNTMuM2wtMzAuOCwxOCAgYy0wLjYsMC40LTEuMywwLjUtMS45LDAuNWMtMC42LDAtMS4zLTAuMS0xLjktMC41Yy0xLjItMC42LTEuOS0xLjktMS45LTMuM1YzMmMwLTEuNCwwLjgtMi43LDEuOS0zLjNjMS4yLTAuNiwyLjctMC42LDMuOCwwICBsMzAuOCwxOGMxLjIsMC42LDEuOSwxLjksMS45LDMuM1M3Mi4zLDUyLjcsNzEuMiw1My4zeiIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPjwvc3ZnPg==");
+        background-repeat: no-repeat;
+        background-position: .618em center;
+        background-size: 1.5em;
+        padding-left: 2.5em;
+      }
+
+      #bands {
+        max-width: 100%;
+        padding: 0;
+        margin: 2.309rem 0 calc(2.618rem - .309rem);
+        border-top: 1px solid #f4f4f4;
+        border-bottom: 1px solid #f4f4f4;
+        line-height: 1.618;
+        text-align: center;
+      }
+      @font-face {
+        font-family: FiroQuote;
+        src: url("css/fonts/SourceHanSerifCN-Regular.woff2");
+        font-display: block;
+      }
+      .line-band {
+        max-width: calc(38rem / .618);
+        margin: 0 auto;
+        padding: 1em 1.618rem;
+        font-family: FiroQuote, serif;
+      }
+      .hidden {
+        display: none;
+      }
+      @media (prefers-color-scheme: dark) {
+        #bands {
+          border-color: #0b0b0b;
+        }
       }
     </style>
     <noscript>
@@ -467,14 +525,45 @@ Firo 中文</a></div>
           --><li><a href="https://github.com/firoorg/firo/releases/download/v0.14.9.4/firo-0.14.9.4-linux64.tar.gz" class="card-button icon linux download">Linux</a></li>
         </ul>
       </div>
-      <p class="fat">
-        <video src="imgs/introducing_firo.mp4" controls poster="imgs/introducing_firo_poster2.webp" preload="metadata" id="introducing_firo">
-          <track kind="subtitles" src="imgs/introducing_firo.vtt" srclang="zh-CN" default label="中文字幕">
-        </video>
-      </p>
+      <div id="bands"><blockquote id="band0" class="line-band">迄今为止，现金是最主要的匿名交易系统。 ——&#xFEFF; &#xFEFF;《密码朋克宣言》</blockquote>
+<blockquote id="band1" class="line-band hidden">当我的身份被交易的底层机制泄露时，我&#xFEFF;就没有隐私了。 —— Eric Hughes</blockquote>
+<blockquote id="band2" class="line-band hidden">如果你不相信我，或者看不懂我讲什么，那么不好意思，我没空搭理你。 —— 中本聪</blockquote>
+<blockquote id="band3" class="line-band hidden">在长大的过程中，我才慢慢发现，我身边的所有事，别人跟我说的所有事，那些所谓本来如此，注定如此的事，它们其实没有非得如此，事情是可以改变的。更重要的是，有些事既然错了，那就该做出改变。 —— Aaron Swartz</blockquote>
+<blockquote id="band4" class="line-band hidden">幸福的秘密是自由，自由的秘密是勇敢。 ——&nbsp;修&#xFEFF;昔&#xFEFF;底&#xFEFF;德</blockquote>
+</div>
+      <script>
+        ;(function () {
+          let n = Math.floor(Math.random() * 1)
+
+          // const timeout = setTimeout(() => {
+            document.querySelector('#band0').classList.add('hidden')
+            document.querySelector(`#band${n}`).classList.remove('hidden')
+          // }, 10000)
+
+          document.querySelector('#bands').addEventListener('dblclick', () => {
+            // clearTimeout(timeout)
+            n++
+            n = n % document.querySelectorAll('.line-band').length
+            Array.prototype.forEach.call(document.querySelectorAll('.line-band'), (band, i) => {
+              if (i === n) {
+                band.classList.remove('hidden')
+              } else {
+                band.classList.add('hidden')
+              }
+            })
+          })
+        })()
+      </script>
       <p>Firo 是真正私密的加密货币，允许你完全隐私地进行交易，发送方、接收方和金额都是隐藏的，在区块链上不可搜索。</p>
       <p>就像你的电子邮件地址，你可以自由地分享它，但没有人知道它何时收到邮件、何时发出邮件。不像比特币或以太坊，每个人都能看到它的交易信息。</p>
       <p>Firo 是完整意义上的「<span onclick="alert('根据定义，钱必须包含以下属性：\n\n可互换性：它的各个单位必须能够相互替换（Firo 的特点）\n耐用：能够经得起反复使用\n可分割：可分割成小单位\n携带：易于携带和运输\n供应有限：它在流通中的供应必须是有限的')" title="根据定义，钱必须包含以下属性：&NewLine;&NewLine;可互换性：它的各个单位必须能够相互替换（Firo 的特点）&NewLine;耐用：能够经得起反复使用&NewLine;可分割：可分割成小单位&NewLine;携带：易于携带和运输&NewLine;供应有限：它在流通中的供应必须是有限的" style="cursor: zoom-in;">钱</span>」。</p>
+      <section class="fat" id="introducing_firo_wrapper">
+        <input id="checkbox_introducing_firo" type="checkbox">
+        <p><label class="button big has-icon icon-play" for="checkbox_introducing_firo" onclick="document.querySelector('#introducing_firo').play()">为什么我们需要 Firo</label></p>
+        <video src="imgs/introducing_firo.mp4" controls poster="imgs/introducing_firo_poster.webp" preload="metadata" id="introducing_firo">
+          <track kind="subtitles" src="imgs/introducing_firo.vtt" srclang="zh-CN" default label="中文字幕">
+        </video>
+      </section>
       <section id="get_firo">
         <h2>获得 Firo</h2>
         <p>你可以在主流交易所上买到 Firo，<span class="mobile-break-line"><br></span>也可以通过显卡<a href="how-to-mine.html" class="article-link">挖矿</a>获得 Firo。</p>
