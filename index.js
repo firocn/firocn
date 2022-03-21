@@ -24,7 +24,8 @@ const _siteDir = `${__dirname}/_site`
 
   new Fontmin()
     .src(path.normalize(`${__dirname}/css/fonts/SourceHanSerifCN-Regular.ttf`))
-    .use(Fontmin.glyph({ text: fs.readFileSync(path.normalize(`${__dirname}/quotes.ejs`)), hinting: false }))
+    // .use(Fontmin.glyph({ text: fs.readFileSync(path.normalize(`${__dirname}/quotes.ejs`)), hinting: false }))
+    .use(Fontmin.glyph({ text: '迄今为止，现金是最主要的匿名交易系统。 ——﻿ ﻿《密码朋克宣言》', hinting: false }))
     .use(Fontmin.ttf2woff2())
     .dest('_site/css/fonts')
     .run(function (err, files) { if (err) throw err })

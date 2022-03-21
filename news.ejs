@@ -83,6 +83,7 @@
                 firelove: '❤️‍🔥',
                 abacus: '🧮',
                 spats: '💥',
+                pirate: '🏴‍☠️',
                 fire: '🔥'
               }
               const typeicon = icons[post.properties.type || 'article']
@@ -93,7 +94,7 @@
               ])[month - 1] + '月' : ({
                 [new Date().getYear() + 1900 - 1]: '去年',
                 [new Date().getYear() + 1900 - 2]: '前年'
-              })[year] || year
+              })[year] || (year >= 2016 && month >= 9 ? year : '史前')
             %>
             <% if (lastDate && lastDate !== date) { %>
               <li class="lidate">
