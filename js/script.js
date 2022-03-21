@@ -20,7 +20,7 @@ if (document.referrer.includes(window.siteURL)) {
   const header = document.querySelector('body > header')
   const scrollToTop = document.querySelector('#scroll_to_top')
   const deadzone = 10, headerHeight = header.offsetHeight
-  let lastPageY
+  let lastScrollY
   window.addEventListener('scroll', () => {
     const scrollY = window.pageYOffset
     if (scrollY < headerHeight) {
@@ -28,7 +28,7 @@ if (document.referrer.includes(window.siteURL)) {
     } else {
       header.classList.remove('visible')
     }
-    if (scrollY < lastPageY - deadzone || scrollY < deadzone || scrollY + windowHeight >= bodyHeight - 100) {
+    if (scrollY < lastScrollY - deadzone || scrollY < deadzone || scrollY + windowHeight >= bodyHeight - 100) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
@@ -36,12 +36,12 @@ if (document.referrer.includes(window.siteURL)) {
       } else {
         document.body.classList.remove('show-topbtn')
       }
-    } else if (scrollY > lastPageY + deadzone) {
+    } else if (scrollY > lastScrollY + deadzone) {
       document.body.classList.remove('show-header')
       document.body.classList.add('hide-header')
       document.body.classList.remove('show-topbtn')
     }
-    lastPageY = scrollY
+    lastScrollY = scrollY
   })
 })()
 
