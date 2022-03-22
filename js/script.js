@@ -28,7 +28,8 @@ if (document.referrer.includes(window.siteURL)) {
     } else {
       header.classList.remove('visible')
     }
-    if (scrollY < lastScrollY - deadzone || scrollY < deadzone || scrollY + windowHeight >= bodyHeight - 100) {
+    const isBottom = scrollY + windowHeight >= bodyHeight - 100
+    if (scrollY < lastScrollY - deadzone || scrollY < deadzone || isBottom) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
@@ -37,17 +38,29 @@ if (document.referrer.includes(window.siteURL)) {
         document.body.classList.remove('show-topbtn')
       }
     } else if (scrollY > lastScrollY + deadzone) {
-      document.body.classList.remove('show-header')
-      document.body.classList.add('hide-header')
+      hideHeader()
       document.body.classList.remove('show-topbtn')
+    }
+    if (isBottom) {
+      document.body.classList.add('is-bottom')
+    } else {
+      document.body.classList.remove('is-bottom')
     }
     lastScrollY = scrollY
   })
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
+if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+  document.body.classList.add('safari')
+}
 
 document.body.classList.add('initialized')
+
+function hideHeader() {
+  document.body.classList.remove('show-header')
+  document.body.classList.add('hide-header')
+}
 
 function onUIUpdated() {
   requestAnimationFrame(() => {

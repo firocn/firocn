@@ -41,6 +41,15 @@ body:not(.firefox) > header {
   top: calc(-3.618em - .125rem);
   opacity: 0;
 }
+@media (hover: none) {
+  .safari.is-bottom > header {
+    transition: opacity .382s !important;
+  }
+  .safari.is-bottom.hide-header > header {
+    transition: top 0s .382s, opacity .382s !important;
+  }
+}
+
 body > header nav > ul {
   display: flex;
   flex-direction: row;
@@ -381,6 +390,11 @@ article[lang|='en'] p, article[lang|='en'] li {
 .show-header .posts-icon {
   top: calc(3.618em + .0625rem);
 }
+@media (hover: none) {
+  .safari.is-bottom .posts-icon {
+    transition: none;
+  }
+}
 .posts-iconfiro img {
   --size: max(1.618em - 1px, 31px);
   width: var(--size);
@@ -429,6 +443,14 @@ article[lang|='en'] p, article[lang|='en'] li {
   transition: bottom .382s;
   bottom: 1.618rem;
   opacity: 1;
+}
+@media (hover: none) {
+  .safari.is-bottom #scroll_to_top {
+    transition: bottom 0s .382s, opacity .382s;
+  }
+  .safari.is-bottom.show-topbtn #scroll_to_top {
+    transition: opacity .382s;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

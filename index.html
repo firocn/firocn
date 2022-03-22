@@ -103,6 +103,14 @@
         top: calc(-3.618em - .125rem);
         opacity: 0;
       }
+      @media (hover: none) {
+        .safari.is-bottom > header {
+          transition: opacity .382s !important;
+        }
+        .safari.is-bottom.hide-header > header {
+          transition: top 0s .382s, opacity .382s !important;
+        }
+      }
       nav > ul {
         display: flex;
         flex-direction: row;
@@ -670,8 +678,7 @@ Firo 中文</a></div>
             const rect = introducingFiro.getBoundingClientRect()
             const top = (window.pageYOffset + rect.top) - (windowHeight - rect.height) * 0.382
             window.scrollTo({ top, behavior: 'smooth' })
-            document.body.classList.remove('show-header')
-            document.body.classList.add('hide-header')
+            hideHeader()
           })
         })
       })()
