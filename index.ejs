@@ -582,7 +582,7 @@
 
         checkbox.addEventListener('change', e => {
           if (!e.target.checked) return
-          introducingFiro.poster = null
+          introducingFiro.poster = ''
           introducingFiro.style.backgroundColor = 'black'
           introducingFiro.play()
           onUIUpdated()
