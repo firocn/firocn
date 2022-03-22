@@ -27,7 +27,7 @@ const _siteDir = `${__dirname}/_site`
     // .use(Fontmin.glyph({ text: fs.readFileSync(path.normalize(`${__dirname}/quotes.ejs`)), hinting: false }))
     .use(Fontmin.glyph({ text: '迄今为止，现金是最主要的匿名交易系统。 ——﻿ ﻿《密码朋克宣言》', hinting: false }))
     .use(Fontmin.ttf2woff2())
-    .dest('_site/css/fonts')
+    .dest(path.normalize(`${__dirname}/_site/css/fonts`))
     .run(function (err, files) { if (err) throw err })
 
   const posts = await Promise.all((await readdir(path.normalize(postsDir))).reverse().map(async postFilename => {
