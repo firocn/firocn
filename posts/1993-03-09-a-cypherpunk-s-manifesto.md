@@ -2,6 +2,7 @@
   "title": "密码朋克宣言",
   "date" : "1993-03-09",
   "author": "Eric Hughes",
+  "img": "cypherpunksmanifesto.png",
   "icon": "pirate",
   "source": "https://www.activism.net/cypherpunk/manifesto.html"
 } %>
