@@ -87,7 +87,7 @@ document.body.classList.add('initialized')
 setTimeout(() => {
   document.body.classList.add('transition-ready')
 }, 382)
-alert(navigator.platform)
+
 function hideHeader() {
   document.body.classList.remove('show-header')
   document.body.classList.add('hide-header')
