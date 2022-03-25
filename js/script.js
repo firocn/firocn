@@ -79,8 +79,17 @@ if (document.referrer.includes(window.siteURL)) {
     lastScrollY = scrollY
   }
 
-  check()
-  window.addEventListener('scroll', check)
+  check(); let scrollendTimeout
+  window.addEventListener('scroll', () => {
+    check()
+
+    cancelAnimationFrame(scrollendTimeout)
+    scrollendTimeout = requestAnimationFrame(() => {
+      scrollendTimeout = requestAnimationFrame(() => {
+        window.dispatchEvent(new CustomEvent("scrollend"))
+      })
+    })
+  })
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')

@@ -598,8 +598,12 @@
             const windowHeight = window.innerHeight
             const rect = introducingFiro.getBoundingClientRect()
             const top = (window.pageYOffset + rect.top) - (windowHeight - rect.height) * 0.382
+            const hide = () => {
+              hideHeader()
+              window.removeEventListener('scrollend', hide)
+            }
+            window.addEventListener('scrollend', hide)
             window.scrollTo({ top, behavior: 'smooth' })
-            hideHeader()
           })
         })
       })()
