@@ -34,7 +34,7 @@ if (document.referrer.includes(window.siteURL)) {
 
     const isBottom = windowHeight < bodyHeight &&
       scrollY >= headerHeight &&
-      scrollY + windowHeight >= bodyHeight - 100
+      scrollY + windowHeight >= bodyHeight - 10
 
     if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
       const set = () => {
@@ -57,7 +57,7 @@ if (document.referrer.includes(window.siteURL)) {
       } else {
         set()
       }
-    } else if (scrollY > sourceScrollY + deadzone) {
+    } else if (scrollY > sourceScrollY + deadzone && scrollY + windowHeight < bodyHeight - windowHeight) {
       hideHeader()
       document.body.classList.remove('show-topbtn')
     }

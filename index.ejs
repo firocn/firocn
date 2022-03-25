@@ -584,15 +584,18 @@
         })
         introducingFiro.addEventListener('timeupdate', e => {
           const video = e.target
-          if (video.duration - video.currentTime <= 0) checkbox.checked = false
+          if (video.duration - video.currentTime <= 0) {
+            checkbox.checked = false
+            onUIUpdated()
+          }
         })
 
         checkbox.addEventListener('change', e => {
+          onUIUpdated()
           if (!e.target.checked) return
           introducingFiro.poster = ''
           introducingFiro.style.backgroundColor = 'black'
           introducingFiro.play()
-          onUIUpdated()
           requestAnimationFrame(() => {
             const windowWidth = window.innerWidth
             const windowHeight = window.innerHeight
