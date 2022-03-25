@@ -83,11 +83,17 @@
         border-bottom: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         background-color: white;
         transition: top .382s;
-        position: sticky;
+        position: static;
         border-top: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         top: -.0625rem;
         margin-top: -.0625rem;
         z-index: 1;
+      }
+      body:not(.transition-ready) * {
+        transition: none !important;
+      }
+      body.initialized > header {
+        position: sticky;
       }
       body > header.visible {
         transition: top .382s;
@@ -102,6 +108,9 @@
         transition: top .382s, opacity .382s .382s;
         top: calc(-3.618em - .125rem);
         opacity: 0;
+      }
+      .static-header > header {
+        top: calc(-3.618em - .125rem);
       }
       @media (hover: none) {
         .safari.is-bottom > header {

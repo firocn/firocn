@@ -21,11 +21,17 @@ body > header {
   border-bottom: .0625rem solid var(--gray-alpha);
   background-color: var(--background-color);
   z-index: 2;
+  position: static;
   transition: top .382s;
-  position: sticky;
   border-top: .0625rem solid var(--gray);
   top: -.0625rem;
   margin-top: -.0625rem;
+}
+body:not(.transition-ready) * {
+  transition: none !important;
+}
+body.initialized > header {
+  position: sticky;
 }
 body > header.visible {
   transition: top .382s;
@@ -40,6 +46,9 @@ body:not(.firefox) > header {
   transition: top .382s, opacity .382s .382s;
   top: calc(-3.618em - .125rem);
   opacity: 0;
+}
+.static-header > header {
+  top: calc(-3.618em - .125rem);
 }
 @media (hover: none) {
   .safari.is-bottom > header {
@@ -387,7 +396,7 @@ article[lang|='en'] p, article[lang|='en'] li {
   top: 1.618rem;
   transition: top .382s;
 }
-.show-header .posts-icon {
+.show-header:not(.static-header) .posts-icon {
   top: calc(3.618em + .0625rem);
 }
 @media (hover: none) {
