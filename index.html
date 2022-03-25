@@ -82,7 +82,7 @@
         padding: 0 1em;
         border-bottom: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         background-color: white;
-        transition: top .382s;
+        transition: top .236s;
         position: static;
         border-top: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         top: -.0625rem;
@@ -96,7 +96,7 @@
         position: sticky;
       }
       body > header.visible {
-        transition: top .382s;
+        transition: top .236s;
         opacity: 1;
       }
       body:not(.firefox) > header {
@@ -105,7 +105,7 @@
         backdrop-filter: saturate(180%) blur(1.25rem);
       }
       .hide-header > header {
-        transition: top .382s, opacity .382s .382s;
+        transition: top .236s, opacity .236s .236s;
         top: calc(-3.618em - .125rem);
         opacity: 0;
       }
@@ -113,10 +113,10 @@
         top: calc(-3.618em - .125rem);
       }
       .is-bottom > header {
-        transition: opacity .382s !important;
+        transition: opacity .236s !important;
       }
       .is-bottom.hide-header > header {
-        transition: top 0s .382s, opacity .382s !important;
+        transition: top 0s .236s, opacity .236s !important;
       }
       nav > ul {
         display: flex;
