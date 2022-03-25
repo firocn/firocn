@@ -36,7 +36,7 @@ if (document.referrer.includes(window.siteURL)) {
       scrollY >= headerHeight &&
       scrollY + windowHeight >= bodyHeight - 10
 
-    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || (!window.isSafari && isBottom) || !lastScrollY) {
+    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || (!window.isApple && isBottom) || !lastScrollY) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
@@ -79,9 +79,13 @@ if (document.referrer.includes(window.siteURL)) {
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
-if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
-  document.body.classList.add('safari')
-  window.isSafari = true
+if (
+  navigator.userAgent.includes('Safari') &&
+  !navigator.userAgent.includes('Chrome') ||
+  navigator.userAgent.includes('iPhone') ||
+  navigator.userAgent.includes('iPad')
+) {
+  window.isApple = true
 }
 
 document.body.classList.add('initialized')
