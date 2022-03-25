@@ -34,7 +34,7 @@ if (document.referrer.includes(window.siteURL)) {
 
     const isBottom = windowHeight < bodyHeight &&
       scrollY >= headerHeight &&
-      scrollY + windowHeight >= bodyHeight - 100
+      scrollY + windowHeight >= bodyHeight - 10
 
     if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
       const set = () => {
