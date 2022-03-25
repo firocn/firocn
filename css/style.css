@@ -398,10 +398,6 @@ article[lang|='en'] p, article[lang|='en'] li {
   top: calc(3.618em + .0625rem);
 }
 
-  .is-bottom .posts-icon {
-    transition: none;
-  }
-
 .posts-iconfiro img {
   --size: max(1.618em - 1px, 31px);
   width: var(--size);
