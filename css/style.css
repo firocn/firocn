@@ -50,12 +50,6 @@ body:not(.firefox) > header {
 .static-header > header {
   top: calc(-3.618em - .125rem);
 }
-.is-bottom > header {
-  transition: opacity .236s !important;
-}
-.is-bottom.hide-header > header {
-  transition: top 0s .236s, opacity .236s !important;
-}
 
 body > header nav > ul {
   display: flex;
@@ -446,12 +440,6 @@ article[lang|='en'] p, article[lang|='en'] li {
   transition: bottom .236s;
   bottom: 1.618rem;
   opacity: 1;
-}
-.is-bottom #scroll_to_top {
-  transition: bottom 0s .236s, opacity .236s;
-}
-.is-bottom.show-topbtn #scroll_to_top {
-  transition: opacity .236s;
 }
 
 @media (prefers-color-scheme: dark) {

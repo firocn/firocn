@@ -32,40 +32,21 @@ if (document.referrer.includes(window.siteURL)) {
       header.classList.remove('visible')
     }
 
-    const isBottom = windowHeight < bodyHeight &&
-      scrollY >= headerHeight &&
-      scrollY + windowHeight >= bodyHeight - 10
-
-    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
-      const set = () => {
-        document.body.classList.add('show-header')
-        document.body.classList.remove('hide-header')
-        if (scrollY > 0) {
-          if (scrollY >= headerHeight) {
-            document.body.classList.add('show-topbtn')
-            document.body.classList.remove('static-header')
-          }
-        } else {
-          document.body.classList.remove('show-topbtn')
-          document.body.classList.add('static-header')
+    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || !lastScrollY) {
+      document.body.classList.add('show-header')
+      document.body.classList.remove('hide-header')
+      if (scrollY > 0) {
+        if (scrollY >= headerHeight) {
+          document.body.classList.add('show-topbtn')
+          document.body.classList.remove('static-header')
         }
-      }
-
-      clearTimeout(timeout)
-      if (isBottom) {
-        timeout = setTimeout(set, 382)
       } else {
-        set()
+        document.body.classList.remove('show-topbtn')
+        document.body.classList.add('static-header')
       }
-    } else if (scrollY > sourceScrollY + deadzone && scrollY + windowHeight < bodyHeight - windowHeight) {
+    } else if (scrollY > sourceScrollY + deadzone) {
       hideHeader()
       document.body.classList.remove('show-topbtn')
-    }
-
-    if (isBottom) {
-      document.body.classList.add('is-bottom')
-    } else {
-      document.body.classList.remove('is-bottom')
     }
 
     if (
