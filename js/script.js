@@ -53,11 +53,11 @@ if (document.referrer.includes(window.siteURL)) {
       document.body.classList.remove('show-topbtn')
     }
 
-    // if (isBottom) {
-    //   document.body.classList.add('is-bottom')
-    // } else {
-    //   document.body.classList.remove('is-bottom')
-    // }
+    if (isBottom) {
+      document.body.classList.add('is-bottom')
+    } else {
+      document.body.classList.remove('is-bottom')
+    }
 
     if (
       !sourceScrollY ||
