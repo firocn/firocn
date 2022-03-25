@@ -112,13 +112,11 @@
       .static-header > header {
         top: calc(-3.618em - .125rem);
       }
-      @media (hover: none) {
-        .safari.is-bottom > header {
-          transition: opacity .382s !important;
-        }
-        .safari.is-bottom.hide-header > header {
-          transition: top 0s .382s, opacity .382s !important;
-        }
+      .is-bottom > header {
+        transition: opacity .382s !important;
+      }
+      .is-bottom.hide-header > header {
+        transition: top 0s .382s, opacity .382s !important;
       }
       nav > ul {
         display: flex;
