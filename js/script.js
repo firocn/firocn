@@ -57,7 +57,7 @@ if (document.referrer.includes(window.siteURL)) {
       } else {
         set()
       }
-    } else if (scrollY > sourceScrollY + deadzone) {
+    } else if (scrollY > sourceScrollY + deadzone && scrollY + windowHeight < bodyHeight - windowHeight) {
       hideHeader()
       document.body.classList.remove('show-topbtn')
     }
