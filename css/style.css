@@ -391,11 +391,11 @@ article[lang|='en'] p, article[lang|='en'] li {
   background-color: var(--background-color);
   box-shadow: 0 0 0 .242874rem var(--background-color);
   position: sticky;
-  top: 1.618rem;
+  top: calc(1.618rem - .309em);
   transition: top .236s;
 }
 .show-header:not(.static-header) .posts-icon {
-  top: calc(3.618em + .0625rem);
+  top: calc(1rem - .309em + 3.618rem + .0625rem);
 }
 
 .posts-iconfiro img {
