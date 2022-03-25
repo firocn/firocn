@@ -21,7 +21,7 @@ if (document.referrer.includes(window.siteURL)) {
   const scrollToTop = document.querySelector('#scroll_to_top')
   const deadzone = 10
   const headerHeight = header.offsetHeight
-  let lastScrollY, sourceScrollY
+  let lastScrollY, sourceScrollY, timeout
 
   const check = () => {
     const scrollY = window.pageYOffset
@@ -37,16 +37,25 @@ if (document.referrer.includes(window.siteURL)) {
       scrollY + windowHeight >= bodyHeight - 100
 
     if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
-      document.body.classList.add('show-header')
-      document.body.classList.remove('hide-header')
-      if (scrollY > 0) {
-        if (scrollY >= headerHeight) {
-          document.body.classList.add('show-topbtn')
-          document.body.classList.remove('static-header')
+      const set = () => {
+        document.body.classList.add('show-header')
+        document.body.classList.remove('hide-header')
+        if (scrollY > 0) {
+          if (scrollY >= headerHeight) {
+            document.body.classList.add('show-topbtn')
+            document.body.classList.remove('static-header')
+          }
+        } else {
+          document.body.classList.remove('show-topbtn')
+          document.body.classList.add('static-header')
         }
+      }
+
+      clearTimeout(timeout)
+      if (isBottom) {
+        timeout = setTimeout(set, 382)
       } else {
-        document.body.classList.remove('show-topbtn')
-        document.body.classList.add('static-header')
+        set()
       }
     } else if (scrollY > sourceScrollY + deadzone) {
       hideHeader()
