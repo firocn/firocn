@@ -19,17 +19,9 @@ if (document.referrer.includes(window.siteURL)) {
 ;(function () {
   const header = document.querySelector('body > header')
   const scrollToTop = document.querySelector('#scroll_to_top')
-  let deadzone = 10
+  const deadzone = 10
   const headerHeight = header.offsetHeight
   let lastScrollY, sourceScrollY
-
-  let fps = 60
-  requestAnimationFrame(t1 => {
-    requestAnimationFrame(t2 => {
-      fps = 1000 / (t2 - t1)
-      deadzone = 10 * (60 / fps)
-    })
-  })
 
   const check = () => {
     const scrollY = window.pageYOffset
@@ -44,7 +36,7 @@ if (document.referrer.includes(window.siteURL)) {
       scrollY >= headerHeight &&
       scrollY + windowHeight >= bodyHeight - 100
 
-    if (scrollY < lastScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
+    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || isBottom || !lastScrollY) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
@@ -56,7 +48,7 @@ if (document.referrer.includes(window.siteURL)) {
         document.body.classList.remove('show-topbtn')
         document.body.classList.add('static-header')
       }
-    } else if (scrollY > lastScrollY + deadzone) {
+    } else if (scrollY > sourceScrollY + deadzone) {
       hideHeader()
       document.body.classList.remove('show-topbtn')
     }
@@ -67,13 +59,13 @@ if (document.referrer.includes(window.siteURL)) {
     //   document.body.classList.remove('is-bottom')
     // }
 
-    // if (
-    //   !sourceScrollY ||
-    //   scrollY > lastScrollY && lastScrollY < sourceScrollY ||
-    //   scrollY < lastScrollY && lastScrollY > sourceScrollY
-    // ) {
-    //   sourceScrollY = scrollY
-    // }
+    if (
+      !sourceScrollY ||
+      scrollY > lastScrollY && lastScrollY < sourceScrollY ||
+      scrollY < lastScrollY && lastScrollY > sourceScrollY
+    ) {
+      sourceScrollY = scrollY
+    }
 
     lastScrollY = scrollY
   }
