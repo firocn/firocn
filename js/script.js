@@ -84,9 +84,9 @@ if (document.referrer.includes(window.siteURL)) {
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
-if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
-  document.body.classList.add('safari')
-}
+// if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+//   document.body.classList.add('safari')
+// }
 
 document.body.classList.add('initialized')
 setTimeout(() => {
