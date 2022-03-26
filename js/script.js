@@ -64,7 +64,7 @@ if (document.referrer.includes(window.siteURL)) {
     lastScrollY = scrollY
   }
 
-  check(); let scrollendTimeout
+  let scrollendTimeout
   window.addEventListener('scroll', () => {
     check()
 
@@ -76,16 +76,17 @@ if (document.referrer.includes(window.siteURL)) {
     })
   })
   window.addEventListener('resize', () => { requestAnimationFrame(check) })
+
+  setTimeout(() => {
+    check()
+    document.body.classList.add('transition-ready')
+  }, 382)
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
 if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
   window.isSafari = true
 }
-
-setTimeout(() => {
-  document.body.classList.add('transition-ready')
-}, 382)
 
 function hideHeader() {
   document.body.classList.remove('show-header')
