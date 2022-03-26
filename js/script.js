@@ -83,7 +83,6 @@ if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chr
   window.isSafari = true
 }
 
-document.body.classList.add('initialized')
 setTimeout(() => {
   document.body.classList.add('transition-ready')
 }, 382)

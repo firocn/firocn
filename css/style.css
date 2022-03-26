@@ -21,17 +21,11 @@ body > header {
   border-bottom: .0625rem solid var(--gray-alpha);
   background-color: var(--background-color);
   z-index: 2;
-  position: static;
+  position: sticky;
   transition: top .236s;
   border-top: .0625rem solid var(--gray);
   top: -.0625rem;
   margin-top: -.0625rem;
-}
-body:not(.transition-ready) * {
-  transition: none !important;
-}
-body.initialized > header {
-  position: sticky;
 }
 body > header.visible {
   transition: top .236s;
