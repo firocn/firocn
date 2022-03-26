@@ -27,9 +27,6 @@ body > header {
   top: -.0625rem;
   margin-top: -.0625rem;
 }
-body:not(.transition-ready) * {
-  transition: none !important;
-}
 body > header.visible {
   transition: top .236s;
   opacity: 1;
