@@ -1,6 +1,5 @@
 let bodyHeight = document.body.offsetHeight
 let windowHeight = window.innerHeight
-let isTransitionReady
 
 window.addEventListener('resize', onUIUpdated)
 
@@ -65,9 +64,8 @@ if (document.referrer.includes(window.siteURL)) {
     lastScrollY = scrollY
   }
 
-  let scrollendTimeout
+  check(); let scrollendTimeout
   window.addEventListener('scroll', () => {
-    if (!isTransitionReady) return
     check()
 
     cancelAnimationFrame(scrollendTimeout)
@@ -78,18 +76,16 @@ if (document.referrer.includes(window.siteURL)) {
     })
   })
   window.addEventListener('resize', () => { requestAnimationFrame(check) })
-
-  setTimeout(() => {
-    check()
-    document.body.classList.add('transition-ready')
-    isTransitionReady = true
-  }, 382)
 })()
 
 if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
 if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
   window.isSafari = true
 }
+
+setTimeout(() => {
+  document.body.classList.add('transition-ready')
+}, 382)
 
 function hideHeader() {
   document.body.classList.remove('show-header')
