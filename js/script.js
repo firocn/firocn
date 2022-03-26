@@ -1,5 +1,6 @@
 let bodyHeight = document.body.offsetHeight
 let windowHeight = window.innerHeight
+let isTransitionReady
 
 window.addEventListener('resize', onUIUpdated)
 
@@ -66,6 +67,7 @@ if (document.referrer.includes(window.siteURL)) {
 
   let scrollendTimeout
   window.addEventListener('scroll', () => {
+    if (!isTransitionReady) return
     check()
 
     cancelAnimationFrame(scrollendTimeout)
@@ -80,6 +82,7 @@ if (document.referrer.includes(window.siteURL)) {
   setTimeout(() => {
     check()
     document.body.classList.add('transition-ready')
+    isTransitionReady = true
   }, 382)
 })()
 
