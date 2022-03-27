@@ -262,7 +262,7 @@
         color: #fff;
         text-decoration: none;
         display: inline-block;
-        padding: 1em 1.618em;
+        padding: 1em 0;
         line-height: 1;
         border-radius: 1.309rem;
         background-repeat: no-repeat;
@@ -293,8 +293,11 @@
       .card-button.macos {
         background-image: url("imgs/apple.svg");
       }
-      .card-button.linux {
-        background-image: url("imgs/linux.svg");
+      .card-button.appstore {
+        background-image: url("imgs/appstore.svg");
+      }
+      .card-button.appstore:before {
+        content: 'App Store';
       }
       .card-button.binance {
         background-image: url("imgs/binance.svg");
@@ -492,7 +495,7 @@
           <li><a href="https://gitee.com/firocn/firo-mobile-download/releases" target="_blank" class="card-button icon android download">Android</a></li><!--
           --><li><a href="https://gitee.com/firocn/firo-releases/releases" target="_blank" class="card-button icon windows download">Windows</a></li><!--
           --><li><a href="https://gitee.com/firocn/firo-releases/releases" target="_blank" class="card-button icon macos download">macOS</a></li><!--
-          --><li><a href="https://gitee.com/firocn/firo-releases/releases" target="_blank" class="card-button icon linux download">Linux</a></li>
+          --><li><a href="https://apps.apple.com/us/app/campfire-firo-wallet/id1613267898" target="_blank" class="card-button icon appstore download">iOS</a></li>
         </ul>
       </div>
       <div id="bands"><%- include('quotes.ejs') %></div>
