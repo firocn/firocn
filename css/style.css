@@ -354,11 +354,11 @@ article[lang|='en'] p, article[lang|='en'] li {
 .posts li a {
   font-weight: bold;
 }
-.posts li a:visited, .menu a:visited, .link:visited, footer a:visited {
+.posts li a:visited, .menu a:visited, .link:visited, footer a:visited, footer a.nocolor {
   color: inherit;
 }
 @media (hover: hover) {
-  .posts li a:visited:active, .menu a:visited:active, footer a:visited:active {
+  .posts li a:visited:active, .menu a:visited:active, footer a:visited:active, footer a.nocolor:active {
     color: white;
   }
 }
