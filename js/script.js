@@ -1,6 +1,11 @@
 let bodyHeight = document.body.offsetHeight
 let windowHeight = window.innerHeight
 
+if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
+if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+  window.isSafari = true
+}
+
 window.addEventListener('resize', onUIUpdated)
 
 Array.prototype.forEach.call(document.querySelectorAll('img'), img => {
@@ -36,7 +41,7 @@ if (document.referrer.includes(window.siteURL)) {
       scrollY >= headerHeight &&
       scrollY + windowHeight >= bodyHeight - 10
 
-    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || (!window.isSafari && isBottom) || !lastScrollY) {
+    if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || (!window.isSafari && isBottom) || lastScrollY === undefined) {
       document.body.classList.add('show-header')
       document.body.classList.remove('hide-header')
       if (scrollY > 0) {
@@ -48,7 +53,7 @@ if (document.referrer.includes(window.siteURL)) {
         document.body.classList.remove('show-topbtn')
         document.body.classList.add('static-header')
       }
-    } else if (scrollY > sourceScrollY + deadzone) {
+    } else if (scrollY > sourceScrollY + deadzone && !document.body.classList.contains('static-header')) {
       hideHeader()
       document.body.classList.remove('show-topbtn')
     }
@@ -78,15 +83,6 @@ if (document.referrer.includes(window.siteURL)) {
   })
   window.addEventListener('resize', () => { requestAnimationFrame(check) })
 })()
-
-if (navigator.userAgent.includes('Firefox')) document.body.classList.add('firefox')
-if (navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
-  window.isSafari = true
-}
-
-setTimeout(() => {
-  document.body.classList.add('transition-ready')
-}, 382)
 
 function hideHeader() {
   document.body.classList.remove('show-header')
