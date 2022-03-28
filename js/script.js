@@ -56,7 +56,8 @@ if (document.referrer.includes(window.siteURL)) {
     if (
       !sourceScrollY ||
       scrollY > lastScrollY && lastScrollY < sourceScrollY ||
-      scrollY < lastScrollY && lastScrollY > sourceScrollY
+      scrollY < lastScrollY && lastScrollY > sourceScrollY ||
+      Math.abs(scrollY - lastScrollY) > deadzone
     ) {
       sourceScrollY = scrollY
     }
