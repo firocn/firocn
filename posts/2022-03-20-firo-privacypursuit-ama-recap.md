@@ -4,7 +4,7 @@
   "author": "Reuben Yap",
   "img": "firo_privacypursuit_ama.jpg",
   "type": "memo",
-  "icon": "ama",
+  "icon": "ninja",
   "source": "2022-03-20-firo-privacypursuit-ama-recap-en.html"
 } %>
 
