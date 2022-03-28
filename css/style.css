@@ -43,6 +43,7 @@ body:not(.firefox) > header {
 }
 .static-header > header {
   top: calc(-3.618em - .125rem);
+  position: static;
 }
 
 body > header nav > ul {
