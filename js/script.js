@@ -37,25 +37,22 @@ if (document.referrer.includes(window.siteURL)) {
       header.classList.remove('visible')
     }
 
-    const isBottom = windowHeight < bodyHeight &&
-      scrollY >= headerHeight &&
-      scrollY + windowHeight >= bodyHeight - 10
+    const isBottom = checkIsBottom(scrollY)
 
     if (scrollY < sourceScrollY - deadzone || scrollY <= 0 || (!window.isSafari && isBottom) || lastScrollY === undefined) {
-      document.body.classList.add('show-header')
-      document.body.classList.remove('hide-header')
+      showHeader()
       if (scrollY > 0) {
         if (scrollY >= headerHeight && lastScrollY) {
-          document.body.classList.add('show-topbtn')
-          document.body.classList.remove('static-header')
+          showTopbtn()
+          stickyHeader()
         }
       } else {
-        document.body.classList.remove('show-topbtn')
-        document.body.classList.add('static-header')
+        hideTopbtn()
+        staticHeader()
       }
     } else if (scrollY > sourceScrollY + deadzone && !document.body.classList.contains('static-header')) {
       hideHeader()
-      document.body.classList.remove('show-topbtn')
+      hideTopbtn()
     }
 
     if (
@@ -82,11 +79,34 @@ if (document.referrer.includes(window.siteURL)) {
     })
   })
   window.addEventListener('resize', () => { requestAnimationFrame(check) })
+
+  function checkIsBottom(scrollY) {
+    if (scrollY === undefined) scrollY = window.pageYOffset
+    return windowHeight < bodyHeight &&
+      scrollY >= headerHeight &&
+      scrollY + windowHeight >= bodyHeight - 10
+  }
 })()
 
+function showHeader() {
+  document.body.classList.add('show-header')
+  document.body.classList.remove('hide-header')
+}
 function hideHeader() {
   document.body.classList.remove('show-header')
   document.body.classList.add('hide-header')
+}
+function showTopbtn() {
+  document.body.classList.add('show-topbtn')
+}
+function hideTopbtn() {
+  document.body.classList.remove('show-topbtn')
+}
+function staticHeader() {
+  document.body.classList.add('static-header')
+}
+function stickyHeader() {
+  document.body.classList.remove('static-header')
 }
 
 function onUIUpdated() {
