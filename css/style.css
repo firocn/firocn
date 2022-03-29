@@ -176,11 +176,6 @@ article:not(.index) img, article video {
   display: block;
   height: auto;
 }
-@media screen and (min-width: 76rem) {
-  :root {
-    scrollbar-gutter: stable both-edges;
-  }
-}
 @media screen and (min-width: 61.484rem) {
   article:not(.index) img {
     border-radius: 1.309rem;
