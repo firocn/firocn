@@ -14,6 +14,7 @@ body {
   padding: 0 0 1.618rem;
   font-family: sans-serif;
   overflow-x: hidden;
+  overflow-x: clip;
 }
 body > header {
   height: 3.618em;
@@ -175,6 +176,11 @@ article:not(.index) img, article video {
   margin: .309rem auto;
   display: block;
   height: auto;
+}
+@media screen and (min-width: 76rem) {
+  body {
+    width: 100vw;
+  }
 }
 @media screen and (min-width: 61.484rem) {
   article:not(.index) img {

@@ -135,6 +135,13 @@
         max-width: calc(38rem / .618);
         padding: 0;
       }
+      @media screen and (min-width: 76rem) {
+        body {
+          width: 100vw;
+          overflow-x: hidden;
+          overflow-x: clip;
+        }
+      }
       @media screen and (min-width: 61.484rem) {
         main > .fat > * {
           border-radius: 1.309rem;
