@@ -168,7 +168,7 @@ Firo 中文</a></div>
 
   const updateInfos = function () {
     if (location.href.includes(siteDomain)) {
-      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
+      fetch(`https://www.firocn.org/getblockcount.txt?_=${new Date().getTime()}`)
         .then(res => res.text())
         .then(height => {
           latestBlockValue.innerHTML = height
