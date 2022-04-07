@@ -236,7 +236,7 @@ daemon=1
 
   const updateInfos = function () {
     if (location.href.includes(siteDomain)) {
-      fetch(`https://www.firocn.org/getblockcount.txt?_=${new Date().getTime()}`)
+      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
         .then(res => res.text())
         .then(height => {
           latestBlockValue.innerHTML = height

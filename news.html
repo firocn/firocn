@@ -90,6 +90,25 @@ Firo 中文</a></div>
             
             <li>
               <div class="posts-icon-wrapper">
+                <div class="posts-icon">🕊️</div>
+              </div>
+              <div class="posts-body">
+                <a href="2022-04-06-hummingbot-campaign-binance-gateio.html">Firo 在币安和 Hummingbot 上的资金流动性奖励活动启动</a>
+                <div class="posts-description">快来赚取 $FIRO 和 $HBOT 奖励吧！</div>
+              </div>
+            </li>
+          
+            
+            
+              <li class="lidate">
+                <div class="posts-icon-wrapper">
+                  <div class="posts-icon posts-iconfiro"><span class="placeholder">📅</span><picture><source srcset="imgs/firo_symbol_dark_mode.svg" media="(prefers-color-scheme: dark)"><img src="imgs/firo_symbol.svg" class="complete" width="31" height="31"></picture></div>
+                </div>
+                <div class="posts-body">三月</div>
+              </li>
+            
+            <li>
+              <div class="posts-icon-wrapper">
                 <div class="posts-icon">🥷</div>
               </div>
               <div class="posts-body">
@@ -529,7 +548,7 @@ Firo 中文</a></div>
 
   const updateInfos = function () {
     if (location.href.includes(siteDomain)) {
-      fetch(`https://www.firocn.org/getblockcount.txt?_=${new Date().getTime()}`)
+      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
         .then(res => res.text())
         .then(height => {
           latestBlockValue.innerHTML = height
