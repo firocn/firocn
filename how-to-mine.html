@@ -237,7 +237,7 @@ daemon=1
   const updateInfos = function () {
     if (location.href.includes(siteDomain)) {
       fetch(`getblockcount.txt?_=${new Date().getTime()}`)
-        .then(res => res.text())
+        .then(res => res.text().trim())
         .then(height => {
           latestBlockValue.innerHTML = height
           latestBlock.style.display = 'inline'
