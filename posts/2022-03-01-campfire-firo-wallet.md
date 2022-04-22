@@ -4,7 +4,7 @@
   "img": "https://firo.org/blog/assets/introducing-campfire.png",
   "author": "Reuben Yap",
   "type": "announcement",
-  "icon": "fire",
+  "icon": "camping",
   "source": "https://firo.org/2022/03/01/campfire-firo-wallet.html"
 } %>
 
