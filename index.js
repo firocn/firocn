@@ -11,7 +11,7 @@ marked.setOptions({ breaks: true, mangle: false })
 
 const dateRegexp = /(\d{4})-(\d{2})-(\d{2})/
 
-const siteData = { imgsURL: 'imgs', siteURL: config.siteURL, dateRegexp, autoPrefixImgURL, siteDomain: config.siteDomain }
+const siteData = { imgsURL: 'imgs', siteURL: config.siteURL, dateRegexp, autoPrefixImgURL, siteDomain: config.siteDomain, __dirname }
 
 const postsDir = `${__dirname}/posts`
 const _siteDir = `${__dirname}/_site`
@@ -159,6 +159,7 @@ function copyFile(fullFilename) {
 }
 
 function autoPrefixImgURL(url, siteURL) {
+  if (url.startsWith(siteData.imgsURL)) return url
   return url.startsWith('http') ? url :
     (siteURL ? `${siteURL}/${siteData.imgsURL}/${url}` : `${siteData.imgsURL}/${url}`)
 }
