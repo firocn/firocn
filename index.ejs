@@ -587,7 +587,7 @@
         checkbox.addEventListener('change', e => {
           onUIUpdated()
           if (!e.target.checked) return
-          introducingFiro.poster = ''
+          if (!location.hash.includes('#video')) introducingFiro.poster = ''
           introducingFiro.style.backgroundColor = 'black'
           introducingFiro.play()
           requestAnimationFrame(() => {
@@ -603,6 +603,10 @@
             window.scrollTo({ top, behavior: 'smooth' })
           })
         })
+
+        if (location.hash.includes('#video')) {
+          checkbox.click()
+        }
       })()
     </script>
   </body>
