@@ -39,7 +39,7 @@ RY：就我个人而言，我的隐私之旅始于 2007 年我取得律师资格
 
 由于资金不足，这有点像火的洗礼，我们还必须处理项目的推进以及受到黑客和攻击的问题。结果，我在工作中获得了很多关于隐私协议的微妙之处及其内部运作的经验和知识。随着时间的推移，我逐渐开始接管更多的职责，并在 2017 年底全职工作后发展到担任首席运营官的角色，然后最终成为项目管理人和联合创始人，因为我被认为是在币的大部分时间里帮助它成长的人。
 
-我们率先使用 Zerocoin（不要与 Zcash 使用的 Zerocash 协议混淆），这是第一个使用零知识证明来燃烧和赎回币的隐私协议，它成为最广泛使用的隐私协议之一，直到它因我们发现并负责任地披露的一个加密漏洞而退役。我们随后发布了 Sigma，这是 Zerocoin 的一个修改版本，它没有可信设置，并且证明大小要小得多。这又是世界上第一个部署的隐私协议，它使用了一种特定的零知识证明，称为 one-out-of-many 证明，现在构成了整个隐私协议系列的基础，如 Lelantus、Lelantus Spark、Lelantus-MW、Triptych 和 Seraphis。2020 年，Zcoin 更名为 Firo（发音为 fee-roh），以反映我们不再使用 Zerocoin 协议，并使其听起来更接近货币，同时也与我们燃烧币的隐私机制相符。
+我们率先使用 Zerocoin（不要与 Zcash 使用的 Zerocash 协议混淆），这是第一个使用零知识证明来燃烧和赎回币的隐私协议，它成为最广泛使用的隐私协议之一，直到它因我们发现并负责任地披露的一个密码学漏洞而退役。我们随后发布了 Sigma，这是 Zerocoin 的一个修改版本，它没有可信设置，并且证明大小要小得多。这又是世界上第一个部署的隐私协议，它使用了一种特定的零知识证明，称为 one-out-of-many 证明，现在构成了整个隐私协议系列的基础，如 Lelantus、Lelantus Spark、Lelantus-MW、Triptych 和 Seraphis。2020 年，Zcoin 更名为 Firo（发音为 fee-roh），以反映我们不再使用 Zerocoin 协议，并使其听起来更接近货币，同时也与我们燃烧币的隐私机制相符。
 
 ![Aram 和 Aaron，提出 Lelantus Spark 的密码学家](https://miro.medium.com/max/1400/1*tyGBxkL5BV1P7KTCbCBEiw.jpeg) Aram 和 Aaron（左一和左二），提出 Lelantus Spark 的密码学家
 
