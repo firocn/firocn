@@ -1,7 +1,7 @@
 <%# {
   "title": "Firo 中国节点",
   "description": "seed.firocn.org",
-  "summary": "seed.firocn.org",
+  "summary": "加快同步速度",
   "img": "nodes.png",
   "card": "summary",
   "date" : "2022-03-17",
