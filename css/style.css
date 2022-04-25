@@ -118,6 +118,13 @@ pre {
   display: inline-block;
   line-height: 1;
 }
+.button:hover {
+  color: #fff;
+}
+.button.disabled {
+  background-color: var(--link-color-2);
+  pointer-events: none;
+}
 @media (prefers-color-scheme: dark) {
   body > header {
     color: white;

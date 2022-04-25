@@ -15,6 +15,36 @@ firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这
 
 `aGR839M4G1zd5ceTuo7MDU8G28JN1HDzW4`
 
+<div><a id="button_copyaddress" class="button" href="javascript: copyAddress()" target="_self">复制</a></div>
+
+<noscript>
+  <style>
+    #button_copyaddress {
+      display: none;
+    }
+  </style>
+</noscript>
+
+<script>
+function copyAddress() {
+  const button = document.querySelector('#button_copyaddress')
+  const input = document.createElement('input')
+  input.value = 'aGR839M4G1zd5ceTuo7MDU8G28JN1HDzW4'
+  input.style.position = 'absolute'
+  input.style.opacity = 0
+  document.body.appendChild(input)
+  input.select()
+  document.execCommand('copy')
+  input.remove()
+  button.innerHTML = '已复制'
+  button.classList.add('disabled')
+  setTimeout(() => {
+    button.innerHTML = '复制'
+    button.classList.remove('disabled')
+  }, 3000)
+}
+</script>
+
 ![Firo 二维码](donationqrcode.png)
 
 ## 收到的捐助
