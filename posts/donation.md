@@ -16,3 +16,7 @@ firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这
 `aGR839M4G1zd5ceTuo7MDU8G28JN1HDzW4`
 
 ![Firo 二维码](donationqrcode.png)
+
+## 收到的捐助
+
+1. [金：5 FIRO - 2022/4/25](https://explorer.firo.org/tx/e5a84caf7400e80c7e0188213bec9c89558fe4f05631e48122011114a0a21e05)
