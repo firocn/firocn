@@ -617,20 +617,13 @@ Firo 中文</a></div>
   const latestPriceValue = document.querySelector('#latest_price_value')
 
   const updateInfos = function () {
-    if (location.href.includes(siteDomain)) {
-      fetch(`getblockcount.txt?_=${new Date().getTime()}`)
-        .then(res => res.text())
-        .then(height => {
-          height = height.trim()
-          latestBlockValue.innerHTML = height
-          latestBlock.style.display = 'inline'
-        })
-    } else {
-      requestAnimationFrame(() => {
-        latestBlockValue.innerHTML = '888888'
+    fetch(`https://explorer.firo.org/insight-api-zcoin/blocks`)
+      .then(res => res.json())
+      .then(json => {
+        height = json.blocks[0].height
+        latestBlockValue.innerHTML = height
         latestBlock.style.display = 'inline'
       })
-    }
     fetch('https://explorer.firo.org/insight-api-zcoin/currency')
       .then(res => res.json())
       .then(json => {
@@ -639,10 +632,8 @@ Firo 中文</a></div>
       })
   }
 
-  setTimeout(() => {
-    updateInfos()
-    setInterval(() => { updateInfos() }, 10000)
-  }, 1000)
+  updateInfos()
+  setInterval(() => { updateInfos() }, 10000)
 </script>
 
     <script src="js/script.js"></script>
