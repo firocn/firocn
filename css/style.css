@@ -294,7 +294,7 @@ p {
   margin: 1em 0;
   display: flow-root;
 }
-p, li {
+p, li, h3 {
   text-align: justify;
 }
 ul, ol {
