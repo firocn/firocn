@@ -3,13 +3,13 @@
   "description": "即将到来的 FIRO 的区块奖励变更将是最大的改变之一，在我们看来是 FIRO 项目迄今为止最大的改进之一。我们正在比以往任何时候都更多地赋予我们的社区以权力！戴上你的派对帽子，准备好庆祝吧！",
   "summary": "社区基金区块奖励来了",
   "author": "Andrei Rotariu, 🔥Crypto Fireside",
-  "img": "https://raw.githubusercontent.com/firoorg/firo-site/785d1c03b57a83a61fad5b68e044334e204fabe5/blog/assets/park-troopers.jpg",
+  "img": "onepiece.jpg",
   "type": "announcement",
   "icon": "dance",
-  "source": "https://github.com/firoorg/firo-site/blob/7ef1f1f012ce307a8e4ef4f3d32867db145afdb7/_posts/2022-05-09-firo-upcoming-tokenomics-change.md"
+  "source": "https://firo.org/2022/05/08/firo-upcoming-tokenomics-change.html"
 } %>
 
-![FIRO 即将发生的代币经济学变更](https://raw.githubusercontent.com/firoorg/firo-site/785d1c03b57a83a61fad5b68e044334e204fabe5/blog/assets/park-troopers.jpg#size=1430x1202)
+![FIRO 即将发生的代币经济学变更](https://firo.org/blog/assets/park-troopers.jpg#size=3876x2660)
 
 ### 即将到来的 FIRO 的区块奖励变更将是最大的改变之一，在我们看来是 FIRO 项目迄今为止最大的改进之一。我们正在比以往任何时候都更多地赋予我们的社区以权力！戴上你的派对帽子，准备好庆祝吧！
 
@@ -84,7 +84,7 @@ FIRO 惊人的、专注的社区包括 [Twitter](https://twitter.com/firoorg) �
 
 对区块奖励的更改和社区基金有一个商定的 6 个月审查和评估。虽然预计不需要执行重大更改或大修，但这个时间段被指定，以便核心团队和 Firo 社区可以评估区块奖励变化的影响，也可以看到社区基金的作用。
 
-*「让我们同意，6 个月后，我们将评估这些变化，看看它是否奏效，我们应该开放，诚实地评估这次投票结果的影响，并愿意重新调整。」R.Y.*
+*「让我们同意，6 个月后，我们将评估这些变化，看看它是否奏效，我们应该开放、诚实地评估这次投票结果的影响，并愿意重新调整。」R.Y.*
 
 ## 你需要我做什么？
 
