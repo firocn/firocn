@@ -83,10 +83,7 @@
         <% } %>
         <%- post.html %>
         <% if (post.properties.iframe) { %>
-          <noscript>⚠️ <strong>需要浏览器启用 JavaScript 功能</strong></noscript>
-          <p class="iframe-wrapper">
-            <iframe onload="setTimeout(function () { document.querySelector('.iframe-wrapper').classList.add('loaded') }, 100)" src="<%= post.properties.iframe %>" importance="high" title="视频嵌入页面" frameborder="0" allowfullscreen scrolling="no" width="640" height="480"></iframe>
-          </p>
+          <%- include('iframe', { iframe: post.properties.iframe }) %>
         <% } %>
         <!-- <footer>
           <ul class="menu">
