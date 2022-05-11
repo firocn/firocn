@@ -220,6 +220,7 @@ iframe {
   height: 21.375em;
   overflow: hidden;
   background-color: var(--gray);
+  margin: 1.309em 0;
 }
 @media screen and (max-width: 41.236rem) {
   article:not(.index) img, .iframe-wrapper, article video {
