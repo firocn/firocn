@@ -85,16 +85,18 @@
         <% if (post.properties.iframe) { %>
           <%- include('iframe', { iframe: post.properties.iframe }) %>
         <% } %>
-        <!-- <footer>
-          <ul class="menu">
-            <% if (post.properties.source && post.properties.type != 'video') { %>
-              <li><a href="<%= post.properties.source %>"><%= ({ forum: '原文（进入论坛）', download: '下载' })[post.properties.type] || '原文' %></a></li>
-            <% } %>
-            <li id="footer_home"><a target="_self" href="index.html">首页</a></li>
-            <li><a href="https://twitter.com/firo_cn">推特</a></li>
-            <li><a href="https://t.me/firo_zh">电报</a></li>
-          </ul>
-        </footer> -->
+        <% if (post.properties.type === 'forum') { %>
+          <footer>
+            <ul class="menu">
+              <% if (post.properties.source && post.properties.type != 'video') { %>
+                <li><a href="<%= post.properties.source %>"><%= ({ forum: '原文（进入论坛）', download: '下载' })[post.properties.type] || '原文' %></a></li>
+              <% } %>
+              <!-- <li id="footer_home"><a target="_self" href="index.html">首页</a></li>
+              <li><a href="https://twitter.com/firo_cn">推特</a></li>
+              <li><a href="https://t.me/firo_zh">电报</a></li> -->
+            </ul>
+          </footer>
+        <% } %>
       </article>
     </main>
     <%- include('footer') %>

@@ -1,5 +1,5 @@
 <%# {
-  "title": "Firo 核心团队财务和支出报告 2022 年 2 月",
+  "title": "Firo 核心团队财务和开支报告 2022 年 2 月",
   "description": "Firo 核心团队的财务现状",
   "img": "firo-discuz.jpg",
   "card": "summary",
