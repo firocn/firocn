@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>构建 FIRO 投票系统提案 - Firo 中文</title>
+    <meta name="description" content="通过主节点建立一个 FIRO 持有投票机制">
+    <meta property="og:image" content="https://firocn.org/imgs/firo-discuz.jpg">
+    <meta property="og:title" content="构建 FIRO 投票系统提案">
+    <meta property="og:description" content="通过主节点建立一个 FIRO 持有投票机制">
+    <meta name="twitter:title" content="构建 FIRO 投票系统提案">
+    <meta name="twitter:description" content="通过主节点建立一个 FIRO 持有投票机制">
+    
+      <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:image" content="https://firocn.org/imgs/firo-discuz.jpg">
+    <meta name="theme-color" content="#9b1c2e">
+<link rel="stylesheet" href="css/style.css">
+<noscript>
+  <style>
+    img:not(.complete) {
+      background: initial;
+    }
+    body > header {
+      position: static;
+    }
+    .show-header .posts-icon {
+      top: 1.618rem;
+    }
+  </style>
+</noscript>
+<link rel="icon" href="imgs/logo-transparentbg180.png">
+<link rel="icon" href="imgs/logo-transparentbg2.svg">
+<link rel="apple-touch-icon" href="imgs/logo-whitebg.png">
+<script>
+  window.siteURL = 'https://firocn.org'
+  window.siteDomain = 'firocn.org'
+</script>
+
+    <base target="_blank" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <div class="header-title"><a href="index.html" target="_self"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="8 8 504 504" style="enable-background:new 8 8 504 504;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#9B1C2E;}
+</style>
+<mask id="mask">
+	<rect x="0" y="0" width="100%" height="100%" style="fill: white;"></rect>
+	<path class="st1" d="M155.6,370.7c5.9,0,11.2-3.2,14-8.4l37.3-70.6h-57.5c-8.7,0-15.8-7.1-15.8-15.8v-31.6
+		c0-8.7,7.1-15.8,15.8-15.8h90.9l70.6-133.9c2.7-5.2,8.1-8.4,14-8.4h118.8C397.5,37.4,332.3,7,260,7C120.3,7,7,120.3,7,260
+		c0,39.7,9.2,77.3,25.5,110.7H155.6z"/>
+	<path class="st1" d="M364.4,149.3c-5.9,0-11.2,3.2-14,8.4l-37.3,70.6h57.5c8.7,0,15.8,7.1,15.8,15.8v31.6
+		c0,8.7-7.1,15.8-15.8,15.8h-90.9l-70.6,133.9c-2.7,5.2-8.1,8.4-14,8.4H76.4C122.5,482.6,187.7,513,260,513
+		c139.7,0,253-113.3,253-253c0-39.7-9.2-77.3-25.5-110.7H364.4z"/>
+</mask>
+<circle class="st0" cx="260" cy="260" r="240" mask="url(#mask)" />
+</svg>
+Firo 中文</a></div>
+        <nav class="header-nav-bar">
+          <ul>
+            
+              <li class="hidden-360"><a class="link" href="news.html" target="_self">新闻</a></li>
+              <li><a class="link" href="community.html" target="_self">社区</a></li>
+            
+            <li><a class="button" href="index.html" target="_self">下载</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav>
+      <a href="news.html" class="logo" target="_self">
+        <picture>
+  <source srcset="imgs/firo_logo_dark_mode.svg" media="(prefers-color-scheme: dark)">
+  <img importance="high" src="imgs/firo_logo.svg" alt="Firo 中文社区" height="84" title="Firo 是保护隐私的加密货币">
+</picture>
+
+      </a>
+      <!-- <ul class="menu">
+        <li><a href="https://twitter.com/firo_cn">推特</a></li>
+        <li><a href="index.html" target="_self">下载</a></li>
+        
+          <li><a href="community.html" target="_self">社区</a></li>
+        
+      </ul> -->
+    </nav>
+    <main>
+      
+        <article>
+      
+        
+          <header>
+            <h1>构建 FIRO 投票系统提案</h1>
+            
+              <p><em>通过主节点建立一个 FIRO 持有投票机制</em></p>
+            
+            <p class="article-header-bar">
+              2022 年 5 月 17 日
+              
+                ｜
+                satoshi
+              
+              
+                ｜
+                <a href="https://forum.firo.org/t/build-firo-voting-system/2427/47">
+                  原文（进入论坛）
+                </a>
+              
+              
+            </p>
+          </header>
+        
+        <p><img src="imgs/performance-speaks-for-itself.jpg" width="904" height="507" class=" "  alt="业绩不言自明"></p>
+<h2 id="业绩不言自明">业绩不言自明</h2>
+<p>Reuben 在 2017 年底全职工作，然后成为 COO，然后是 CEO 和联合创始人。在其 5 年的领导下，FIRO 的价格从 120 美元跌至 1 美元，然后其推卸责任，说自己只是个项目管家。</p>
+<p>5 年来的表现如此糟糕，任何一个民主国家的首相和内阁都会被赶下台。</p>
+<h2 id="事实：">事实：</h2>
+<ol>
+<li><p>在 Reuben 的领导下，从 2017 年到现在，FIRO 价格在 5 年内从 120 美元下降到 1 美元，证明  Reuben 的想法和决定都是错误的。</p>
+</li>
+<li><p>在 Reuben 的领导下，隐私区块链项目成为一个公司实体（不负责长期持有者的所有者权益）。创始人、经理、开发人员、社区管理员和宣传人员都成为 FIRO 公司的员工。</p>
+</li>
+<li><p>在 Reuben 的领导下，利用开发基金建立一个独裁和高度中心化的组织。这是关于隐私区块链的最大笑话。</p>
+</li>
+<li><p>Reuben 控制着开发基金的使用权，影响核心团队实施他错误的想法和决定（由市值下降证实，市值下降到排名 600 以下，而 Zcash 排名 40）。</p>
+</li>
+<li><p>在 Reuben 的领导下，谁能说清楚有多少人是真正的 FIRO 长期持有者，有多少人是麻烦制造者，有多少人是论坛 ID 背后的敌人？或者隐藏在论坛 ID 背后，<strong>以隐私的名义做一切事情来破坏 Firo</strong>。（Reuben 能否摆脱疑问，有多少 ID 是你的发言人，有多少是水军和付费发帖者？）</p>
+</li>
+</ol>
+<h2 id="我们应该做什么？">我们应该做什么？</h2>
+<ol>
+<li><p>通过主节点建立一个 FIRO 持有投票机制。</p>
+</li>
+<li><p>只有<strong>持续时间超过 1 年的主节点才有投票权</strong>，<strong>一个主节点一票</strong>。（如何定义「持续时间超过 1 年」：主节点必须持续运行，永不中途停止；一旦停止或中断，无论任何原因，失去投票权，必须重新计算连续运行 1 年）</p>
+</li>
+<li><p>在论坛中，只有主节点的所有者可以打开投票主题。</p>
+</li>
+<li><p>所有的投票线程<strong>必须得到 50% 以上的投票通过</strong>。</p>
+</li>
+<li><p><strong>重大决定</strong>，如尾部发行，<strong>必须得到 80% 以上的投票同意</strong>。</p>
+</li>
+</ol>
+<h2 id="这样做有什么好处？">这样做有什么好处？</h2>
+<ol>
+<li><p><strong>建立明确的产权责任制度。</strong></p>
+</li>
+<li><p>增加 FIRO 持有量，锁定主节点，减少市场上的倾销，有利于稳定 FIRO 价格。</p>
+</li>
+<li><p>现在的 FIRO 价格<strong>非常非常低</strong>，低得令人难以置信，拥有一个主节点只需要 1000 到 1500 美元。这<strong>对论坛中所谓的小投资者建立一个或多个主节点是非常非常友好的</strong>。</p>
+</li>
+<li><p>由于建立了正确的投票机制，长期储户不再担心自己的权益会被论坛里的独裁者或傻瓜破坏。</p>
+</li>
+<li><p>隐私币的最后买家是那些长期持有隐私币的人；隐私币最大的价值是储存财富，其次是隐私支付。<strong>只有那些不担心财富受到伤害的长期储户才会把越来越多的钱储存到 FIRO 中。最后，他们成为大储户拥有许多主节点将决定他们自己的 FIRO 的价格</strong>。这就是自然的自我反馈和正反馈。</p>
+</li>
+</ol>
+<p>只有富人才需要在隐私区块链中隐藏他们的财富；没有银行存款的人，甚至没有 1000 到 3000 美元来购买一个或多个主节点，他们根本就不是 FIRO 的目标群体。</p>
+<p>现在，对于论坛中的小投资者来说，与你污名化的大户相比，你处于完全不平等的绝对优势地位；你只需要花<strong>十分之一</strong>（Firo 长期持有者成本 10 美元）甚至<strong>百分之一</strong>（Zcoin 持有者成本 100 美元）的钱来建立一个主节点。</p>
+
+        
+        
+          <footer>
+            <ul class="menu">
+              
+                <li><a href="https://forum.firo.org/t/build-firo-voting-system/2427/47">原文（进入论坛）</a></li>
+              
+              <!-- <li id="footer_home"><a target="_self" href="index.html">首页</a></li>
+              <li><a href="https://twitter.com/firo_cn">推特</a></li>
+              <li><a href="https://t.me/firo_zh">电报</a></li> -->
+            </ul>
+          </footer>
+        
+      </article>
+    </main>
+    <style>
+  @media (hover: none) {
+    #copyrightlink {
+      pointer-events: none;
+    }
+  }
+</style>
+<footer>
+  <p>
+    <a target="_self" href="donation.html">捐助</a>
+    ｜ <a target="_blank" href="https://firo.org/zh-cn/">官网</a>
+    ｜ <a target="_blank" href="https://twitter.com/firo_cn">推特</a>
+    ｜ <a target="_self" href="seed.html">节点</a>
+    <span id="latest_block" style="display: none;">｜ <a href="https://explorer.firo.org/" target="_blank">高度：<span id="latest_block_value"></span></a></span>
+    <span id="latest_price" style="display: none;">｜ <a href="https://charts.cointrader.pro/charts.html?coin=FIRO%3AUSD" target="_blank">价格：<span id="latest_price_value"></span></a></span>
+  </p>
+  <p title="在 MIT 许可下发布"><a href="http://opensource.org/licenses/mit-license.php" target="_blank" class="nocolor" id="copyrightlink">©</a> Firo 中文社区 2016-2022</p>
+</footer>
+<script>
+  const latestBlock = document.querySelector('#latest_block')
+  const latestBlockValue = document.querySelector('#latest_block_value')
+  const latestPrice = document.querySelector('#latest_price')
+  const latestPriceValue = document.querySelector('#latest_price_value')
+
+  const updateInfos = function () {
+    fetch(`https://explorer.firo.org/insight-api-zcoin/blocks`)
+      .then(res => res.json())
+      .then(json => {
+        height = json.blocks[0].height
+        latestBlockValue.innerHTML = height
+        latestBlock.style.display = 'inline'
+      })
+    fetch('https://explorer.firo.org/insight-api-zcoin/currency')
+      .then(res => res.json())
+      .then(json => {
+        latestPriceValue.innerHTML = `$${json.data.zcoin_usd}`
+        latestPrice.style.display = 'inline'
+      })
+  }
+
+  updateInfos()
+  setInterval(() => { updateInfos() }, 10000)
+</script>
+
+    <div id="scroll_to_top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">🔝</div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
