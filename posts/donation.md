@@ -9,7 +9,7 @@
   "hidden": true
 } %>
 
-firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这些捐助会用于改进社区（工作人员的生活）。
+firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这些捐助会用于改进社区。
 
 ## 使用下方地址或二维码
 
@@ -46,6 +46,8 @@ function copyAddress() {
 </script>
 
 ![Firo 二维码](donationqrcode.png)
+
+*捐助后请私信 [@firo_cn](https://twitter.com/firo_cn) 我们将把您添加到捐助列表中。*
 
 ## 收到的捐助
 
