@@ -85,7 +85,7 @@
         <% if (post.properties.iframe) { %>
           <%- include('iframe', { iframe: post.properties.iframe }) %>
         <% } %>
-        <% if (post.properties.type === 'forum') { %>
+        <% if (post.properties.type === 'forum' || post.properties.showSourceLink) { %>
           <footer>
             <ul class="menu">
               <% if (post.properties.source && post.properties.type != 'video') { %>

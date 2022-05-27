@@ -41,6 +41,9 @@
   <!-- 图标（可选） -->
   "icon": "fire",
 
+  <!-- 显示原文链接（可选） -->
+  "showSourceLink": true,
+
   <!-- 来源地址（可选） -->
   "source": "https://firo.org/2022/01/28/helsing-private-firo-masternode.html"
 } %>
