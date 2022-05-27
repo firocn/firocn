@@ -6,6 +6,7 @@
   "date" : "2022-04-16",
   "author": "クロ",
   "icon": "heart_exclamation",
+  "alias": ["donation"],
   "hidden": true
 } %>
 

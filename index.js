@@ -90,11 +90,13 @@ const _siteDir = `${__dirname}/_site`
 
   posts.forEach(post => {
     if (post.properties.url) return
-    render(
-      path.normalize(`${__dirname}/post.ejs`),
-      { post },
-      path.normalize(`${_siteDir}/${post.filename.replace(/\.md$/, '.html')}`)
-    )
+    (post.properties.alias || [post.filename]).forEach(filename => {
+      render(
+        path.normalize(`${__dirname}/post.ejs`),
+        { post },
+        path.normalize(`${_siteDir}/${filename.replace(/\.md$/, '')}.html`)
+      )
+    })
   })
 })()
 
