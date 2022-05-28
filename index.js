@@ -90,7 +90,7 @@ const _siteDir = `${__dirname}/_site`
 
   posts.forEach(post => {
     if (post.properties.url) return
-    (post.properties.alias || [post.filename]).forEach(filename => {
+    ([post.filename, ...(post.properties.alias || [])]).forEach(filename => {
       render(
         path.normalize(`${__dirname}/post.ejs`),
         { post },
