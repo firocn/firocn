@@ -14,7 +14,7 @@ firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这
 
 ## 使用下方地址或二维码
 
-`aGR839M4G1zd5ceTuo7MDU8G28JN1HDzW4`
+`aMaciZvU9swjFnxWBuD5Bq9uDT5fQgW4a1`
 
 <div><a id="button_copyaddress" class="button" href="javascript: copyAddress()" target="_self">复制</a></div>
 
@@ -30,7 +30,7 @@ firocn.org 是一个社区支持的社区，我们十分感谢任何捐助。这
 function copyAddress() {
   const button = document.querySelector('#button_copyaddress')
   const input = document.createElement('input')
-  input.value = 'aGR839M4G1zd5ceTuo7MDU8G28JN1HDzW4'
+  input.value = 'aMaciZvU9swjFnxWBuD5Bq9uDT5fQgW4a1'
   input.style.position = 'absolute'
   input.style.opacity = 0
   document.body.appendChild(input)
