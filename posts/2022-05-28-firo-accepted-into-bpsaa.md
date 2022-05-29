@@ -6,7 +6,7 @@
   "img": "firo-accepted-into-bpsaa.jpg",
   "type": "announcement",
   "icon": "lockedwithpen",
-  "source": "https://github.com/firoorg/firo-site/blob/2cefd7f268cedb6c40876a4e426893e877f488b5/_posts/2022-05-28-firo-accepted-into-bpsaa.md.md"
+  "source": "https://firo.org/2022/05/28/firo-accepted-into-bpsaa.html"
 } %>
 
 ![Firo 已被 BPSAA 接纳为会员](firo-accepted-into-bpsaa.jpg)
