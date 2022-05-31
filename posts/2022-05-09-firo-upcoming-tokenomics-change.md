@@ -9,7 +9,7 @@
   "source": "https://firo.org/2022/05/08/firo-upcoming-tokenomics-change.html"
 } %>
 
-![FIRO 即将发生的代币经济学变更](https://firo.org/blog/assets/park-troopers.jpg#size=3876x2660)
+![FIRO 即将发生的代币经济学变更](onepiece.jpg)
 
 ### 即将到来的 FIRO 的区块奖励变更将是最大的改变之一，在我们看来是 FIRO 项目迄今为止最大的改进之一。我们正在比以往任何时候都更多地赋予我们的社区以权力！戴上你的派对帽子，准备好庆祝吧！
 
