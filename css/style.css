@@ -132,9 +132,6 @@ pre {
   .link {
     color: var(--link-color);
   }
-  .button {
-    background-color: var(--link-color);
-  }
 }
 body > footer {
   margin: 3.309rem 0 0;
