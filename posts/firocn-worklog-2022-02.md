@@ -1,7 +1,7 @@
 <%# {
   "title": "Firo CN worklog February 2022",
   "date" : "2022-03-13",
-  "author": "クロ",
+  "author": "Kuro",
   "language": "en",
   "hidden": true
 } %>

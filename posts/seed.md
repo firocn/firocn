@@ -5,7 +5,7 @@
   "img": "nodes.png",
   "card": "summary",
   "date" : "2022-03-17",
-  "author": "クロ",
+  "author": "Kuro",
   "hidden": true
 } %>
 
