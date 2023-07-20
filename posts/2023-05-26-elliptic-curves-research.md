@@ -1,6 +1,6 @@
 <%# {
   "title": "推进隐私：Aram Jivanyan 推进 Lelantus Spark 研究",
-  "description": "椭圆曲线研究",
+  "description": "Magic Grants 已经批准为 Firo 的密码学家 Aram Jivanyan 提供研究经费，让他在 MAGIC Firo 基金的资助下进行为期六个月的曲线树研究。\n\n这项研究的结果有望解决 Spark 面临的主要挑战，即实现百万级的匿名集。除了 Lelantus Spark 的研究，这笔资金将支持 Aram 在 Aura 投票协议方面的持续工作。",
   "summary": "椭圆曲线研究",
   "img": "https://firo.org/blog/assets/elliptic-curves.png",
   "author": "AJay",

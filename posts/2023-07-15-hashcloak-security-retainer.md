@@ -1,6 +1,6 @@
 <%# {
   "title": "构建更安全的 Firo： MAGIC 批准与 HashCloak 签订安全合同",
-  "description": "测试基础设施、扩大单元测试覆盖面和改进 PR 审查流程",
+  "description": "MAGIC 董事会已批准了 HashCloak 为 Firo 提供的安全合同，该合同将使用 MAGIC Firo 基金。\n\n该安全合同重点是构建 Firo 的模糊测试基础设施，扩展单元测试覆盖率，并增强 Firo 现有的 PR 审查流程。此外，该合同还确保 Firo 了解最新的漏洞和安全技术，并评估其他链中的漏洞及其对 Firo 的适用性。",
   "summary": "测试基础设施、扩大单元测试覆盖面和改进 PR 审查流程",
   "img": "https://firo.org/blog/assets/security-retainer/banner.jpg",
   "author": "Reuben Yap",

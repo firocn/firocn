@@ -1,6 +1,6 @@
 <%# {
   "title": "Spark 揭晓：公开测试网启动日期已确定",
-  "description": "Spark 测试网将于 2023 年 7 月 31 日启动",
+  "description": "Spark 测试网将于 2023 年 7 月 31 日启动\n\nSpark 可能是目前最好的基于区块链的隐私系统，因为它没有 Zcash 中必须信任少数人的可信设置，它比 Monero 具有更大的隐秘性。\n\n它还有一个查看密钥（view keys）系统，可用于您在需要向监管机构（例如证监会和反洗钱局）披露交易信息的情况下使用。\n\n这些交易数据不会公开在区块链上，这就阻止了像 Chainalysis 这样的公司获取我们的交易信息，除非我们允许，这是比特币上发生的情况。",
   "summary": "Spark 测试网将于 2023 年 7 月 31 日启动",
   "img": "https://firo.org/blog/assets/spark-testnet-launching1.jpg",
   "author": "Reuben Yap",
