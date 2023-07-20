@@ -48,10 +48,10 @@ if (document.referrer.includes(window.siteURL)) {
         }
       } else {
         hideTopbtn()
-        staticHeader()
+        // staticHeader()
       }
     } else if (scrollY > sourceScrollY + deadzone && !document.body.classList.contains('static-header')) {
-      hideHeader()
+      // hideHeader()
       hideTopbtn()
     }
 
