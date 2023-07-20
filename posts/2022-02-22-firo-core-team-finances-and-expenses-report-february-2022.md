@@ -9,7 +9,7 @@
   "source": "https://forum.firo.org/t/firo-core-team-finances-and-expenses-report-february-2022"
 } %>
 
-当我们在讨论[代币经济学和资金](https://firocn.org/2022-02-17-tokenomics-and-funding-division-of-block-reward-discussion-and-community-matching-fund.html)时，我想分享 Firo 核心团队的财务现状，以便人们有更多的信息。
+当我们在讨论[代币经济学和资金](2022-02-17-tokenomics-and-funding-division-of-block-reward-discussion-and-community-matching-fund.html)时，我想分享 Firo 核心团队的财务现状，以便人们有更多的信息。
 
 团队每 30 天收到大约 **16200 FIRO**（约 54270 美元）（取决于出块时间）。
 我们还从 [OpenCollective 捐款](https://opencollective.com/firo)中收到少量资金（非常感谢！）。

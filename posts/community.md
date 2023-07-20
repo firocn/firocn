@@ -12,10 +12,6 @@
 
 # Firo 中文社区
 
-## Twitter
-
-[@firo_cn](https://twitter.com/firo_cn)
-
 ## Telegram
 
 [t.me/firo_zh](https://t.me/firo_zh)
@@ -33,7 +29,3 @@
 ## QQ
 
 [![QQ](qq.webp)](https://jq.qq.com/?_wv=1027&k=JzGzHApT)
-
-## GitHub
-
-[github.com/firocn](https://github.com/firocn)

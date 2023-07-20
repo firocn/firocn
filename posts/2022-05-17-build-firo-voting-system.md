@@ -7,6 +7,7 @@
   "author": "satoshi",
   "type": "forum",
   "icon": "vote",
+  "hidden": true,
   "source": "https://forum.firo.org/t/build-firo-voting-system/2427/47"
 } %>
 
