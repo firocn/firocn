@@ -36,6 +36,7 @@
         margin: 0;
         font-family: sans-serif;
         overflow-x: clip;
+        padding-top: calc(3.618rem + .0625rem);
       }
       p, h2, h3 {
         line-height: 1.618;
@@ -85,10 +86,11 @@
         border-bottom: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         background-color: white;
         transition: top .236s;
-        position: sticky;
+        position: fixed;
         border-top: .0625rem solid rgba(0, 0, 0, calc(1 - 244 / 255));
         top: -.0625rem;
-        margin-top: -.0625rem;
+        left: 0;
+        right: 0;
         z-index: 1;
       }
       body > header.visible {
@@ -462,12 +464,6 @@
     </style>
     <noscript>
       <style>
-        body > header {
-          position: static;
-        }
-        .show-header .posts-icon {
-          top: 1.618rem;
-        }
       </style>
     </noscript>
     <script>
