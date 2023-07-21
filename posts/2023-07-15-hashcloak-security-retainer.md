@@ -31,4 +31,4 @@ MAGIC Grants 是一个支持加密货币网络的 501(c)(3) 公共慈善机构�
 
 ## 关于 MAGIC Firo 基金
 
-MAGIC Firo 基金（magicgrants.org/funds）成立于 2022 年 12 月，由 MAGIC 董事会管理，独立于 Firo 核心团队。MAGIC Firo 基金的资金来源于 Firo 支持者（如 Arcadia）的慷慨捐赠。如果您居住在美国，向该基金的捐款可以减税。
+[MAGIC Firo 基金](https://magicgrants.org/funds/)成立于 2022 年 12 月，由 MAGIC 董事会管理，独立于 Firo 核心团队。MAGIC Firo 基金的资金来源于 Firo 支持者（如 Arcadia）的慷慨捐赠。如果您居住在美国，向该基金的捐款可以减税。
