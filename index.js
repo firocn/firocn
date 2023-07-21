@@ -78,13 +78,13 @@ const _siteDir = `${__dirname}/_site`
 
   render(
     path.normalize(`${__dirname}/index.ejs`),
-    {},
+    { pageTyle: 'index' },
     path.normalize(`${__dirname}/_site/index.html`)
   )
 
   render(
     path.normalize(`${__dirname}/news.ejs`),
-    { posts: posts.filter(p => p.date && !p.properties.hidden) },
+    { posts: posts.filter(p => p.date && !p.properties.hidden), pageTyle: 'news' },
     path.normalize(`${__dirname}/_site/news.html`)
   )
 
@@ -93,7 +93,7 @@ const _siteDir = `${__dirname}/_site`
     ([post.filename, ...(post.properties.alias || [])]).forEach(filename => {
       render(
         path.normalize(`${__dirname}/post.ejs`),
-        { post },
+        { post, pageTyle: 'post' },
         path.normalize(`${_siteDir}/${filename.replace(/\.md$/, '')}.html`)
       )
     })
